@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>Formation - Monprofchezmoi</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="Cours en ligne" name="keywords">
     <meta content="Soutien Scolaire" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="{{ asset('asset/img/favicon.png') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1096,7 +1096,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img src="{{ asset('asset/img/logo.png') }}" alt="Monprofchezmoi">
                 <p>Chez MONPROFCHEZMOI CI, nous croyons que chaque personne possède un potentiel unique. Notre mission est de révéler ce potentiel grâce à un accompagnement personnalisé, des enseignants qualifiés et des solutions adaptées à chaque étape de la vie.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

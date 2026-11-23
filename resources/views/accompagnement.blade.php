@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Accompagnement DYS Primaire - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="DYS, dyslexie, dyscalculie, soutien scolaire, primaire, Abidjan" name="keywords">
     <meta content="Accompagnement pédagogique adapté aux enfants DYS au primaire en Côte d'Ivoire." name="description">
@@ -15,8 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
     <link href="asset/css/courscss/style.css" rel="stylesheet">
 </head>

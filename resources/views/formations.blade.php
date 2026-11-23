@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Formations - Monprofchezmoi</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="Formations professionnelles, Cours en ligne" name="keywords">
     <meta content="Formations professionnelles et certifiantes pour adultes" name="description">
 
@@ -1855,21 +1855,21 @@ body {
 
         <div class="slider-hero-formations animate-scroll">
             <div class="slide active">
-                <img src="/asset/img/ok1.jpeg" alt="Créer son entreprise">
+                <img loading="lazy" decoding="async" src="/asset/img/ok1.jpeg" alt="Créer son entreprise">
                 <div class="slider-caption">
                     <h3>Créer son entreprise</h3>
                     <p>Acquérez les compétences essentielles à l'entrepreneuriat</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="/asset/img/ok4.jpeg" alt="Marché">
+                <img loading="lazy" decoding="async" src="/asset/img/ok4.jpeg" alt="Marché">
                 <div class="slider-caption">
                     <h3>Rester en adéquation avec le marché</h3>
                     <p>Maintenez vos compétences à jour</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="/asset/img/ok3.jpeg" alt="Trouver un job">
+                <img loading="lazy" decoding="async" src="/asset/img/ok3.jpeg" alt="Trouver un job">
                 <div class="slider-caption">
                     <h3>Trouver un job</h3>
                     <p>Développez les compétences recherchées par les employeurs</p>
@@ -1929,7 +1929,7 @@ body {
             </div>
 
             <div class="avantages-image-wrap animate-scroll">
-                <img src="asset/img/formata.jpeg" alt="Formations pratiques">
+                <img loading="lazy" decoding="async" src="asset/img/formata.jpeg" alt="Formations pratiques">
                 <div class="avantages-badge"><i class="fas fa-star"></i> 100% personnalisé</div>
             </div>
         </div>
@@ -2055,7 +2055,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Chez MONPROFCHEZMOI CI, nous croyons que chaque personne possède un potentiel unique. Notre mission est de révéler ce potentiel grâce à un accompagnement personnalisé, des enseignants qualifiés et des solutions adaptées à chaque étape de la vie.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -2124,21 +2124,17 @@ body {
 window.addEventListener('scroll', function() {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById('scrollProgress').style.width = (scrollTop / scrollHeight * 100) + '%';
+    const scrollProgress = document.getElementById('scrollProgress');
+    if (scrollProgress) scrollProgress.style.width = (scrollTop / scrollHeight * 100) + '%';
 
     const navbar = document.querySelector('.navbar-moderne');
-    if (window.scrollY > 50) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
+    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
 
     const backToTop = document.getElementById('backToTop');
-    if (window.scrollY > 500) backToTop.classList.add('visible');
-    else backToTop.classList.remove('visible');
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 500);
 });
 
-// Spinner
 window.addEventListener('load', function() {
-    setTimeout(() => {
-
     // Si un groupe est sélectionné, descendre doucement vers la liste des formations
     const params = new URLSearchParams(window.location.search);
     if (params.get('groupe')) {

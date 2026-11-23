@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Coaching Sportif à Domicile - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Coaching sportif, Fitness, Perte de poids, Remise en forme, Abidjan, Côte d'Ivoire" name="keywords">
     <meta content="Accompagnement sportif personnalisé à domicile en Côte d'Ivoire. Coachs diplômés pour tous niveaux et objectifs." name="description">

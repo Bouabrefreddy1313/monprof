@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Orientation Première - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Orientation Première, Parcours études, Lycée, Bac, Abidjan, Côte d'Ivoire" name="keywords">
     <meta content="Accompagnement personnalisé pour les élèves de Première : exploration des formations, métiers et construction du projet d'études à Abidjan." name="description">
@@ -1838,7 +1838,7 @@ body {
                 </div>
             </div>
             <div class="hero-image-wrapper animate-slide-right">
-                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=700&fit=crop" alt="Élève africain de Première réfléchissant à son orientation" class="hero-image-main">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=700&fit=crop" alt="Élève africain de Première réfléchissant à son orientation" class="hero-image-main">
                 <div class="floating-card floating-card-1">
                     <i class="fas fa-graduation-cap"></i>
                     <div>
@@ -2452,7 +2452,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

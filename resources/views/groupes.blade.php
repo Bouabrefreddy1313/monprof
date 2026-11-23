@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Cours en ligne DCG & DSCG - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
@@ -23,7 +23,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Owl Carousel -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 </head>
 
 <style>
@@ -1020,7 +1019,7 @@ body {
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="asset/img/don2.jpeg" alt="DCG DSCG">
+                <img loading="lazy" decoding="async" src="asset/img/don2.jpeg" alt="DCG DSCG">
                 <div class="carousel-overlay"></div>
                 <div class="carousel-caption-moderne">
                     <div class="carousel-label"><i class="fas fa-trophy"></i> Taux de réussite élevé</div>
@@ -1033,7 +1032,7 @@ body {
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="asset/img/don3.jpeg" alt="DCG DSCG">
+                <img loading="lazy" decoding="async" src="asset/img/don3.jpeg" alt="DCG DSCG">
                 <div class="carousel-overlay"></div>
                 <div class="carousel-caption-moderne">
                     <div class="carousel-label"><i class="fas fa-rocket"></i> Formation accélérée</div>
@@ -1101,7 +1100,7 @@ body {
         <div class="services-grid">
             <div class="service-card-moderne animate-scroll">
                 <div class="service-icon-moderne">
-                    <img src="asset/img/intello.png" alt="Structure">
+                    <img loading="lazy" decoding="async" src="asset/img/intello.png" alt="Structure">
                 </div>
                 <h4>On vous structure 🤓</h4>
                 <p>Dès votre inscription, vous apprendrez à aborder chaque matière du diplôme de manière efficace et méthodique grâce à des cours spécifiques : Mental, Concentration, Organisation, Mémorisation, Attentes du Jury... Dès le premier jour, vous aurez un plan clair et une grande confiance en vous.</p>
@@ -1109,7 +1108,7 @@ body {
             </div>
             <div class="service-card-moderne animate-scroll">
                 <div class="service-icon-moderne">
-                    <img src="asset/img/fort.png" alt="Formation">
+                    <img loading="lazy" decoding="async" src="asset/img/fort.png" alt="Formation">
                 </div>
                 <h4>Nous vous formons pour devenir des champions, tout simplement. 🙌</h4>
                 <p>Vous bénéficiez de cours en vidéo efficaces et faciles à comprendre, couvrant chaque aspect des programmes, avec des points essentiels à retenir, des cas pratiques corrigés disponibles en vidéo et en PDF téléchargeables, pour renforcer vos connaissances.</p>
@@ -1117,7 +1116,7 @@ body {
             </div>
             <div class="service-card-moderne animate-scroll">
                 <div class="service-icon-moderne">
-                    <img src="asset/img/fete.png" alt="Diplômé">
+                    <img loading="lazy" decoding="async" src="asset/img/fete.png" alt="Diplômé">
                 </div>
                 <h4>Vous êtes heureux diplômés 🥳</h4>
                 <p>En suivant nos cours à la lettre, vous serez parfaitement préparé pour réussir vos examens avec brio et vous présenter le jour J avec assurance et détermination. Une fois votre diplôme en main, vous deviendrez l'un des candidats les plus recherchés par les recruteurs dans le domaine de l'expertise comptable.</p>
@@ -1221,7 +1220,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Chez MONPROFCHEZMOI CI, nous croyons que chaque personne possède un potentiel unique. Notre mission est de révéler ce potentiel grâce à un accompagnement personnalisé.</p>
                 <div class="footer-social-moderne">
                     <a href="#"><i class="fab fa-twitter"></i></a>

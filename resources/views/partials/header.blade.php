@@ -1,3 +1,6 @@
+{{-- Styles et scripts responsive communs (une seule fois par page) --}}
+@include('partials.responsive-assets')
+
 <!-- Scroll Progress -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -9,15 +12,15 @@
 <div class="topbar-minimal">
     <div class="container">
         <div class="topbar-info-minimal">
-            <span><i class="fas fa-map-marker-alt"></i> Riviera 4 Synacassi 1, Abidjan</span>
-            <span><i class="fas fa-phone-alt"></i> +225 01 53 75 15 44</span>
-            <span><i class="fas fa-envelope"></i> info@monprofchezmoi-ci.com</span>
+            <span class="topbar-addr"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Riviera 4 Synacassi 1, Abidjan</span>
+            <span class="topbar-phone"><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+2250153751544">+225 01 53 75 15 44</a></span>
+            <span class="topbar-mail"><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@monprofchezmoi-ci.com">info@monprofchezmoi-ci.com</a></span>
         </div>
         <div class="topbar-social-minimal">
-            <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://lc.cx/bRCp37" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://lc.cx/apXwPN" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com/@Monprofchezmoi" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://lc.cx/bI7TWa" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://lc.cx/bRCp37" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://lc.cx/apXwPN" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://youtube.com/@Monprofchezmoi" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
         </div>
     </div>
 </div>
@@ -25,13 +28,13 @@
 <!-- ============================================
      NAVBAR
      ============================================ -->
-<nav class="navbar navbar-expand-lg navbar-moderne">
+<nav class="navbar navbar-expand-lg navbar-moderne" aria-label="Navigation principale">
     <div class="container">
         <a href="{{ url('/') }}" class="navbar-brand">
-            <img src="asset/img/logo.png" alt="Monprofchezmoi" height="45">
+            <img src="{{ asset('asset/img/logo.png') }}" alt="Monprofchezmoi - Accueil" width="45" height="45">
         </a>
 
-        <button class="navbar-toggler navbar-toggler-premium" type="button" data-bs-toggle="collapse" data-bs-target="#navbarModerne">
+        <button class="navbar-toggler navbar-toggler-premium" type="button" data-bs-toggle="collapse" data-bs-target="#navbarModerne" aria-controls="navbarModerne" aria-expanded="false" aria-label="Ouvrir le menu">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -191,4 +194,15 @@
         </div>
     </div>
 </nav>
+
+{{-- Si la page n'a pas ses propres styles de header, on active ceux de responsive.css
+     (classe « mpcm-hf »). S'exécute avant l'affichage : pas de clignotement. --}}
+<script>
+(function () {
+    var h = document.querySelector('.mega-header-moderne');
+    if (h && getComputedStyle(h).backgroundImage === 'none') {
+        document.documentElement.classList.add('mpcm-hf');
+    }
+})();
+</script>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="Cours en ligne" name="keywords">
     <meta content="Soutien Scolaire" name="description">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -18,14 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/custom-styles.css">
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
 <!-- À ajouter dans le <head> de votre HTML -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
@@ -2874,10 +2869,10 @@ body {
                     <img src="asset/img/enfnoi.jpeg" alt="Enfant en cours">
                 </div>
                 <div class="collage-secondary">
-                    <img src="asset/img/deux.jpg" alt="Formation adulte">
+                    <img loading="lazy" decoding="async" src="asset/img/deux.jpg" alt="Formation adulte">
                 </div>
                 <div class="collage-tertiary">
-                    <img src="asset/img/ligne.jpeg" alt="Activité créative">
+                    <img loading="lazy" decoding="async" src="asset/img/ligne.jpeg" alt="Activité créative">
                 </div>
                 <div class="collage-badge"><i class="fas fa-check-circle"></i> 5000+ familles accompagnées </div>
             </div>
@@ -3034,7 +3029,7 @@ body {
                     </div>
 
                     <div class="cours-image-wrap animate-scroll">
-                        <img src="asset/img/ok2.jpeg" alt="DCG DSCG">
+                        <img loading="lazy" decoding="async" src="asset/img/ok2.jpeg" alt="DCG DSCG">
                         <div class="cours-image-badge">
                             <i class="fas fa-graduation-cap"></i> DCG & DSCG en ligne
                         </div>
@@ -3070,7 +3065,7 @@ body {
                     </div>
 
                     <div class="cours-image-wrap animate-scroll">
-                        <img src="asset/img/souta.jpeg" alt="Soutien scolaire">
+                        <img loading="lazy" decoding="async" src="asset/img/souta.jpeg" alt="Soutien scolaire">
                         <div class="cours-image-badge">
                             <i class="fas fa-book-open"></i> Soutien scolaire
                         </div>
@@ -3106,7 +3101,7 @@ body {
                     </div>
 
                     <div class="cours-image-wrap animate-scroll">
-                        <img src="asset/img/formata.jpeg" alt="Formations professionnelles">
+                        <img loading="lazy" decoding="async" src="asset/img/formata.jpeg" alt="Formations professionnelles">
                         <div class="cours-image-badge">
                             <i class="fas fa-briefcase"></i> Formations professionnelles
                         </div>
@@ -3251,7 +3246,7 @@ body {
             </div>
 
             <div class="pourquoi-image animate-scroll">
-                <img src="asset/img/deux.jpg" alt="Notre approche">
+                <img loading="lazy" decoding="async" src="asset/img/deux.jpg" alt="Notre approche">
                 <div class="pourquoi-stats-float">
                     <div class="number">100%</div>
                     <div class="label">Flexible - À domicile, en centre ou en ligne</div>
@@ -3443,7 +3438,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Chez MONPROFCHEZMOI CI, nous croyons que chaque personne possède un potentiel unique. Notre mission est de révéler ce potentiel grâce à un accompagnement personnalisé, des enseignants qualifiés et des solutions adaptées à chaque étape de la vie.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -3901,22 +3896,16 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('scroll', function() {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById('scrollProgress').style.width = (scrollTop / scrollHeight * 100) + '%';
+    const scrollProgress = document.getElementById('scrollProgress');
+    if (scrollProgress) scrollProgress.style.width = (scrollTop / scrollHeight * 100) + '%';
 
     // Navbar
     const navbar = document.querySelector('.navbar-moderne');
-    if (window.scrollY > 50) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
+    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
 
     // Back to top
     const backToTop = document.getElementById('backToTop');
-    if (window.scrollY > 500) backToTop.classList.add('visible');
-    else backToTop.classList.remove('visible');
-});
-
-// Spinner
-window.addEventListener('load', function() {
-    setTimeout(() => {
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 500);
 });
 
 // Mobile Mega Menu - CORRIGÉ

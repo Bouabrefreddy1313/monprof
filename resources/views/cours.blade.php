@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>{{ $cours->titre }} - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="Formation professionnelle, {{ $cours->titre }}, Abidjan" name="keywords">
     <meta content="{{ $cours->description }}" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="{{ asset('asset/img/favicon.png') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1726,7 +1726,7 @@ textarea.form-control-moderne {
                     @if($cours->image)
                         <img src="{{ asset('storage/' . $cours->image) }}" alt="{{ $cours->titre }}">
                     @else
-                        <img src="{{ asset('asset/img/ent.jpeg') }}" alt="Formation">
+                        <img loading="lazy" decoding="async" src="{{ asset('asset/img/ent.jpeg') }}" alt="Formation">
                     @endif
                 </div>
             </div>
@@ -1951,7 +1951,7 @@ function parseContentToModules($text) {
                         </div>
                         <div class="sidebar-card-body">
                             <div class="qr-code-wrapper">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data={{ urlencode(config('app.url') . route('cours', $cours->id, false)) }}" alt="QR Code {{ $cours->titre }}">
+                                <img loading="lazy" decoding="async" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data={{ urlencode(config('app.url') . route('cours', $cours->id, false)) }}" alt="QR Code {{ $cours->titre }}">
                             </div>
                             <p class="qr-card-text">
                                 <strong>{{ $cours->titre }}</strong>
@@ -2207,7 +2207,7 @@ function parseContentToModules($text) {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="{{ asset('asset/img/logo.png') }}" alt="Monprofchezmoi">
                                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles                 chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

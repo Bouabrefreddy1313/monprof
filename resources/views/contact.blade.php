@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Contact - Monprofchezmoi</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="Contact MonProfChezMoi, nous joindre, telephone, email" name="keywords">
     <meta content="Contactez l'equipe de MonProfChezMoi pour toute question, inscription ou formation." name="description">
 

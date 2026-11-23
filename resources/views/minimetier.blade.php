@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Mini-Métiers - Des ateliers ludiques pour révéler les talents de votre enfant</title>
     <meta name="description" content="Découvrez nos ateliers Mini-Métiers pendant les vacances scolaires. Cuisinier, Scientifique, Artiste, Détective, Médecin... Chaque semaine, une nouvelle aventure pour enfants de 4 à 10 ans.">
 
@@ -485,6 +485,7 @@
             .day-checkbox { padding: 6px 10px; font-size: 0.8rem; }
         }
     </style>
+    @include('partials.responsive-assets')
 </head>
 <body class="font-poppins bg-gray-50 overflow-x-hidden">
 

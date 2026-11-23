@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Ma Cabine à Livres - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Bibliothèque enfants, livres, lecture, contes" name="keywords">
     <meta content="Donnez le goût de la lecture à vos enfants avec notre bibliothèque de 60 livres pour les 3-15 ans." name="description">
@@ -22,8 +22,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
@@ -142,7 +140,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/fusa.jpg" alt="La princesse Violette">
+                        <img loading="lazy" decoding="async" src="asset/img/fusa.jpg" alt="La princesse Violette">
                         <span class="book-card-age">Dès 3 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -152,7 +150,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/mys.jpg" alt="Mystère aux Etats-Unis">
+                        <img loading="lazy" decoding="async" src="asset/img/mys.jpg" alt="Mystère aux Etats-Unis">
                         <span class="book-card-age">3-6 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -162,7 +160,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/roi.jpg" alt="Le Roi Lion">
+                        <img loading="lazy" decoding="async" src="asset/img/roi.jpg" alt="Le Roi Lion">
                         <span class="book-card-age">Dès 3 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -182,7 +180,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/amandine.jpeg" alt="Amandine Malabul">
+                        <img loading="lazy" decoding="async" src="asset/img/amandine.jpeg" alt="Amandine Malabul">
                         <span class="book-card-age">6-8 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -192,7 +190,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/james.jpeg" alt="Emma James">
+                        <img loading="lazy" decoding="async" src="asset/img/james.jpeg" alt="Emma James">
                         <span class="book-card-age">Dès 6 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -202,7 +200,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/bibliomys.jpeg" alt="Bibliomystère">
+                        <img loading="lazy" decoding="async" src="asset/img/bibliomys.jpeg" alt="Bibliomystère">
                         <span class="book-card-age">Dès 8 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -222,7 +220,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/licorne.jpg" alt="Skandar">
+                        <img loading="lazy" decoding="async" src="asset/img/licorne.jpg" alt="Skandar">
                         <span class="book-card-age">9-12 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -232,7 +230,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/disparu.jpeg" alt="La Joconde disparue">
+                        <img loading="lazy" decoding="async" src="asset/img/disparu.jpeg" alt="La Joconde disparue">
                         <span class="book-card-age">Dès 9 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -242,7 +240,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/naitre.jpeg" alt="Naître fille">
+                        <img loading="lazy" decoding="async" src="asset/img/naitre.jpeg" alt="Naître fille">
                         <span class="book-card-age">10-12 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -262,7 +260,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/guerre.jpg" alt="La Guerre des Deux Lunes">
+                        <img loading="lazy" decoding="async" src="asset/img/guerre.jpg" alt="La Guerre des Deux Lunes">
                         <span class="book-card-age">13-14 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -272,7 +270,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img src="asset/img/sem.jpeg" alt="Sem">
+                        <img loading="lazy" decoding="async" src="asset/img/sem.jpeg" alt="Sem">
                         <span class="book-card-age">Dès 15 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -561,7 +559,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

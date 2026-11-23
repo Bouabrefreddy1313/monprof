@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Monprofchezmoi-ci.com - Cours de Musique</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Cours de musique, piano, guitare, chant, solfège" name="keywords">
     <meta content="Cours de musique pour enfants et adultes - Piano, Guitare, Chant, Solfège" name="description">
@@ -22,8 +22,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
@@ -1717,7 +1715,7 @@
             </div>
 
             <div class="intro-image-wrap animate-scroll">
-                <img src="asset/img/mus.jpg" alt="Cours de musique">
+                <img loading="lazy" decoding="async" src="asset/img/mus.jpg" alt="Cours de musique">
             </div>
         </div>
     </div>
@@ -2167,7 +2165,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

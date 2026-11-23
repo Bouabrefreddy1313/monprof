@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Monprofchezmoi-ci.com - Les Petits Bilingues</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Cours d'anglais pour enfants, bilinguisme, ateliers linguistiques" name="keywords">
     <meta content="Les Petits Bilingues de MONPROFCHEZMOI : ateliers d'anglais immersifs et ludiques pour enfants de 4 à 16 ans, en mini-groupes de 3 à 8 enfants. Hebdomadaire, immersif ou stage de vacances à Abidjan." name="description">
@@ -22,8 +22,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
@@ -2580,7 +2578,7 @@
                 <!-- Hebdomadaire G1 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/hebdopetit.jpg" alt="Atelier hebdomadaire petits" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/hebdopetit.jpg" alt="Atelier hebdomadaire petits" class="workshop-image">
                         <div class="workshop-badge">Hebdo</div>
                     </div>
                     <div class="workshop-body">
@@ -2654,7 +2652,7 @@
                 <!-- Immersif G1 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/yoga.jpg" alt="Atelier immersif" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/yoga.jpg" alt="Atelier immersif" class="workshop-image">
                         <div class="workshop-badge">Immersif</div>
                     </div>
                     <div class="workshop-body">
@@ -2728,7 +2726,7 @@
                 <!-- Stage G1 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/petitseul.jpg" alt="Stage de vacances" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/petitseul.jpg" alt="Stage de vacances" class="workshop-image">
                         <div class="workshop-badge">Stage</div>
                     </div>
                     <div class="workshop-body">
@@ -2789,7 +2787,7 @@
                 <!-- Hebdomadaire G2 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/joueseul.jpg" alt="Atelier hebdomadaire" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/joueseul.jpg" alt="Atelier hebdomadaire" class="workshop-image">
                         <div class="workshop-badge">Hebdo</div>
                     </div>
                     <div class="workshop-body">
@@ -2863,7 +2861,7 @@
                 <!-- Immersif G2 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/main.jpg" alt="Atelier immersif" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/main.jpg" alt="Atelier immersif" class="workshop-image">
                         <div class="workshop-badge">Immersif</div>
                     </div>
                     <div class="workshop-body">
@@ -2937,7 +2935,7 @@
                 <!-- Stage G2 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/activ.jpg" alt="Stage de vacances" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/activ.jpg" alt="Stage de vacances" class="workshop-image">
                         <div class="workshop-badge">Stage</div>
                     </div>
                     <div class="workshop-body">
@@ -2998,7 +2996,7 @@
                 <!-- Hebdomadaire G3 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/beber.jpeg" alt="Atelier hebdomadaire ados" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/beber.jpeg" alt="Atelier hebdomadaire ados" class="workshop-image">
                         <div class="workshop-badge">Hebdo</div>
                     </div>
                     <div class="workshop-body">
@@ -3072,7 +3070,7 @@
                 <!-- Immersif G3 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/azaz.jpeg" alt="Atelier immersif ados" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/azaz.jpeg" alt="Atelier immersif ados" class="workshop-image">
                         <div class="workshop-badge">Immersif</div>
                     </div>
                     <div class="workshop-body">
@@ -3146,7 +3144,7 @@
                 <!-- Stage G3 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img src="asset/img/beber.jpeg" alt="Stage de vacances ados" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="asset/img/beber.jpeg" alt="Stage de vacances ados" class="workshop-image">
                         <div class="workshop-badge">Stage</div>
                     </div>
                     <div class="workshop-body">
@@ -3216,7 +3214,7 @@
             </div>
 
             <div class="intro-image-wrap animate-scroll">
-                <img src="asset/img/yoga.jpg" alt="Enfants apprenant l'anglais">
+                <img loading="lazy" decoding="async" src="asset/img/yoga.jpg" alt="Enfants apprenant l'anglais">
             </div>
         </div>
     </div>
@@ -3422,7 +3420,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

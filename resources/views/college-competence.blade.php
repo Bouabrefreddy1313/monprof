@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Codage & Robotique Collège - Monprofchezmoici.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Codage, Robotique, Python, IA, Collège, Abidjan, Côte d'Ivoire" name="keywords">
     <meta content="Activités numériques pour collégiens : robotique, programmation Python, IA, animation numérique et JavaScript à Abidjan." name="description">
@@ -15,8 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
     <link href="asset/css/courscss/style.css" rel="stylesheet">
 </head>
@@ -1852,7 +1850,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="asset/img/robo.jpg" alt="Champions de la Robotique Collège">
+                    <img loading="lazy" decoding="async" src="asset/img/robo.jpg" alt="Champions de la Robotique Collège">
                     <div class="programme-image-badge"><i class="fas fa-robot"></i> 6e à 3e</div>
                 </div>
                 <div class="programme-text">
@@ -1956,7 +1954,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique Collège">
+                    <img loading="lazy" decoding="async" src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique Collège">
                     <div class="programme-image-badge"><i class="fas fa-palette"></i> 6e à 3e</div>
                 </div>
                 <div class="programme-text">
@@ -2056,7 +2054,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Génies du Python Collège">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Génies du Python Collège">
                     <div class="programme-image-badge"><i class="fab fa-python"></i> 6e à 3e</div>
                 </div>
                 <div class="programme-text">
@@ -2158,7 +2156,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="Pionniers de l'IA Collège">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="Pionniers de l'IA Collège">
                     <div class="programme-image-badge"><i class="fas fa-brain"></i> 5e à 3e</div>
                 </div>
                 <div class="programme-text">
@@ -2258,7 +2256,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop" alt="Génies du JavaScript Collège">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop" alt="Génies du JavaScript Collège">
                     <div class="programme-image-badge"><i class="fab fa-js"></i> 5e à 3e</div>
                 </div>
                 <div class="programme-text">
@@ -2596,7 +2594,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

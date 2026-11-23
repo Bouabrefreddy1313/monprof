@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Orientation Supérieur - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Orientation Supérieur, Projet Professionnel, Réorientation, Études, Côte d'Ivoire, Abidjan" name="keywords">
     <meta content="Accompagnement personnalisé pour les étudiants : orientation, réorientation et construction de projet professionnel à Abidjan." name="description">

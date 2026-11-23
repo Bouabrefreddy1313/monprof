@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Soutien scolaire primaire - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Soutien scolaire, primaire, cours particuliers, Abidjan" name="keywords">
     <meta content="Accompagnement personnalisé pour les élèves du primaire en Côte d'Ivoire. Toutes matières, tous programmes." name="description">
@@ -22,8 +22,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Soutien Scolaire Supérieur - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Soutien Scolaire, BTS, Licence, Master, Grandes Écoles, Côte d'Ivoire, Abidjan" name="keywords">
     <meta content="Accompagnement personnalisé pour étudiants en BTS, Licence, Master et Grandes Écoles à Abidjan." name="description">
@@ -2357,7 +2357,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

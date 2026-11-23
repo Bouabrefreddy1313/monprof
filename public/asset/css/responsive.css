@@ -1,0 +1,718 @@
+/* =====================================================================
+   MONPROFCHEZMOI — responsive.css
+   ---------------------------------------------------------------------
+   Chargé sur toutes les pages publiques par partials/responsive-assets,
+   lui-même inclus dans partials/header.
+
+   Ce fichier a deux niveaux :
+
+   1. @layer mpcm-base — styles « de secours » (header partagé, images,
+      médias). Une couche CSS perd toujours face aux styles non rangés
+      dans une couche : une page qui définit déjà son header garde son
+      propre style, une page qui n'en a pas reçoit celui-ci.
+      Écrit en mobile-first (base = mobile, puis min-width).
+
+   2. Hors couche, préfixé par « html body » — corrections qui doivent
+      passer devant les styles déjà présents dans les pages. Comme ces
+      pages sont écrites en desktop-first (max-width), les corrections
+      utilisent les mêmes seuils que Bootstrap 5 pour s'aligner dessus.
+
+   Points de rupture couverts :
+     320–374  petits téléphones        375–479  téléphones standards
+     480–767  grands téléphones        768–991  tablettes portrait
+     992–1279 tablettes paysage/laptop 1280–1535 desktop
+     1536+    grands écrans
+   ===================================================================== */
+
+
+/* =====================================================================
+   NIVEAU 1 — STYLES DE BASE (priorité la plus basse)
+   ===================================================================== */
+@layer mpcm-base {
+
+    /* ---------- Variables (les pages qui les définissent gardent les leurs) */
+    :root {
+        --orange: #FF6B35;
+        --orange-dark: #E85A2B;
+        --orange-light: #FF8C5A;
+        --blue: #0A1628;
+        --blue-light: #1E3A5F;
+        --white: #FFFFFF;
+        --gray-50: #F8F9FA;
+        --gray-100: #F1F3F4;
+        --gray-200: #E8EAED;
+        --gray-600: #5F6368;
+        --gray-800: #3C4043;
+        --shadow-md: 0 8px 24px rgba(10, 22, 40, 0.1);
+        --shadow-xl: 0 24px 64px rgba(10, 22, 40, 0.16);
+        --shadow-orange: 0 8px 32px rgba(255, 107, 53, 0.25);
+    }
+
+    /* ---------- Médias fluides */
+    img, video, svg, canvas { max-width: 100%; }
+    img, video { height: auto; }
+    iframe[src*="youtube"], iframe[src*="youtu.be"], iframe[src*="vimeo"] {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border: 0;
+    }
+
+    /* ---------- Mots longs, URLs, emails : pas de débordement */
+    p, li, dd, td, th, label, blockquote,
+    h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+}
+
+
+/* =====================================================================
+   NIVEAU 1 bis — HEADER DE SECOURS
+   Une trentaine de pages incluent partials/header sans définir ses styles
+   (le header s'affichait en vrac). Un petit script placé juste après le
+   menu (partials/header) détecte ce cas et ajoute la classe « mpcm-hf »
+   sur <html> : ces styles ne s'appliquent alors qu'à ces pages-là.
+   Mobile-first : base = mobile, puis min-width: 992px.
+   ===================================================================== */
+/* ---------- Conteneurs du header (si Bootstrap n'est pas chargé) */
+html.mpcm-hf .topbar-minimal .container,
+html.mpcm-hf .navbar-moderne > .container {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+/* ---------- Barre de progression */
+html.mpcm-hf .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    z-index: 10000;
+    transition: width 0.1s;
+}
+
+/* ---------- Topbar */
+html.mpcm-hf .topbar-minimal {
+    background: var(--blue);
+    padding: 6px 0;
+}
+html.mpcm-hf .topbar-minimal .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+html.mpcm-hf .topbar-info-minimal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 20px;
+}
+html.mpcm-hf .topbar-info-minimal span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.8rem;
+}
+html.mpcm-hf .topbar-info-minimal i { color: var(--orange); }
+html.mpcm-hf .topbar-info-minimal a { color: inherit; text-decoration: none; }
+html.mpcm-hf .topbar-social-minimal { display: flex; gap: 6px; }
+html.mpcm-hf .topbar-social-minimal a {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+html.mpcm-hf .topbar-social-minimal a:hover { background: var(--orange); color: #fff; }
+
+/* ---------- Navbar — mobile d'abord */
+html.mpcm-hf .navbar-moderne {
+    background: rgba(255, 255, 255, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    padding: 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+html.mpcm-hf .navbar-moderne.scrolled { box-shadow: var(--shadow-md); }
+html.mpcm-hf .navbar-moderne > .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+html.mpcm-hf .navbar-moderne .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+html.mpcm-hf .navbar-moderne .navbar-brand img { height: 40px; width: auto; }
+
+html.mpcm-hf .navbar-moderne .navbar-collapse { flex-basis: 100%; flex-grow: 1; }
+html.mpcm-hf .navbar-moderne .collapse:not(.show) { display: none; }
+html.mpcm-hf .navbar-moderne .collapse.show {
+    display: block;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+html.mpcm-hf .nav-menu-moderne {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+html.mpcm-hf .nav-menu-moderne .nav-item-moderne {
+    position: relative;
+    border-bottom: 1px solid var(--gray-100);
+}
+html.mpcm-hf .nav-menu-moderne .nav-link-moderne {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    min-height: 48px;
+    padding: 12px 16px;
+    color: var(--gray-800);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+html.mpcm-hf .nav-menu-moderne .nav-link-moderne:hover { color: var(--orange); }
+html.mpcm-hf .nav-link-moderne .chevron {
+    font-size: 0.7rem;
+    color: var(--orange);
+    transition: transform 0.3s ease;
+}
+html.mpcm-hf .nav-item-moderne.active .chevron { transform: rotate(180deg); }
+
+/* Mega menu — mobile : accordéon */
+html.mpcm-hf .mega-menu-moderne { display: none; background: var(--gray-50); }
+html.mpcm-hf .nav-item-moderne.active > .mega-menu-moderne { display: block; }
+html.mpcm-hf .mega-header-moderne {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    color: #fff;
+    padding: 12px 16px;
+}
+html.mpcm-hf .mega-header-moderne h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+html.mpcm-hf .mega-header-moderne h4 i { color: var(--orange); }
+html.mpcm-hf .mega-header-moderne p {
+    margin: 4px 0 0 28px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+html.mpcm-hf .mega-body-moderne { padding: 12px 16px; }
+html.mpcm-hf .mega-body-moderne > div + div { margin-top: 16px; }
+html.mpcm-hf .mega-col-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--orange);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--gray-100);
+}
+html.mpcm-hf .mega-link-moderne {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 6px 0;
+    color: var(--gray-800);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+html.mpcm-hf .mega-link-moderne:hover { color: var(--orange); }
+html.mpcm-hf .mega-link-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 8px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 0.8rem;
+}
+
+/* Bouton connexion / utilisateur */
+html.mpcm-hf .navbar-moderne .navbar-collapse > div:last-child { padding: 12px 16px; }
+html.mpcm-hf .btn-nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: var(--orange);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+html.mpcm-hf .btn-nav-cta:hover { background: var(--orange-dark); color: #fff; }
+html.mpcm-hf .user-connected { display: flex; align-items: center; gap: 10px; }
+html.mpcm-hf .user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+}
+html.mpcm-hf .user-name { font-weight: 600; color: var(--gray-800); }
+html.mpcm-hf .btn-connect-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    color: var(--gray-600);
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Burger */
+html.mpcm-hf .navbar-toggler-premium {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+html.mpcm-hf .hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: var(--blue);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+html.mpcm-hf .navbar-toggler-premium[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+html.mpcm-hf .navbar-toggler-premium[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+html.mpcm-hf .navbar-toggler-premium[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ---------- Navbar — mobile et tablette : neutralise les styles « desktop »
+   que certaines pages définissent sans media query */
+@media (max-width: 991.98px) {
+    html.mpcm-hf .nav-menu-moderne { align-items: stretch; gap: 0; }
+    html.mpcm-hf .nav-menu-moderne .nav-link-moderne::after { display: none; }
+}
+
+/* ---------- Navbar — à partir de 992px (menu horizontal) */
+@media (min-width: 992px) {
+    html.mpcm-hf .navbar-moderne > .container { flex-wrap: nowrap; }
+    html.mpcm-hf .navbar-moderne .navbar-brand img { height: 45px; }
+    html.mpcm-hf .navbar-moderne .navbar-toggler { display: none; }
+    html.mpcm-hf .navbar-moderne .navbar-collapse.collapse {
+        display: flex;
+        flex-basis: auto;
+        align-items: center;
+        justify-content: flex-end;
+        background: transparent;
+        border: 0;
+        max-height: none;
+        overflow: visible;
+    }
+    html.mpcm-hf .navbar-moderne .navbar-collapse > div:last-child { padding: 0 0 0 12px; }
+    html.mpcm-hf .nav-menu-moderne { flex-direction: row; align-items: center; width: auto; gap: 2px; }
+    html.mpcm-hf .nav-menu-moderne .nav-item-moderne { border: 0; }
+    html.mpcm-hf .nav-menu-moderne .nav-link-moderne { padding: 26px 12px; font-size: 0.88rem; }
+    html.mpcm-hf .nav-item-moderne:hover .chevron { transform: rotate(180deg); }
+
+    html.mpcm-hf .mega-menu-moderne {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        min-width: 560px;
+        transform: translateX(-50%) translateY(10px);
+        background: var(--white);
+        border: 1px solid var(--gray-100);
+        border-radius: 16px;
+        box-shadow: var(--shadow-xl);
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1029;
+    }
+    html.mpcm-hf .nav-item-moderne:hover > .mega-menu-moderne {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+    html.mpcm-hf .mega-header-moderne { padding: 18px 24px; }
+    html.mpcm-hf .mega-body-moderne {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 18px 24px;
+    }
+    html.mpcm-hf .mega-body-moderne > div + div { margin-top: 0; }
+    html.mpcm-hf .mega-link-icon { background: var(--gray-50); }
+    html.mpcm-hf .btn-nav-cta { width: auto; }
+}
+
+
+/* =====================================================================
+   NIVEAU 2 — CORRECTIONS (passent devant les styles des pages)
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   2.1 Base
+   --------------------------------------------------------------------- */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Filet de sécurité contre le scroll horizontal. Les vraies causes
+   (animations latérales, éléments trop larges) sont corrigées plus bas ;
+   « clip » ne casse pas le header sticky, contrairement à « hidden ». */
+@supports (overflow-x: clip) {
+    html { overflow-x: clip; }
+}
+
+/* Encoches iPhone (viewport-fit=cover) : le contenu reste dans la zone sûre.
+   Sans encoche, env() vaut 0 et la marge Bootstrap habituelle est gardée. */
+html body .container,
+html body .container-fluid {
+    padding-left: max(calc(var(--bs-gutter-x, 1.5rem) * 0.5), env(safe-area-inset-left));
+    padding-right: max(calc(var(--bs-gutter-x, 1.5rem) * 0.5), env(safe-area-inset-right));
+}
+
+/* ---------------------------------------------------------------------
+   2.2 Animations au défilement
+   Sur mobile et tablette, les blocs qui arrivaient par le côté
+   (translateX ±60px) dépassaient de l'écran : ils arrivent par le bas.
+   --------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+    html body .animate-slide-left:not(.visible),
+    html body .animate-slide-right:not(.visible) {
+        transform: translateY(30px);
+    }
+    html body [data-aos="fade-left"]:not(.aos-animate),
+    html body [data-aos="fade-right"]:not(.aos-animate),
+    html body [data-aos="fade-up-left"]:not(.aos-animate),
+    html body [data-aos="fade-up-right"]:not(.aos-animate),
+    html body [data-aos="slide-left"]:not(.aos-animate),
+    html body [data-aos="slide-right"]:not(.aos-animate) {
+        transform: translate3d(0, 40px, 0);
+    }
+}
+
+/* ---------------------------------------------------------------------
+   2.3 Hero : hauteur d'écran réelle (barres du navigateur mobile)
+   --------------------------------------------------------------------- */
+@supports (min-height: 100svh) {
+    @media (min-width: 992px) {
+        html body .hero-nouveau { min-height: 100svh; }
+    }
+}
+
+/* ---------------------------------------------------------------------
+   2.4 Topbar — compacte sur mobile (une seule ligne)
+   --------------------------------------------------------------------- */
+html body .topbar-info-minimal a { color: inherit; text-decoration: none; }
+html body .topbar-info-minimal a:hover { color: var(--orange); }
+
+@media (max-width: 767.98px) {
+    html body .topbar-minimal { padding: 4px 0; }
+    html body .topbar-minimal .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 8px;
+    }
+    html body .topbar-info-minimal { flex-wrap: nowrap; gap: 0; }
+    html body .topbar-info-minimal .topbar-addr,
+    html body .topbar-info-minimal .topbar-mail { display: none; }
+    html body .topbar-info-minimal span { font-size: 0.85rem; white-space: nowrap; }
+    html body .topbar-info-minimal .topbar-phone a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+    }
+    html body .topbar-social-minimal a { width: 36px; height: 36px; }
+}
+@media (max-width: 374.98px) {
+    /* Très petits écrans : on garde uniquement le téléphone */
+    html body .topbar-social-minimal { display: none; }
+    html body .topbar-info-minimal { margin-inline: auto; }
+}
+
+/* ---------------------------------------------------------------------
+   2.5 Navigation
+   --------------------------------------------------------------------- */
+html body .navbar-moderne {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+html body .navbar-toggler-premium {
+    width: 44px;
+    height: 44px;
+}
+/* Titre des sous-menus : Bootstrap imposait une couleur sombre sur le fond bleu (titre invisible) */
+html body .mega-header-moderne h4 { color: #fff; }
+
+/* Bouton « Connexion » : texte toujours blanc, quel que soit le style des liens de la page */
+html body .navbar-moderne .btn-nav-cta,
+html body .navbar-moderne .btn-nav-cta:hover {
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    html body .navbar-moderne .navbar-brand { padding: 8px 0; }
+    html body .navbar-moderne .navbar-brand img { height: 40px; width: auto; }
+
+    @supports (height: 100dvh) {
+        html body .navbar-moderne .collapse.show,
+        html body .navbar-moderne .collapsing {
+            max-height: calc(100dvh - 64px);
+        }
+    }
+    html body .navbar-moderne .collapse.show {
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+    html body .nav-menu-moderne .nav-link-moderne { min-height: 48px; }
+    html body .mega-link-moderne { min-height: 44px; }
+    html body .mega-col-title { font-size: 0.75rem; }
+
+    /* Menu ouvert : la page derrière ne défile plus */
+    html.mpcm-nav-open,
+    html.mpcm-nav-open body {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 575.98px) {
+    html body .navbar-toggler-premium { width: 44px; height: 44px; }
+}
+
+/* Desktop : sous-menus aussi utilisables au toucher (iPad) et au clavier */
+@media (min-width: 992px) {
+    html body .nav-item-moderne.active > .mega-menu-moderne,
+    html body .nav-item-moderne:has(:focus-visible) > .mega-menu-moderne {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+/* Jusqu'à 1399px, les sous-menus des bords s'alignent sur leur lien
+   (à gauche pour les premiers, à droite pour les derniers) pour ne pas dépasser de l'écran */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    html body .nav-menu-moderne .nav-item-moderne:nth-child(-n+3) > .mega-menu-moderne {
+        left: 0;
+        right: auto;
+        transform: translateY(10px);
+    }
+    html body .nav-menu-moderne .nav-item-moderne:nth-child(-n+3):hover > .mega-menu-moderne,
+    html body .nav-menu-moderne .nav-item-moderne:nth-child(-n+3).active > .mega-menu-moderne,
+    html body .nav-menu-moderne .nav-item-moderne:nth-child(-n+3):has(:focus-visible) > .mega-menu-moderne {
+        transform: translateY(0);
+    }
+    html body .nav-menu-moderne .nav-item-moderne:nth-last-child(-n+4) > .mega-menu-moderne {
+        left: auto;
+        right: 0;
+        transform: translateY(10px);
+    }
+    html body .nav-menu-moderne .nav-item-moderne:nth-last-child(-n+4):hover > .mega-menu-moderne,
+    html body .nav-menu-moderne .nav-item-moderne:nth-last-child(-n+4).active > .mega-menu-moderne,
+    html body .nav-menu-moderne .nav-item-moderne:nth-last-child(-n+4):has(:focus-visible) > .mega-menu-moderne {
+        transform: translateY(0);
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    html body .mega-menu-moderne { min-width: min(560px, 92vw); }
+    html body .nav-menu-moderne .nav-link-moderne { padding-left: 10px; padding-right: 10px; }
+}
+
+/* ---------------------------------------------------------------------
+   2.6 Boutons flottants (diagnostic, chatbot, retour en haut)
+   Sur mobile : plus compacts, empilés, au-dessus de la barre iPhone.
+   --------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+    /* « Trouver ma solution » devient un bouton rond */
+    html body .diagnostic-float-btn {
+        left: calc(16px + env(safe-area-inset-left));
+        bottom: calc(16px + env(safe-area-inset-bottom));
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    html body .diagnostic-float-btn .float-text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+    html body .diagnostic-float-btn .pulse-ring { border-radius: 50%; }
+
+    html body #chatbot-root {
+        right: calc(16px + env(safe-area-inset-right));
+        bottom: calc(16px + env(safe-area-inset-bottom));
+    }
+    html body #chatbot-root .cb-toggle { width: 56px; height: 56px; }
+
+    html body .back-to-top-moderne {
+        right: calc(20px + env(safe-area-inset-right));
+        bottom: calc(84px + env(safe-area-inset-bottom));
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Le bas du pied de page n'est plus caché par les boutons flottants */
+    html body footer::after {
+        content: "";
+        display: block;
+        height: calc(72px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Fenêtre du chatbot : pleine largeur utile sur téléphone */
+@media (max-width: 480px) {
+    html body #chatbot-root .cb-window {
+        right: 0;
+        width: calc(100vw - 32px);
+        height: calc(100vh - 120px);
+    }
+    @supports (height: 100dvh) {
+        html body #chatbot-root .cb-window { height: calc(100dvh - 120px); }
+    }
+}
+
+/* ---------------------------------------------------------------------
+   2.7 Zones tactiles : 44px minimum sur écran tactile
+   (l'apparence ne change pas, seule la zone cliquable grandit)
+   --------------------------------------------------------------------- */
+@media (max-width: 991.98px), (hover: none) {
+    /* Liens du pied de page et fil d'Ariane */
+    html body .footer-links-moderne { gap: 0; }
+    html body .footer-links-moderne a,
+    html body .breadcrumb-moderne a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+    /* Points des sliders : zone de toucher élargie autour du point */
+    html body .cours-dot,
+    html body .owl-dot,
+    html body .carousel-indicators [data-bs-target] {
+        position: relative;
+    }
+    html body .cours-dot::after,
+    html body .owl-dot::after,
+    html body .carousel-indicators [data-bs-target]::after {
+        content: "";
+        position: absolute;
+        inset: -14px;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   2.8 Modales et popups : jamais plus hautes que l'écran
+   --------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+    html body .modal-inscription,
+    html body .diagnostic-modal-card {
+        max-height: calc(100vh - 24px);
+    }
+    @supports (height: 100dvh) {
+        html body .modal-inscription,
+        html body .diagnostic-modal-card {
+            max-height: calc(100dvh - 24px);
+        }
+    }
+    html body .modal-inscription .modal-close,
+    html body .diagnostic-close-btn,
+    html body .newsletter-close {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   2.9 Formulaires : 16px minimum (pas de zoom automatique sur iPhone)
+   --------------------------------------------------------------------- */
+@media (max-width: 991.98px), (hover: none) {
+    html body input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="color"]),
+    html body select,
+    html body textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   2.10 Accessibilité : focus clavier visible
+   --------------------------------------------------------------------- */
+html body :is(a, button, input, select, textarea, summary, [tabindex], [role="button"]):focus-visible {
+    outline: 3px solid var(--orange, #FF6B35) !important;
+    outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------
+   2.11 Animations réduites (réglage système de l'utilisateur)
+   --------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    html body *,
+    html body *::before,
+    html body *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    html body .animate-scroll,
+    html body .animate-slide-left,
+    html body .animate-slide-right,
+    html body .animate-scale,
+    html body [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

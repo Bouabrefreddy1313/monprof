@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Digital Teens Collège - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Digital Teens, Codage, Robotique, Python, IA, Collège, Abidjan" name="keywords">
     <meta content="Activités numériques pour collégiens : robotique, programmation Python, IA, animation numérique et JavaScript à Abidjan." name="description">
@@ -1596,7 +1596,7 @@ body {
             <div class="col-12 stagger-item">
                 <div class="activite-card">
                     <div class="activite-header-img">
-                        <img src="asset/img/robo.jpg" alt="Champions de la Robotique">
+                        <img loading="lazy" decoding="async" src="asset/img/robo.jpg" alt="Champions de la Robotique">
                         <div class="activite-header-overlay">
                             <h3><i class="fas fa-robot"></i> Champions de la Robotique</h3>
                             <p>Concevoir, programmer et relever des défis technologiques</p>
@@ -1676,7 +1676,7 @@ body {
             <div class="col-12 stagger-item">
                 <div class="activite-card">
                     <div class="activite-header-img">
-                        <img src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique">
+                        <img loading="lazy" decoding="async" src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique">
                         <div class="activite-header-overlay">
                             <h3><i class="fas fa-laptop-code"></i> Champion de l'Animation Numérique</h3>
                             <p>Créer et maîtriser les outils numériques</p>
@@ -1753,7 +1753,7 @@ body {
             <div class="col-12 stagger-item">
                 <div class="activite-card">
                     <div class="activite-header-img">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=400&fit=crop" alt="Génies du Python">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=400&fit=crop" alt="Génies du Python">
                         <div class="activite-header-overlay">
                             <h3><i class="fab fa-python"></i> Génies du Python</h3>
                             <p>Apprendre à programmer et créer ses premières applications</p>
@@ -1832,7 +1832,7 @@ body {
             <div class="col-12 stagger-item">
                 <div class="activite-card">
                     <div class="activite-header-img">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=400&fit=crop" alt="Pionniers de l'IA">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=400&fit=crop" alt="Pionniers de l'IA">
                         <div class="activite-header-overlay">
                             <h3><i class="fas fa-brain"></i> Pionniers de l'IA</h3>
                             <p>Découvrir les technologies qui transforment le monde</p>
@@ -1909,7 +1909,7 @@ body {
             <div class="col-12 stagger-item">
                 <div class="activite-card">
                     <div class="activite-header-img">
-                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&h=400&fit=crop" alt="Génies du JavaScript">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&h=400&fit=crop" alt="Génies du JavaScript">
                         <div class="activite-header-overlay">
                             <h3><i class="fab fa-js"></i> Génies du JavaScript</h3>
                             <p>Créer ses premières pages web interactives</p>
@@ -2233,7 +2233,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>

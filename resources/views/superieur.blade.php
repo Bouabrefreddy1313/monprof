@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>MONPROFCHEZMOI-CI.COM - cours</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
@@ -21,8 +21,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="asset/css/bootstrap.min.css" rel="stylesheet">
@@ -103,7 +101,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                    <img class="img-fluid w-100" src="asset/img/SUP.jpg" alt="Image">
+                    <img loading="lazy" decoding="async" class="img-fluid w-100" src="asset/img/SUP.jpg" alt="Image">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn text-content" data-wow-delay="0.5s">
@@ -149,7 +147,7 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                    <img src="asset/img/logo.png" alt="" width="150px">                        </a>
+                    <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="" width="150px">                        </a>
                     
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Riviera 4 Synacassi 1, Abidjan, Cote d'Ivoire</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+225 01 53 75 15 44</p>

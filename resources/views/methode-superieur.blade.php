@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Soutien Académique Supérieur - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Soutien Académique, Enseignement Supérieur, Cours particuliers, Examens, Côte d'Ivoire, Abidjan" name="keywords">
     <meta content="Accompagnement personnalisé pour étudiants : soutien scolaire, préparation aux examens et méthodologie de travail à Abidjan." name="description">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Monprofchezmoi-ci.com - Codage & Robotique</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Cours de codage, robotique, programmation" name="keywords">
     <meta content="Programmation informatique pour enfants et adolescents - Animation numérique, JavaScript, Python, IA et Robotique" name="description">
@@ -1679,7 +1679,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique">
+                    <img loading="lazy" decoding="async" src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique">
                     <div class="programme-image-badge"><i class="fas fa-child"></i> CP à CM2</div>
                 </div>
                 <div class="programme-text">
@@ -1779,7 +1779,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="asset/img/js.jpg" alt="Génies du Python">
+                    <img loading="lazy" decoding="async" src="asset/img/js.jpg" alt="Génies du Python">
                     <div class="programme-image-badge"><i class="fab fa-python"></i> CM1 – CM2</div>
                 </div>
                 <div class="programme-text">
@@ -1879,7 +1879,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="asset/img/vir.jpeg" alt="Pionniers de l'IA">
+                    <img loading="lazy" decoding="async" src="asset/img/vir.jpeg" alt="Pionniers de l'IA">
                     <div class="programme-image-badge"><i class="fas fa-brain"></i> CM1 – CM2</div>
                 </div>
                 <div class="programme-text">
@@ -1977,7 +1977,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="asset/img/js.jpeg" alt="Génies du JavaScript">
+                    <img loading="lazy" decoding="async" src="asset/img/js.jpeg" alt="Génies du JavaScript">
                     <div class="programme-image-badge"><i class="fab fa-js"></i> CM2 avancé – Collège</div>
                 </div>
                 <div class="programme-text">
@@ -2131,7 +2131,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -2209,11 +2209,6 @@ window.addEventListener('scroll', function() {
     const backToTop = document.getElementById('backToTop');
     if (window.scrollY > 500) backToTop.classList.add('visible');
     else backToTop.classList.remove('visible');
-});
-
-// Spinner
-window.addEventListener('load', function() {
-    setTimeout(() => {
 });
 
 // Tab Switching

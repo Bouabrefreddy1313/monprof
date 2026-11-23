@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Orientation Terminale - Monprofchezmoi-ci.com</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Orientation Terminale, Bac, Enseignement supérieur, Parcoursup, Abidjan, Côte d'Ivoire" name="keywords">
     <meta content="Accompagnement personnalisé pour les élèves de Terminale : choix post-Bac, candidatures et préparation à l'enseignement supérieur à Abidjan." name="description">
@@ -1868,7 +1868,7 @@ body {
                 </div>
             </div>
             <div class="hero-image-wrapper animate-slide-right">
-                <img src="asset/img/don1.jpeg" alt="Élève africain de Terminale préparant son avenir" class="hero-image-main">
+                <img loading="lazy" decoding="async" src="asset/img/don1.jpeg" alt="Élève africain de Terminale préparant son avenir" class="hero-image-main">
                 <div class="floating-card floating-card-1">
                     <i class="fas fa-graduation-cap"></i>
                     <div>
@@ -2548,7 +2548,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
