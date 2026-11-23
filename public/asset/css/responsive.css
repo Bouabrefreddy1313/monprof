@@ -476,7 +476,7 @@ html body .topbar-info-minimal a:hover { color: var(--orange); }
 }
 @media (max-width: 374.98px) {
     /* Très petits écrans : on garde uniquement le téléphone */
-    html body .topbar-social-minimal { display: none; }
+    html body .topbar-minimal .topbar-social-minimal { display: none; }
     html body .topbar-info-minimal { margin-inline: auto; }
 }
 
