@@ -96,6 +96,8 @@
 
         .carte strong { font-size: 1.35rem; font-weight: 800; }
         .carte span.desc { color: var(--bleu-clair); line-height: 1.5; }
+        .carte .accroche { display: block; font-weight: 700; color: var(--bleu); margin-bottom: 2px; }
+        .carte .slogan { display: block; margin-bottom: 8px; }
 
         .carte .fleche {
             margin-top: auto;
@@ -144,7 +146,11 @@
             @endif
             <span class="icone" aria-hidden="true"><i class="fas fa-user-graduate"></i></span>
             <strong>Particulier</strong>
-            <span class="desc">Soutien scolaire, cours à domicile, activités extrascolaires et accompagnement pour vos enfants ou vous-même.</span>
+            <span class="desc">
+                <span class="accroche">Une offre pour toute la famille</span>
+                <em class="slogan">Un accompagnement adapté à vos besoins !</em>
+                Soutien scolaire, activités extrascolaires et accompagnement personnalisé pour les enfants, les adolescents et les adultes.
+            </span>
             <span class="fleche">Accéder à l'espace particuliers <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
         </button>
 
