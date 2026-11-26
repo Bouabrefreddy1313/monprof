@@ -125,28 +125,28 @@
         </div>
         <ul class="sidebar-nav">
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.dashboard') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.dashboard') }}" class="sidebar-nav-link">
                     <i class="fas fa-tachometer-alt"></i> <span>Dashboard Ventes</span>
                 </a>
             </li>
             <li class="sidebar-section-label">Module Diagnostic</li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
                     <i class="fas fa-chart-pie"></i> <span>Entonnoir & Stats</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.questions') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions') }}" class="sidebar-nav-link">
                     <i class="fas fa-question-circle"></i> <span>Questionnaire No-Code</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.courses') }}" class="sidebar-nav-link active">
+                <a href="{{ route('particuliers.superadmin.diagnostic.courses') }}" class="sidebar-nav-link active">
                     <i class="fas fa-tags"></i> <span>Cours & Tags Matching</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.settings') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.settings') }}" class="sidebar-nav-link">
                     <i class="fas fa-sliders-h"></i> <span>Configuration Module</span>
                 </a>
             </li>
@@ -181,7 +181,7 @@
 
         <!-- Filter Card -->
         <div class="card-custom py-3">
-            <form action="{{ route('superadmin.diagnostic.courses') }}" method="GET" class="row g-2 align-items-center">
+            <form action="{{ route('particuliers.superadmin.diagnostic.courses') }}" method="GET" class="row g-2 align-items-center">
                 <div class="col-md-4">
                     <input type="text" name="search" class="form-control form-control-sm" placeholder="Rechercher par titre de cours..." value="{{ request('search') }}">
                 </div>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="col-md-2 d-flex gap-2">
                     <button type="submit" class="btn btn-warning btn-sm text-white fw-bold w-100"><i class="fas fa-filter"></i></button>
-                    <a href="{{ route('superadmin.diagnostic.courses') }}" class="btn btn-light btn-sm text-secondary">Reset</a>
+                    <a href="{{ route('particuliers.superadmin.diagnostic.courses') }}" class="btn btn-light btn-sm text-secondary">Reset</a>
                 </div>
             </form>
         </div>
@@ -252,7 +252,7 @@
                                         @forelse($c->diagnosticTags as $tag)
                                             <span class="tag-badge {{ $tag->est_suggere && !$tag->est_valide ? 'suggested' : '' }}">
                                                 <strong>{{ $tag->type_tag }}:</strong> {{ $tag->valeur }}
-                                                <form action="{{ route('superadmin.diagnostic.tags.destroy', $tag->id) }}" method="POST" class="d-inline ms-1" onsubmit="return confirm('Supprimer ce tag ?');">
+                                                <form action="{{ route('particuliers.superadmin.diagnostic.tags.destroy', $tag->id) }}" method="POST" class="d-inline ms-1" onsubmit="return confirm('Supprimer ce tag ?');">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" style="background:none;border:none;color:#EF4444;padding:0;font-size:0.7rem;">&times;</button>
@@ -272,14 +272,14 @@
                                             <i class="fas fa-edit"></i>
                                         </button>
                                         @if($c->diagnosticTags->where('est_valide', false)->count() > 0)
-                                            <form action="{{ route('superadmin.diagnostic.courses.validate-tags', $c->id) }}" method="POST" class="d-inline">
+                                            <form action="{{ route('particuliers.superadmin.diagnostic.courses.validate-tags', $c->id) }}" method="POST" class="d-inline">
                                                 @csrf
                                                 <button type="submit" class="btn btn-outline-success btn-sm" title="Valider les tags suggérés">
                                                     <i class="fas fa-check"></i>
                                                 </button>
                                             </form>
                                         @endif
-                                        <a href="{{ route('cours', $c->id) }}" target="_blank" class="btn btn-light btn-sm border" title="Voir la fiche">
+                                        <a href="{{ route('particuliers.cours', $c->id) }}" target="_blank" class="btn btn-light btn-sm border" title="Voir la fiche">
                                             <i class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
@@ -290,7 +290,7 @@
                             <div class="modal fade" id="editCourseModal{{ $c->id }}" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
-                                        <form action="{{ route('superadmin.diagnostic.courses.update', $c->id) }}" method="POST">
+                                        <form action="{{ route('particuliers.superadmin.diagnostic.courses.update', $c->id) }}" method="POST">
                                             @csrf
                                             <div class="modal-header">
                                                 <h5 class="modal-title fw-bold">Paramètres Diagnostic : {{ Str::limit($c->titre, 40) }}</h5>
@@ -363,7 +363,7 @@
 <div class="modal fade" id="rulesModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="{{ route('superadmin.diagnostic.rules.update') }}" method="POST">
+            <form action="{{ route('particuliers.superadmin.diagnostic.rules.update') }}" method="POST">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title fw-bold"><i class="fas fa-sliders-h text-warning me-2"></i> Pondérations de l'Algorithme</h5>
@@ -395,7 +395,7 @@
 <div class="modal fade" id="mappingModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form action="{{ route('superadmin.diagnostic.mapping.update') }}" method="POST">
+            <form action="{{ route('particuliers.superadmin.diagnostic.mapping.update') }}" method="POST">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title fw-bold"><i class="fas fa-sitemap text-warning me-2"></i> Mapping Formations &rarr; Parcours</h5>
@@ -443,7 +443,7 @@
 async function toggleCourseActive(courseId) {
     const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     try {
-        const res = await fetch(`/superadmin/diagnostic/courses/${courseId}/toggle-active`, {
+        const res = await fetch(`/particuliers/superadmin/diagnostic/courses/${courseId}/toggle-active`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

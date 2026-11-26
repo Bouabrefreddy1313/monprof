@@ -56,6 +56,12 @@ return [
         'driver' => 'session',
         'provider' => 'comm',
     ],
+
+        // Espace entreprises (ancien site 2) : comptes de la table pro_users
+        'entreprise' => [
+            'driver' => 'session',
+            'provider' => 'pro_users',
+        ],
     ],
 
     /*
@@ -92,6 +98,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Comm::class,
         ],
+        'pro_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Entreprises\User::class,
+        ],
     ],
 
     /*
@@ -117,6 +127,14 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        // Espace entreprises
+        'pro_users' => [
+            'provider' => 'pro_users',
+            'table' => 'pro_password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
         ],

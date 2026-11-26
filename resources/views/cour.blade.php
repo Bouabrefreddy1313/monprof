@@ -10,7 +10,7 @@
 
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,7 +22,7 @@
     <!-- Libraries Stylesheet -->
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="asset/css/formationcss/cssform/style.css" rel="stylesheet">
+    <link href="/asset/css/formationcss/cssform/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,8 +40,8 @@
             </div>
             <div class="modal-body">
                 <div class="list-group">
-                    <a href="{{ url('/bouge') }}" class="list-group-item list-group-item-action">Bouge ta grammaire et ton orthographe</a>
-                    <a href="{{ url('/codage') }}" class="list-group-item list-group-item-action">Codage informatique pour 8-14 ans</a>
+                    <a href="{{ url('/particuliers/bouge') }}" class="list-group-item list-group-item-action">Bouge ta grammaire et ton orthographe</a>
+                    <a href="{{ url('/particuliers/codage') }}" class="list-group-item list-group-item-action">Codage informatique pour 8-14 ans</a>
                 </div>
             </div>
             <div class="modal-footer">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="{{ url('/contact') }}" class="btn btn-primary">Nous contacter</a>
+                    <a href="{{ url('/particuliers/contact') }}" class="btn btn-primary">Nous contacter</a>
                 </div>
             </div>
             <div class="col-lg-4 sticky-section">
@@ -127,7 +127,7 @@
                                         <span class="text-dark">4.5</span>
                                     </div>
                                     <div class="text-center mt-4">
-    <a href="{{ route('order.form', ['id' => $cours->id]) }}" class="btn btn-primary" target="_blank">Je commande</a>
+    <a href="{{ route('particuliers.order.form', ['id' => $cours->id]) }}" class="btn btn-primary" target="_blank">Je commande</a>
 </div>
 
                                 </div>
@@ -148,8 +148,8 @@
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="index.html" class="navbar-brand">
-                            <img src="asset/img/logo.png" alt="" width="150px">                        </a>
+                        <a href="/index.html" class="navbar-brand">
+                            <img src="/asset/img/logo.png" alt="" width="150px">                        </a>
                         <p class="mt-3 mb-4">Leader de l’accompagnement éducatif en Côte d’Ivoire, groupe  éducatif expérimenté et innovant, Monprofchezmoi est avant tout  une entreprise à taille humaine, capable de répondre au plus près  de chez vous à chacun de vos besoins.
 Depuis 2019, Monprofchezmoi accompagne près de 500 familles  chaque année. Nous avons développé une approche pédagogique  qui permet de prendre en compte les besoins individuels de nos  élèves, avec le souci permanent d’atteindre l’objectif de chacun.
 </p>
@@ -242,12 +242,12 @@ Depuis 2019, Monprofchezmoi accompagne près de 500 familles  chaque année. Nou
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
 
     <!-- Template Javascript -->
-    <script src="asset/js/formationjs/js/main.js"></script>
+    <script src="/asset/js/formationjs/js/main.js"></script>
 
 @include('components.newsletter-popup')
 @include('components.chatbot')

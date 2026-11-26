@@ -24,8 +24,8 @@ return [
     'password'   => env('CINETPAY_PASSWORD'),
     'base_url'   => env('CINETPAY_BASE_URL', 'https://api.cinetpay.net'),
     'checkout_url' => env('CINETPAY_CHECKOUT_URL', 'https://secure.cinetpay.net'),
-    'return_url' => env('CINETPAY_RETURN_URL', 'https://monprofchezmoi-ci.com/payment/return'),
-    'notify_url' => env('CINETPAY_NOTIFY_URL', 'https://monprofchezmoi-ci.com/payment/notify'),
+    'return_url' => env('CINETPAY_RETURN_URL', 'https://monprofchezmoi-ci.com/particuliers/payment/return'),
+    'notify_url' => env('CINETPAY_NOTIFY_URL', 'https://monprofchezmoi-ci.com/particuliers/payment/notify'),
 ],
 
     'geniuspay' => [

@@ -65,7 +65,7 @@ class MatiereController extends Controller
             'admin_id' => $request->admin_id,
         ]);
     
-        return redirect()->route('matieres.index')->with('success', 'Matière ajoutée avec succès.');
+        return redirect()->route('particuliers.matieres.index')->with('success', 'Matière ajoutée avec succès.');
     }
     public function showCours($id)
     {
@@ -74,7 +74,7 @@ class MatiereController extends Controller
             $lecons = Lecons::where('matiere_id', $id)->get();
             return view('lecons.index', compact('matiere', 'lecons'));
         } else {
-            return redirect()->route('login')->with('message', 'Veuillez vous connecter pour accéder aux leçons.');
+            return redirect()->route('particuliers.login')->with('message', 'Veuillez vous connecter pour accéder aux leçons.');
         }
     }
     

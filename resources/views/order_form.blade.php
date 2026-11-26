@@ -10,7 +10,7 @@
 
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,8 +72,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="list-group">
-                        <a href="{{ url('/orientation/gauche') }}" class="list-group-item list-group-item-action">Vous êtes lycéen : 2nd , 1ère, Terminale</a>
-                        <a href="{{ url('/orientation/droite') }}" class="list-group-item list-group-item-action">Vous avez entamé des études supérieures</a>
+                        <a href="{{ url('/particuliers/orientation/gauche') }}" class="list-group-item list-group-item-action">Vous êtes lycéen : 2nd , 1ère, Terminale</a>
+                        <a href="{{ url('/particuliers/orientation/droite') }}" class="list-group-item list-group-item-action">Vous avez entamé des études supérieures</a>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -99,7 +99,7 @@
     </div>
 @endif
 
-                    <form action="{{ route('order.store') }}" method="POST">
+                    <form action="{{ route('particuliers.order.store') }}" method="POST">
     @csrf
 
     <div class="mb-3">
@@ -214,8 +214,8 @@
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="index.html" class="navbar-brand">
-                            <img src="asset/img/logo.png" alt="" width="150px">                        </a>
+                        <a href="/index.html" class="navbar-brand">
+                            <img src="/asset/img/logo.png" alt="" width="150px">                        </a>
                         <p class="mt-3 mb-4">Leader de l’accompagnement éducatif en Côte d’Ivoire, groupe  éducatif expérimenté et innovant, Monprofchezmoi est avant tout  une entreprise à taille humaine, capable de répondre au plus près  de chez vous à chacun de vos besoins.
 Depuis 2019, Monprofchezmoi accompagne près de 500 familles  chaque année. Nous avons développé une approche pédagogique  qui permet de prendre en compte les besoins individuels de nos  élèves, avec le souci permanent d’atteindre l’objectif de chacun.
 </p>
@@ -303,11 +303,11 @@ Depuis 2019, Monprofchezmoi accompagne près de 500 familles  chaque année. Nou
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/counterup/counterup.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="/asset/js/cours/main.js"></script>

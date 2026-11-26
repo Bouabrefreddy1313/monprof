@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('admin.subscribers.index') }}">Abonnés</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('particuliers.admin.subscribers.index') }}">Abonnés</a></li>
             <li class="breadcrumb-item active">Campagne</li>
         </ol>
     </nav>
@@ -25,7 +25,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('admin.subscribers.send-campaign') }}" method="POST">
+            <form action="{{ route('particuliers.admin.subscribers.send-campaign') }}" method="POST">
                 @csrf
 
                 <div class="mb-3">
@@ -53,7 +53,7 @@
                 <button type="submit" class="btn btn-warning btn-lg" onclick="return confirm('Envoyer cette campagne à {{ $total }} abonné(s) ?')">
                     📨 Envoyer la campagne
                 </button>
-                <a href="{{ route('admin.subscribers.index') }}" class="btn btn-secondary btn-lg">Annuler</a>
+                <a href="{{ route('particuliers.admin.subscribers.index') }}" class="btn btn-secondary btn-lg">Annuler</a>
             </form>
         </div>
     </div>

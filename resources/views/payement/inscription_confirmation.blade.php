@@ -170,7 +170,7 @@
                 <div class="montant">{{ number_format($inscription->frais_reservation, 0, '', ' ') }} FCFA</div>
             </div>
 
-            <form action="{{ route('payment.initiate') }}" method="POST">
+            <form action="{{ route('particuliers.payment.initiate') }}" method="POST">
     @csrf
     <input type="hidden" name="reservation_token" value="{{ $inscription->token }}">
     <input type="hidden" name="type" value="inscription">

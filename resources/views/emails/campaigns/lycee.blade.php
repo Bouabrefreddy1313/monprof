@@ -48,23 +48,23 @@
                 <div class="program-card">
                     <h3>📝 Préparation au Bac</h3>
                     <p>Un programme complet avec des révisions structurées, des annales corrigées et des méthodologies pour maximiser vos résultats.</p>
-                    <a href="{{ url('/lycee-preparation') }}" class="program-link">Découvrir →</a>
+                    <a href="{{ url('/particuliers/lycee-preparation') }}" class="program-link">Découvrir →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>🧭 Orientation scolaire</h3>
                     <p>Un coaching personnalisé pour vous aider à choisir votre filière et préparer votre post-bac en toute sérénité.</p>
-                    <a href="{{ url('/terminale') }}" class="program-link">En savoir plus →</a>
+                    <a href="{{ url('/particuliers/terminale') }}" class="program-link">En savoir plus →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>⭐ Coaching méthodologique</h3>
                     <p>Des techniques de travail efficaces pour optimiser vos révisions, gérer le stress et atteindre vos objectifs.</p>
-                    <a href="{{ url('/lycee-coaching') }}" class="program-link">Voir plus →</a>
+                    <a href="{{ url('/particuliers/lycee-coaching') }}" class="program-link">Voir plus →</a>
                 </div>
 
                 <div class="cta-section">
-                    <a href="{{ url('/lycee-preparation') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/lycee-preparation') }}" class="cta-button">
                         Voir nos programmes lycée →
                     </a>
                 </div>
@@ -78,9 +78,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

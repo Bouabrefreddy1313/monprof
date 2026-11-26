@@ -69,7 +69,7 @@ class AdminVideoController extends Controller
             'thumbnail' => $thumbnailPath,
         ]);
 
-        return redirect()->route('admin.videos.index')
+        return redirect()->route('particuliers.admin.videos.index')
             ->with('success', 'Vidéo ajoutée avec succès.');
     }
 
@@ -113,7 +113,7 @@ class AdminVideoController extends Controller
 
         $video->update($data);
 
-        return redirect()->route('admin.videos.index')
+        return redirect()->route('particuliers.admin.videos.index')
             ->with('success', 'Vidéo mise à jour avec succès.');
     }
 
@@ -126,7 +126,7 @@ class AdminVideoController extends Controller
 
         $video->delete();
 
-        return redirect()->route('admin.videos.index')
+        return redirect()->route('particuliers.admin.videos.index')
             ->with('success', 'Vidéo supprimée avec succès.');
     }
 }

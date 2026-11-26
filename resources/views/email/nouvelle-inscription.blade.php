@@ -70,7 +70,7 @@
         </div>
 
         <center>
-            <a href="{{ url('/admin/inscriptions/' . $inscription->id) }}" class="btn">Voir l'inscription</a>
+            <a href="{{ url('/particuliers/admin/inscriptions/' . $inscription->id) }}" class="btn">Voir l'inscription</a>
         </center>
     </div>
 </body>

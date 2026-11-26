@@ -231,7 +231,7 @@ class DiagnosticRecommendationService
             'prix' => $cours->prix ?? 'Tarif sur devis personnalisé',
             'formateur' => $cours->formateur ?? 'Enseignant / Formateur qualifié certifié',
             'image' => $cours->image ? asset('storage/' . $cours->image) : asset('asset/img/hero-illustration.png'),
-            'url' => route('cours', $cours->id),
+            'url' => route('particuliers.cours', $cours->id),
         ];
     }
 

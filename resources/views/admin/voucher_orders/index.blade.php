@@ -413,11 +413,11 @@
     </div>
 
     <div class="header-actions">
-        <a href="{{ route('vouchers.create') }}" class="btn btn-primary">
+        <a href="{{ route('particuliers.vouchers.create') }}" class="btn btn-primary">
             <i class="fas fa-plus"></i> Ajouter un bon
         </a>
 
-        <a href="{{ route('vouchers.index') }}" class="btn btn-secondary">
+        <a href="{{ route('particuliers.vouchers.index') }}" class="btn btn-secondary">
             <i class="fas fa-list"></i> Voir la liste des bons
         </a>
     </div>
@@ -487,7 +487,7 @@
                             <td>
                                 @if($order->status === 'pending')
                                     <div class="action-buttons">
-                                        <form action="{{ route('admin.orders.validate', $order) }}" method="POST" class="validate-form">
+                                        <form action="{{ route('particuliers.admin.orders.validate', $order) }}" method="POST" class="validate-form">
                                             @csrf
                                             <button class="btn btn-success" type="submit">
                                                 <i class="fas fa-check"></i>
@@ -495,7 +495,7 @@
                                             </button>
                                         </form>
 
-                                        <form action="{{ route('admin.orders.reject', $order) }}" method="POST" class="reject-form">
+                                        <form action="{{ route('particuliers.admin.orders.reject', $order) }}" method="POST" class="reject-form">
                                             @csrf
                                             <button class="btn btn-danger" type="submit">
                                                 <i class="fas fa-times"></i>

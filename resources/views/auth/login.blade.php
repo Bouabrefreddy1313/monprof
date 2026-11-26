@@ -428,7 +428,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}" id="loginForm">
+        <form method="POST" action="{{ route('particuliers.login') }}" id="loginForm">
             @csrf
 
             <!-- Email -->
@@ -483,8 +483,8 @@
                     <label for="remember_me">Se souvenir de moi</label>
                 </div>
 
-                @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" class="forgot-link">
+                @if (Route::has('particuliers.password.request'))
+                    <a href="{{ route('particuliers.password.request') }}" class="forgot-link">
                         Mot de passe oublié ?
                     </a>
                 @endif
@@ -503,14 +503,14 @@
 
             <!-- Register -->
             <div class="register-wrap">
-                <p>Pas encore de compte ? <a href="{{ route('register') }}">Créer un compte</a></p>
+                <p>Pas encore de compte ? <a href="{{ route('particuliers.register') }}">Créer un compte</a></p>
             </div>
         </form>
     </div>
 
     <!-- Back to home -->
     <div class="back-home">
-        <a href="{{ url('/') }}">
+        <a href="{{ url('/particuliers') }}">
             <i class="fas fa-arrow-left"></i>
             Retour à l'accueil
         </a>

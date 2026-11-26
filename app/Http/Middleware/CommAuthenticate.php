@@ -17,7 +17,7 @@ class CommAuthenticate
     {
         
             if (!session()->has('comm_id')) {
-                return redirect('/comm/login');
+                return redirect('/particuliers/comm/login');
             }
     
             return $next($request);

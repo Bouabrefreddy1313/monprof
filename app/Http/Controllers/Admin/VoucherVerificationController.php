@@ -163,7 +163,7 @@ class VoucherVerificationController extends Controller
         }
 
         return redirect()
-            ->route('admin.bons.verifier', ['code' => $order->code])
+            ->route('particuliers.admin.bons.verifier', ['code' => $order->code])
             ->with('success', "✅ Le bon {$order->code} a été validé et lié avec succès à la formation « {$formation->titre} » !");
     }
 }

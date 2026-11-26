@@ -203,7 +203,7 @@
         messageDiv.className = 'newsletter-message';
         messageDiv.textContent = '';
 
-        fetch('/subscriber/subscribe', {
+        fetch('/particuliers/subscriber/subscribe', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

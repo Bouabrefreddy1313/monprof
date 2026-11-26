@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Ajouter une formation</title>
-    <link rel="stylesheet" href="asset/css/vue.css">
+    <link rel="stylesheet" href="/asset/css/vue.css">
 </head>
 <body>
 @include('partials.header')
 
-<form action="{{ route('cours.store') }}" method="POST"  enctype="multipart/form-data">
+<form action="{{ route('particuliers.cours.store') }}" method="POST"  enctype="multipart/form-data">
     @csrf
     <div>
         <label for="titre">Titre du cours :</label>
@@ -107,7 +107,7 @@
 
             if (formationId) {
                 $.ajax({
-                    url: '/getSousFormations/' + formationId,
+                    url: '/particuliers/getSousFormations/' + formationId,
                     type: 'GET',
                     dataType: 'json',
                     success: function(data) {

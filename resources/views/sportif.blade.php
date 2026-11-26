@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     <!-- Libraries Stylesheet -->
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     @include('partials.responsive-assets')

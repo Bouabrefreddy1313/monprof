@@ -102,7 +102,7 @@
             </div>
         @endif
 
-        <form action="{{ route('superadmin.login.submit') }}" method="POST">
+        <form action="{{ route('particuliers.superadmin.login.submit') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="email"><i class="fas fa-envelope"></i> Email</label>
@@ -124,7 +124,7 @@
         </form>
 
         <div class="link-register">
-            Pas encore de compte ? <a href="{{ route('superadmin.register.form') }}">S'inscrire ici</a>
+            Pas encore de compte ? <a href="{{ route('particuliers.superadmin.register.form') }}">S'inscrire ici</a>
         </div>
     </div>
 

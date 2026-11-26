@@ -59,19 +59,19 @@
                                 @endif
                             </div>
                             <p>{{ Str::limit($course->description ?? $course->objectif ?? 'Activité encadrée par un coach ou un animateur expert.', 150) }}</p>
-                            <a href="{{ url('/cours/' . $course->id) }}" class="course-link">Voir la formation →</a>
+                            <a href="{{ url('/particuliers/cours/' . $course->id) }}" class="course-link">Voir la formation →</a>
                         </div>
                     @endforeach
                 @else
                     <div class="course-card">
                         <h3>⚽ Sport & activités extrascolaires</h3>
                         <p>Coaching sportif à domicile, codage pour enfants, musique, art et langues. Des activités encadrées pour s'épanouir et développer de nouveaux talents.</p>
-                        <a href="{{ url('/formations') }}" class="course-link">Voir toutes les formations →</a>
+                        <a href="{{ url('/particuliers/formations') }}" class="course-link">Voir toutes les formations →</a>
                     </div>
                 @endif
 
                 <div class="cta-section">
-                    <a href="{{ url('/formations') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/formations') }}" class="cta-button">
                         Découvrir nos activités →
                     </a>
                 </div>
@@ -85,9 +85,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

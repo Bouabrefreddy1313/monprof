@@ -13,7 +13,7 @@ class Authenticate extends Middleware
             throw new \Illuminate\Auth\AuthenticationException(
                 'Unauthenticated.',
                 $guards,
-                route('superadmin.login.form')
+                route('particuliers.superadmin.login.form')
             );
         }
 
@@ -21,7 +21,7 @@ class Authenticate extends Middleware
             throw new \Illuminate\Auth\AuthenticationException(
                 'Unauthenticated.',
                 $guards,
-                route('admin.login.form')
+                route('particuliers.admin.login.form')
             );
         }
 
@@ -34,6 +34,15 @@ class Authenticate extends Middleware
 
     protected function redirectTo(Request $request): ?string
     {
-        return $request->expectsJson() ? null : route('login');
+        if ($request->expectsJson()) {
+            return null;
+        }
+
+        // Espace entreprises : page de connexion des comptes entreprise
+        if ($request->is('entreprises', 'entreprises/*')) {
+            return route('entreprises.login');
+        }
+
+        return route('particuliers.login');
     }
 }

@@ -48,23 +48,23 @@
                 <div class="program-card">
                     <h3>📖 Soutien scolaire toutes matières</h3>
                     <p>Un suivi personnalisé en français, mathématiques, anglais, histoire-géographie, sciences... Pour combler les lacunes et renforcer les acquis.</p>
-                    <a href="{{ url('/soutien-college') }}" class="program-link">En savoir plus →</a>
+                    <a href="{{ url('/particuliers/soutien-college') }}" class="program-link">En savoir plus →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>🎓 Préparation au Brevet</h3>
                     <p>Un programme intensif et des méthodologies éprouvées pour préparer le Diplôme National du Brevet avec confiance.</p>
-                    <a href="{{ url('/soutien-brevet') }}" class="program-link">Découvrir →</a>
+                    <a href="{{ url('/particuliers/soutien-brevet') }}" class="program-link">Découvrir →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>⭐ Coaching scolaire</h3>
                     <p>Un accompagnement méthodologique pour apprendre à s'organiser, prendre des notes efficaces et gérer son temps.</p>
-                    <a href="{{ url('/coaching') }}" class="program-link">En savoir plus →</a>
+                    <a href="{{ url('/particuliers/coaching') }}" class="program-link">En savoir plus →</a>
                 </div>
 
                 <div class="cta-section">
-                    <a href="{{ url('/soutien-college') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/soutien-college') }}" class="cta-button">
                         Voir nos programmes collège →
                     </a>
                 </div>
@@ -78,9 +78,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

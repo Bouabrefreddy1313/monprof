@@ -219,7 +219,7 @@ body {
             <nav class="sidebar-nav">
                 <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
                 <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
-                <form id="logout-form" action="{{ route('comm.logout') }}" method="POST" style="display: none;">
+                <form id="logout-form" action="{{ route('particuliers.comm.logout') }}" method="POST" style="display: none;">
     @csrf
 </form>
 
@@ -248,7 +248,7 @@ body {
                             <p>Gérer les soutiens scolaires</p>
                         </div>
                     </div>
-                    <a href="{{ url('/voirsoutien') }}" class="card-button">
+                    <a href="{{ url('/particuliers/voirsoutien') }}" class="card-button">
                         Voir <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -263,7 +263,7 @@ body {
                             <p>Gérer les cours dcg & dscg</p>
                         </div>
                     </div>
-                    <a href="{{ url('/payments/index') }}" class="card-button">
+                    <a href="{{ url('/particuliers/payments/index') }}" class="card-button">
                         Voir <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -278,7 +278,7 @@ body {
                             <p>Gérer les activités extrascolaires</p>
                         </div>
                     </div>
-                    <a href="{{ url('/voircontact') }}" class="card-button">
+                    <a href="{{ url('/particuliers/voircontact') }}" class="card-button">
                         Voir <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -293,7 +293,7 @@ body {
                             <p>Gérer les formations individuelles</p>
                         </div>
                     </div>
-                    <a href="{{ url('/voircours') }}" class="card-button">
+                    <a href="{{ url('/particuliers/voircours') }}" class="card-button">
                         Voir <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -323,7 +323,7 @@ body {
                             <p>Gérer les bons cadeaux</p>
                         </div>
                     </div>
-                    <a href="{{ url('/admin/orders') }}" class="card-button">
+                    <a href="{{ url('/particuliers/admin/orders') }}" class="card-button">
                         Voir <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -338,7 +338,7 @@ body {
                             <p>Accéder à la page de sélection</p>
                         </div>
                     </div>
-                    <a href="{{ url('/choisir') }}" class="card-button">
+                    <a href="{{ url('/particuliers/choisir') }}" class="card-button">
                         Ouvrir <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Ajouter une sous-formation</title>
     
-    <link rel="stylesheet" href="asset/css/vue.css">
+    <link rel="stylesheet" href="/asset/css/vue.css">
 </head>
 <body>
 @include('partials.header')
@@ -24,7 +24,7 @@
         </div>
     @endif
 
-    <form action="{{ route('sous_formations.store') }}" method="POST">
+    <form action="{{ route('particuliers.sous_formations.store') }}" method="POST">
         @csrf
         <div>
             <label for="titre">Titre de la sous-formation :</label>

@@ -1,4 +1,4 @@
-@if(!request()->is('admin*') && !request()->is('superadmin*') && !auth('admin')->check() && !auth('superadmin')->check())
+@if(!request()->is('particuliers/admin*') && !request()->is('particuliers/superadmin*') && !auth('admin')->check() && !auth('superadmin')->check())
 
 <!-- Floating CTA Button -->
 <div id="diagnosticFloatingBtn" class="diagnostic-float-btn" onclick="openDiagnosticModal()">
@@ -1064,7 +1064,7 @@
         if (isInitialized) return;
         try {
             const utmParams = new URLSearchParams(window.location.search);
-            const res = await fetch('/api/diagnostic/init', {
+            const res = await fetch('/particuliers/api/diagnostic/init', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1320,7 +1320,7 @@
             document.getElementById('diagScreenQuestion').style.display = 'none';
             document.getElementById('diagScreenLoading').style.display = 'block';
 
-            const res = await fetch('/api/diagnostic/answer', {
+            const res = await fetch('/particuliers/api/diagnostic/answer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1428,7 +1428,7 @@
 
     async function loadRecommendation() {
         try {
-            const res = await fetch('/api/diagnostic/recommendation', {
+            const res = await fetch('/particuliers/api/diagnostic/recommendation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1473,7 +1473,7 @@
             const consentement = document.getElementById('leadConsentement').checked;
             const hp = document.getElementById('diagHoneypot').value;
 
-            const res = await fetch('/api/diagnostic/submit-lead', {
+            const res = await fetch('/particuliers/api/diagnostic/submit-lead', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

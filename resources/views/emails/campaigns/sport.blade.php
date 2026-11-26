@@ -48,23 +48,23 @@
                 <div class="program-card">
                     <h3>🏋️ Coaching personnalisé</h3>
                     <p>Un programme 100% adapté à votre niveau et vos objectifs. Perte de poids, prise de masse, cardio ou musculation.</p>
-                    <a href="{{ url('/sport-adulte') }}" class="program-link">En savoir plus →</a>
+                    <a href="{{ url('/particuliers/sport-adulte') }}" class="program-link">En savoir plus →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>🎯 Suivi nutritionnel</h3>
                     <p>Des conseils alimentaires personnalisés pour maximiser vos résultats et adopter un mode de vie sain.</p>
-                    <a href="{{ url('/sport-adulte') }}" class="program-link">Découvrir →</a>
+                    <a href="{{ url('/particuliers/sport-adulte') }}" class="program-link">Découvrir →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>⭐ Programme spécial</h3>
                     <p>Première séance d'évaluation offerte ! Découvrez notre méthode et définissez vos objectifs avec un coach expert.</p>
-                    <a href="{{ url('/sport-adulte') }}" class="program-link">Réserver →</a>
+                    <a href="{{ url('/particuliers/sport-adulte') }}" class="program-link">Réserver →</a>
                 </div>
 
                 <div class="cta-section">
-                    <a href="{{ url('/sport-adulte') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/sport-adulte') }}" class="cta-button">
                         Voir nos programmes sport →
                     </a>
                 </div>
@@ -78,9 +78,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

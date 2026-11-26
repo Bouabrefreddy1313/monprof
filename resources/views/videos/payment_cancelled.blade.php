@@ -19,7 +19,7 @@
             <div class="cancel-icon"><i class="fas fa-times"></i></div>
             <h2 class="fw-bold mb-3">Paiement annulé</h2>
             <p class="text-muted mb-4">Le paiement a été annulé ou a échoué. Vous pouvez réessayer.</p>
-            <a href="{{ url('/groupe') }}" class="btn btn-primary btn-lg w-100">
+            <a href="{{ url('/particuliers/groupe') }}" class="btn btn-primary btn-lg w-100">
                 <i class="fas fa-video"></i> Retour aux formations
             </a>
         </div>

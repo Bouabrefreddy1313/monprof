@@ -180,7 +180,7 @@
                     <p>
                         Nous avons élargi notre offre avec de nouveaux programmes adaptés à tous les niveaux. Découvrez nos formations en primaire, collège, lycée et même pour le supérieur.
                     </p>
-                    <a href="{{ url('/formations') }}" class="news-link">Voir toutes les formations →</a>
+                    <a href="{{ url('/particuliers/formations') }}" class="news-link">Voir toutes les formations →</a>
                 </div>
 
                 <div class="news-card">
@@ -188,7 +188,7 @@
                     <p>
                         Profitez de notre promotion exclusive : -20% sur votre première inscription pour toute nouvelle formation. Offre limitée dans le temps !
                     </p>
-                    <a href="{{ url('/') }}" class="news-link">En profiter maintenant →</a>
+                    <a href="{{ url('/particuliers') }}" class="news-link">En profiter maintenant →</a>
                 </div>
 
                 <div class="news-card">
@@ -196,11 +196,11 @@
                     <p>
                         Comment aider votre enfant à s'organiser pour ses révisions ? Nos experts partagent leurs meilleures méthodes et astuces pour une rentrée scolaire réussie.
                     </p>
-                    <a href="{{ url('/reussir') }}" class="news-link">Lire le guide complet →</a>
+                    <a href="{{ url('/particuliers/reussir') }}" class="news-link">Lire le guide complet →</a>
                 </div>
 
                 <div class="cta-section">
-                    <a href="{{ url('/formations') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/formations') }}" class="cta-button">
                         Découvrir toutes nos formations →
                     </a>
                 </div>
@@ -214,9 +214,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

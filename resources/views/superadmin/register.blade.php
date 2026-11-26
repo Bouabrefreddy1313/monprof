@@ -96,7 +96,7 @@
             </div>
         @endif
 
-        <form action="{{ route('superadmin.register.submit') }}" method="POST">
+        <form action="{{ route('particuliers.superadmin.register.submit') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name"><i class="fas fa-user"></i> Nom complet</label>
@@ -118,7 +118,7 @@
         </form>
 
         <div class="link-login">
-            Déjà un compte ? <a href="{{ route('superadmin.login.form') }}">Se connecter</a>
+            Déjà un compte ? <a href="{{ route('particuliers.superadmin.login.form') }}">Se connecter</a>
         </div>
     </div>
 

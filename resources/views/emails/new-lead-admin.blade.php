@@ -69,7 +69,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 30px;">
-                <a href="{{ route('admin.leads.show', $lead->id) }}" style="display: inline-block; background: #FF6B35; color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 10px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 12px rgba(255,107,53,0.3);">
+                <a href="{{ route('particuliers.admin.leads.show', $lead->id) }}" style="display: inline-block; background: #FF6B35; color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 10px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 12px rgba(255,107,53,0.3);">
                     Voir la fiche complète dans le Dashboard Admin &rarr;
                 </a>
             </div>

@@ -24,7 +24,7 @@ class ReservationConfirmation extends Mailable
                     ->view('emails.reservation_confirmation')
                     ->with([
                         'reservation' => $this->reservation,
-                        'url' => route('reservation.confirmation', ['token' => $this->reservation->token]),
+                        'url' => route('particuliers.reservation.confirmation', ['token' => $this->reservation->token]),
                     ]);
     }
 }

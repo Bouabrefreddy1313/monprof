@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +23,10 @@
 <!-- À ajouter dans le <head> de votre HTML -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="asset/css/courscss/style.css" rel="stylesheet">
+<link href="/asset/css/courscss/style.css" rel="stylesheet">
 </head>
 <style>
 /* ============================================
@@ -2855,7 +2855,7 @@ body {
                 <div class="hero-buttons-nouveau">
                     <a href="#solutions" class="btn-hero-nouveau btn-orange"><i class="fas fa-book"></i> Nos cours</a>
                     <a href="#activites" class="btn-hero-nouveau btn-outline"><i class="fas fa-palette"></i> Nos activités</a>
-                    <a href="{{ url('/formations') }}" class="btn-hero-nouveau btn-outline"><i class="fas fa-graduation-cap"></i> Nos formations</a>
+                    <a href="{{ url('/particuliers/formations') }}" class="btn-hero-nouveau btn-outline"><i class="fas fa-graduation-cap"></i> Nos formations</a>
                 </div>
 
                 <button type="button" class="hero-rappel" id="openRappelModal">
@@ -2866,13 +2866,13 @@ body {
 
             <div class="hero-image-collage d-none d-lg-block">
                 <div class="collage-main">
-                    <img src="asset/img/enfnoi.jpeg" alt="Enfant en cours">
+                    <img src="/asset/img/enfnoi.jpeg" alt="Enfant en cours">
                 </div>
                 <div class="collage-secondary">
-                    <img loading="lazy" decoding="async" src="asset/img/deux.jpg" alt="Formation adulte">
+                    <img loading="lazy" decoding="async" src="/asset/img/deux.jpg" alt="Formation adulte">
                 </div>
                 <div class="collage-tertiary">
-                    <img loading="lazy" decoding="async" src="asset/img/ligne.jpeg" alt="Activité créative">
+                    <img loading="lazy" decoding="async" src="/asset/img/ligne.jpeg" alt="Activité créative">
                 </div>
                 <div class="collage-badge"><i class="fas fa-check-circle"></i> 5000+ familles accompagnées </div>
             </div>
@@ -3022,14 +3022,14 @@ body {
                         </div>
 
                         <div class="cours-cta">
-                            <a href="{{ url('/reponse') }}" class="btn-hero-nouveau btn-orange">
+                            <a href="{{ url('/particuliers/reponse') }}" class="btn-hero-nouveau btn-orange">
                                 Découvrir tous nos cours <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
                     <div class="cours-image-wrap animate-scroll">
-                        <img loading="lazy" decoding="async" src="asset/img/ok2.jpeg" alt="DCG DSCG">
+                        <img loading="lazy" decoding="async" src="/asset/img/ok2.jpeg" alt="DCG DSCG">
                         <div class="cours-image-badge">
                             <i class="fas fa-graduation-cap"></i> DCG & DSCG en ligne
                         </div>
@@ -3058,14 +3058,14 @@ body {
                         </div>
 
                         <div class="cours-cta">
-                            <a href="{{ url('/reponse') }}" class="btn-hero-nouveau btn-orange">
+                            <a href="{{ url('/particuliers/reponse') }}" class="btn-hero-nouveau btn-orange">
                                 Découvrir tous nos cours <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
                     <div class="cours-image-wrap animate-scroll">
-                        <img loading="lazy" decoding="async" src="asset/img/souta.jpeg" alt="Soutien scolaire">
+                        <img loading="lazy" decoding="async" src="/asset/img/souta.jpeg" alt="Soutien scolaire">
                         <div class="cours-image-badge">
                             <i class="fas fa-book-open"></i> Soutien scolaire
                         </div>
@@ -3094,14 +3094,14 @@ body {
                         </div>
 
                         <div class="cours-cta">
-                            <a href="{{ url('/reponse') }}" class="btn-hero-nouveau btn-orange">
+                            <a href="{{ url('/particuliers/reponse') }}" class="btn-hero-nouveau btn-orange">
                                 Découvrir tous nos cours <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
                     <div class="cours-image-wrap animate-scroll">
-                        <img loading="lazy" decoding="async" src="asset/img/formata.jpeg" alt="Formations professionnelles">
+                        <img loading="lazy" decoding="async" src="/asset/img/formata.jpeg" alt="Formations professionnelles">
                         <div class="cours-image-badge">
                             <i class="fas fa-briefcase"></i> Formations professionnelles
                         </div>
@@ -3246,7 +3246,7 @@ body {
             </div>
 
             <div class="pourquoi-image animate-scroll">
-                <img loading="lazy" decoding="async" src="asset/img/deux.jpg" alt="Notre approche">
+                <img loading="lazy" decoding="async" src="/asset/img/deux.jpg" alt="Notre approche">
                 <div class="pourquoi-stats-float">
                     <div class="number">100%</div>
                     <div class="label">Flexible - À domicile, en centre ou en ligne</div>
@@ -3316,7 +3316,7 @@ body {
         </div>
 
         <div class="step-cta animate-scroll">
-            <a href="{{ url('/formations') }}" class="btn-hero-nouveau btn-orange">Faire une demande <i class="fas fa-arrow-right"></i></a>
+            <a href="{{ url('/particuliers/formations') }}" class="btn-hero-nouveau btn-orange">Faire une demande <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -3424,7 +3424,7 @@ body {
             <p class="section-subtitle">Un soutien scolaire, une formation ou une activité éducative adaptée à vos besoins. Notre équipe vous accompagne pour trouver la meilleure solution selon votre objectif.</p>
 
             <div class="cta-buttons-final">
-                <a href="{{ url('/formations') }}" class="btn-cta-final btn-blue"><i class="fas fa-graduation-cap"></i> 🔵 Demander une formation</a>
+                <a href="{{ url('/particuliers/formations') }}" class="btn-cta-final btn-blue"><i class="fas fa-graduation-cap"></i> 🔵 Demander une formation</a>
                 <a href="tel:+2250153751544" class="btn-cta-final btn-outline-light"><i class="fas fa-phone-alt"></i> 📞 Nous contacter</a>
             </div>
         </div>
@@ -3438,7 +3438,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Chez MONPROFCHEZMOI CI, nous croyons que chaque personne possède un potentiel unique. Notre mission est de révéler ce potentiel grâce à un accompagnement personnalisé, des enseignants qualifiés et des solutions adaptées à chaque étape de la vie.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -3451,22 +3451,22 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 
@@ -3509,13 +3509,13 @@ body {
         niveauDesc: 'De la maternelle au CM2',
         icon: '<i class="fas fa-child"></i>',
         items: [
-            { icon: '<i class="fas fa-briefcase"></i>', title: 'Mini métiers', desc: 'Découvrir les métiers', url: "{{ url('/minimetier') }}" },
-            { icon: '<i class="fas fa-robot"></i>', title: 'Robotique et ateliers créatifs', desc: 'Codage et création', url: "{{ url('/codage') }}" },
-            { icon: '<i class="fas fa-language"></i>', title: 'Les petits bilingues', desc: 'Langues étrangères', url: "{{ url('/petit') }}" },
-            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/musique') }}" },
-            { icon: '<i class="fas fa-spell-check"></i>', title: 'Bouge ta grammaire', desc: 'Français ludique', url: "{{ url('/bouge') }}" },
-            { icon: '<i class="fas fa-book-reader"></i>', title: 'Ma cabine à livres', desc: 'Lecture et imagination', url: "{{ url('/cabine') }}" },
-            { icon: '<i class="fas fa-running"></i>', title: 'Sport enfant', desc: 'Activités physiques', url: "{{ url('/sportenf') }}" }
+            { icon: '<i class="fas fa-briefcase"></i>', title: 'Mini métiers', desc: 'Découvrir les métiers', url: "{{ url('/particuliers/minimetier') }}" },
+            { icon: '<i class="fas fa-robot"></i>', title: 'Robotique et ateliers créatifs', desc: 'Codage et création', url: "{{ url('/particuliers/codage') }}" },
+            { icon: '<i class="fas fa-language"></i>', title: 'Les petits bilingues', desc: 'Langues étrangères', url: "{{ url('/particuliers/petit') }}" },
+            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/particuliers/musique') }}" },
+            { icon: '<i class="fas fa-spell-check"></i>', title: 'Bouge ta grammaire', desc: 'Français ludique', url: "{{ url('/particuliers/bouge') }}" },
+            { icon: '<i class="fas fa-book-reader"></i>', title: 'Ma cabine à livres', desc: 'Lecture et imagination', url: "{{ url('/particuliers/cabine') }}" },
+            { icon: '<i class="fas fa-running"></i>', title: 'Sport enfant', desc: 'Activités physiques', url: "{{ url('/particuliers/sportenf') }}" }
         ]
     },
     {
@@ -3523,14 +3523,14 @@ body {
         niveauDesc: 'De la 6ème à la 3ème',
         icon: '<i class="fas fa-school"></i>',
         items: [
-            { icon: '<i class="fas fa-graduation-cap"></i>', title: 'Coaching scolaire', desc: 'Accompagnement personnalisé', url: "{{ url('/coaching') }}" },
-            { icon: '<i class="fas fa-briefcase"></i>', title: 'Mini métiers', desc: 'Découvrir les métiers', url: "{{ url('/minimetier') }}" },
-            { icon: '<i class="fas fa-robot"></i>', title: 'Robotique', desc: 'Technologie et création', url: "{{ url('/college-competence') }}" },
-            { icon: '<i class="fas fa-language"></i>', title: 'Les petits bilingues', desc: 'Langues étrangères', url: "{{ url('/petit') }}" },
-            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/musique') }}" },
-            { icon: '<i class="fas fa-spell-check"></i>', title: 'Bouge ta grammaire', desc: 'Français ludique', url: "{{ url('/bouge') }}" },
-            { icon: '<i class="fas fa-book-reader"></i>', title: 'Ma cabine à livres', desc: 'Lecture et imagination', url: "{{ url('/cabine') }}" },
-            { icon: '<i class="fas fa-running"></i>', title: 'Sport enfant', desc: 'Activités physiques', url: "{{ url('/sportenf') }}" }
+            { icon: '<i class="fas fa-graduation-cap"></i>', title: 'Coaching scolaire', desc: 'Accompagnement personnalisé', url: "{{ url('/particuliers/coaching') }}" },
+            { icon: '<i class="fas fa-briefcase"></i>', title: 'Mini métiers', desc: 'Découvrir les métiers', url: "{{ url('/particuliers/minimetier') }}" },
+            { icon: '<i class="fas fa-robot"></i>', title: 'Robotique', desc: 'Technologie et création', url: "{{ url('/particuliers/college-competence') }}" },
+            { icon: '<i class="fas fa-language"></i>', title: 'Les petits bilingues', desc: 'Langues étrangères', url: "{{ url('/particuliers/petit') }}" },
+            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/particuliers/musique') }}" },
+            { icon: '<i class="fas fa-spell-check"></i>', title: 'Bouge ta grammaire', desc: 'Français ludique', url: "{{ url('/particuliers/bouge') }}" },
+            { icon: '<i class="fas fa-book-reader"></i>', title: 'Ma cabine à livres', desc: 'Lecture et imagination', url: "{{ url('/particuliers/cabine') }}" },
+            { icon: '<i class="fas fa-running"></i>', title: 'Sport enfant', desc: 'Activités physiques', url: "{{ url('/particuliers/sportenf') }}" }
         ]
     },
     {
@@ -3538,12 +3538,12 @@ body {
         niveauDesc: 'De la Seconde à la Terminale',
         icon: '<i class="fas fa-university"></i>',
         items: [
-            { icon: '<i class="fas fa-briefcase"></i>', title: 'Mini métiers', desc: 'Découvrir les métiers', url: "{{ url('/minimetier') }}" },
-            { icon: '<i class="fas fa-robot"></i>', title: 'Robotique', desc: 'Technologie et création', url: "{{ url('/college-competence') }}" },
-            { icon: '<i class="fas fa-language"></i>', title: 'Les petits bilingues', desc: 'Langues étrangères', url: "{{ url('/petit') }}" },
-            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/musique') }}" },
-            { icon: '<i class="fas fa-spell-check"></i>', title: 'Bouge ta grammaire', desc: 'Français ludique', url: "{{ url('/bouge') }}" },
-            { icon: '<i class="fas fa-book-reader"></i>', title: 'Ma cabine à livres', desc: 'Lecture et imagination', url: "{{ url('/cabine') }}" }
+            { icon: '<i class="fas fa-briefcase"></i>', title: 'Mini métiers', desc: 'Découvrir les métiers', url: "{{ url('/particuliers/minimetier') }}" },
+            { icon: '<i class="fas fa-robot"></i>', title: 'Robotique', desc: 'Technologie et création', url: "{{ url('/particuliers/college-competence') }}" },
+            { icon: '<i class="fas fa-language"></i>', title: 'Les petits bilingues', desc: 'Langues étrangères', url: "{{ url('/particuliers/petit') }}" },
+            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/particuliers/musique') }}" },
+            { icon: '<i class="fas fa-spell-check"></i>', title: 'Bouge ta grammaire', desc: 'Français ludique', url: "{{ url('/particuliers/bouge') }}" },
+            { icon: '<i class="fas fa-book-reader"></i>', title: 'Ma cabine à livres', desc: 'Lecture et imagination', url: "{{ url('/particuliers/cabine') }}" }
         ]
     },
     {
@@ -3551,9 +3551,9 @@ body {
         niveauDesc: 'De la licence au master',
         icon: '<i class="fas fa-user-graduate"></i>',
         items: [
-            { icon: '<i class="fas fa-microphone"></i>', title: 'Préparation aux oraux', desc: 'Confiance et expression', url: "{{ url('/musique') }}" },
-            { icon: '<i class="fas fa-compass"></i>', title: 'Accompagnement à la réorientation', desc: 'Changer de voie', url: "{{ url('/musique') }}" },
-            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/musique') }}" }
+            { icon: '<i class="fas fa-microphone"></i>', title: 'Préparation aux oraux', desc: 'Confiance et expression', url: "{{ url('/particuliers/musique') }}" },
+            { icon: '<i class="fas fa-compass"></i>', title: 'Accompagnement à la réorientation', desc: 'Changer de voie', url: "{{ url('/particuliers/musique') }}" },
+            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/particuliers/musique') }}" }
         ]
     },
     {
@@ -3561,8 +3561,8 @@ body {
         niveauDesc: 'Formations et activités',
         icon: '<i class="fas fa-users"></i>',
         items: [
-            { icon: '<i class="fas fa-dumbbell"></i>', title: 'Sports à domicile pour adultes', desc: 'Bien-être physique', url: "{{ url('/musique') }}" },
-            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/musique') }}" }
+            { icon: '<i class="fas fa-dumbbell"></i>', title: 'Sports à domicile pour adultes', desc: 'Bien-être physique', url: "{{ url('/particuliers/musique') }}" },
+            { icon: '<i class="fas fa-music"></i>', title: 'Musique et chant', desc: 'Éveil musical', url: "{{ url('/particuliers/musique') }}" }
         ]
     }
 ];
@@ -3630,19 +3630,19 @@ document.addEventListener('keydown', function(e) {
                 icon: '<i class="fas fa-book"></i>',
                 title: 'Soutien scolaire toutes matières',
                 desc: 'Accompagnement personnalisé dans toutes les disciplines',
-                url: "{{ url('/primaire') }}"
+                url: "{{ url('/particuliers/primaire') }}"
             },
             {
                 icon: '<i class="fas fa-puzzle-piece"></i>',
                 title: 'Accompagnement DYS',
                 desc: 'Méthodes adaptées pour les troubles d\'apprentissage',
-                url: "{{ url('/accompagnement') }}"
+                url: "{{ url('/particuliers/accompagnement') }}"
             },
             {
                 icon: '<i class="fas fa-tasks"></i>',
                 title: 'Méthodologie et organisation',
                 desc: 'Apprendre à apprendre efficacement',
-                url: "{{ url('/methode') }}"
+                url: "{{ url('/particuliers/methode') }}"
             }
         ]
     },
@@ -3655,19 +3655,19 @@ document.addEventListener('keydown', function(e) {
                 icon: '<i class="fas fa-book"></i>',
                 title: 'Soutien scolaire toutes matières',
                 desc: 'Renforcement dans toutes les matières du collège',
-                url: "{{ url('/soutien-collège') }}"
+                url: "{{ url('/particuliers/soutien-collège') }}"
             },
             {
                 icon: '<i class="fas fa-certificate"></i>',
                 title: 'Préparation Brevet',
                 desc: 'Préparation ciblée pour réussir le Diplôme National',
-                url: "{{ url('/soutien-brevet') }}"
+                url: "{{ url('/particuliers/soutien-brevet') }}"
             },
             {
                 icon: '<i class="fas fa-user-graduate"></i>',
                 title: 'Méthodologie et autonomie',
                 desc: 'Développer son travail personnel et sa confiance',
-                url: "{{ url('/college-methode') }}"
+                url: "{{ url('/particuliers/college-methode') }}"
             }
         ]
     },
@@ -3680,19 +3680,19 @@ document.addEventListener('keydown', function(e) {
                 icon: '<i class="fas fa-book"></i>',
                 title: 'Soutien scolaire toutes matières',
                 desc: 'Accompagnement dans toutes les spécialités',
-                url: "{{ url('/lycee-sous') }}"
+                url: "{{ url('/particuliers/lycee-sous') }}"
             },
             {
                 icon: '<i class="fas fa-award"></i>',
                 title: 'Préparation Bac',
                 desc: 'Révision intensive et méthodologie pour le Bac',
-                url: "{{ url('/lycee-preparation') }}"
+                url: "{{ url('/particuliers/lycee-preparation') }}"
             },
             {
                 icon: '<i class="fas fa-star"></i>',
                 title: 'Coaching méthodologique',
                 desc: 'Stratégies de travail et gestion du stress',
-                url: "{{ url('/lycee-coaching') }}"
+                url: "{{ url('/particuliers/lycee-coaching') }}"
             }
         ]
     },
@@ -3705,19 +3705,19 @@ document.addEventListener('keydown', function(e) {
                 icon: '<i class="fas fa-compass"></i>',
                 title: 'Soutien aux études supérieures',
                 desc: 'Accompagnement dans vos cursus universitaires',
-                url: "{{ url('/soutien-superieur') }}"
+                url: "{{ url('/particuliers/soutien-superieur') }}"
             },
             {
                 icon: '<i class="fas fa-compass"></i>',
                 title: 'Orientation aux études supérieures',
                 desc: 'Choix de filière et de parcours',
-                url: "{{ url('/orientation-superieur') }}"
+                url: "{{ url('/particuliers/orientation-superieur') }}"
             },
             {
                 icon: '<i class="fas fa-calculator"></i>',
                 title: 'Préparation DCG / DSCG',
                 desc: 'Préparation aux diplômes de comptabilité',
-                url: "{{ url('/groupe') }}"
+                url: "{{ url('/particuliers/groupe') }}"
             }
         ]
     },
@@ -3730,13 +3730,13 @@ document.addEventListener('keydown', function(e) {
                 icon: '<i class="fas fa-chalkboard-teacher"></i>',
                 title: 'Toutes les formations professionnelles',
                 desc: 'Développez vos compétences pour votre carrière',
-                url: "{{ url('/formations') }}"
+                url: "{{ url('/particuliers/formations') }}"
             },
             {
                 icon: '<i class="fas fa-gift"></i>',
                 title: 'Nos bons cadeaux',
                 desc: 'Offrez une formation à vos proches',
-                url: "{{ route('gift-vouchers.index') }}"
+                url: "{{ route('particuliers.gift-vouchers.index') }}"
             }
         ]
     }
@@ -3843,7 +3843,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const formData = new FormData(form);
 
-        fetch("{{ route('rappel.store') }}", {
+        fetch("{{ route('particuliers.rappel.store') }}", {
             method: "POST",
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',

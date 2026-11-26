@@ -41,11 +41,11 @@
                 @endif
             </h1>
             <div>
-                <a href="{{ route('admin.dashboard') }}" class="btn btn-outline-secondary mr-2">
+                <a href="{{ route('particuliers.admin.dashboard') }}" class="btn btn-outline-secondary mr-2">
                     <i class="fas fa-arrow-left"></i> Dashboard
                 </a>
                 @if($unreadCount > 0)
-                    <form action="{{ route('admin.notifications.readAll') }}" method="POST" class="d-inline">
+                    <form action="{{ route('particuliers.admin.notifications.readAll') }}" method="POST" class="d-inline">
                         @csrf
                         <button type="submit" class="btn btn-warning">
                             <i class="fas fa-check-double"></i> Tout marquer comme lu
@@ -106,7 +106,7 @@
                                         @endif
                                     </div>
                                     @if($notification->est_non_lue)
-                                        <form action="{{ route('admin.notifications.read', $notification->id) }}" method="POST" class="ml-3">
+                                        <form action="{{ route('particuliers.admin.notifications.read', $notification->id) }}" method="POST" class="ml-3">
                                             @csrf
                                             <button type="submit" class="btn btn-sm btn-outline-success">
                                                 <i class="fas fa-check"></i> Marquer lue

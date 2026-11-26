@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <style>
 * {
@@ -115,7 +115,7 @@ input:focus {
         <div class="form-card">
             <h2>Create Account</h2>
             
-            <form action="{{ route('comm.register') }}" method="POST">
+            <form action="{{ route('particuliers.comm.register') }}" method="POST">
             @csrf   
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Name" required>
@@ -138,7 +138,7 @@ input:focus {
 
             <div class="login-link">
                 <p>Vous Avez déja un compte?</p>
-                <a href="/comm/login" class="login-btn">Login here</a>
+                <a href="/particuliers/comm/login" class="login-btn">Login here</a>
             </div>
         </div>
     </div>

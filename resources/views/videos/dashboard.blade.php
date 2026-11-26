@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Mes vidéos - Dashboard</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -850,19 +850,19 @@
          ============================================ -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
-            <img src="asset/img/logo.png" alt="Monprofchezmoi">
+            <img src="/asset/img/logo.png" alt="Monprofchezmoi">
             <span>MONPROFCHEZMOI</span>
         </div>
 
         <ul class="sidebar-nav">
             <li class="sidebar-nav-item">
-                <a href="{{ url('/') }}" class="sidebar-nav-link">
+                <a href="{{ url('/particuliers') }}" class="sidebar-nav-link">
                     <i class="fas fa-home"></i>
                     <span>Accueil</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('video.dashboard') }}" class="sidebar-nav-link active">
+                <a href="{{ route('particuliers.video.dashboard') }}" class="sidebar-nav-link active">
                     <i class="fas fa-film"></i>
                     <span>Mes vidéos</span>
                     @if($accessList->count() > 0)
@@ -871,19 +871,19 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('dcg.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.dcg.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-graduation-cap"></i>
                     <span>Formations DCG</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('dscg.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.dscg.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-university"></i>
                     <span>Formations DSCG</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('panier.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.panier.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-shopping-cart"></i>
                     <span>Mon panier</span>
                     @php
@@ -920,7 +920,7 @@
             </h1>
             <div class="topbar-actions">
                 @auth
-                    <a href="{{ route('panier.index') }}" class="btn-topbar btn-cart">
+                    <a href="{{ route('particuliers.panier.index') }}" class="btn-topbar btn-cart">
                         <i class="fas fa-shopping-cart"></i>
                         Panier
                         @if($cartCountDash > 0)
@@ -928,10 +928,10 @@
                         @endif
                     </a>
                 @endauth
-                <a href="{{ route('dcg.index') }}" class="btn-topbar btn-primary-moderne">
+                <a href="{{ route('particuliers.dcg.index') }}" class="btn-topbar btn-primary-moderne">
                     <i class="fas fa-graduation-cap"></i> DCG/DSCG
                 </a>
-                <a href="{{ route('video.dashboard') }}" class="btn-topbar btn-outline-moderne">
+                <a href="{{ route('particuliers.video.dashboard') }}" class="btn-topbar btn-outline-moderne">
                     <i class="fas fa-tachometer-alt"></i> Dashboard
                 </a>
             </div>
@@ -1076,7 +1076,7 @@
                                     </div>
                                 </div>
 
-                                <a href="{{ route('video.show', $access->video->id) }}" class="btn-watch" style="margin-top: 16px;">
+                                <a href="{{ route('particuliers.video.show', $access->video->id) }}" class="btn-watch" style="margin-top: 16px;">
                                     <i class="fas fa-play-circle"></i> Regarder
                                 </a>
                             </div>
@@ -1091,10 +1091,10 @@
                     <h3>Aucune vidéo achetée</h3>
                     <p>Explorez nos formations DCG et DSCG pour commencer votre parcours</p>
                     <div class="empty-actions">
-                        <a href="{{ route('dcg.index') }}" class="btn-watch">
+                        <a href="{{ route('particuliers.dcg.index') }}" class="btn-watch">
                             <i class="fas fa-graduation-cap"></i> Formations DCG
                         </a>
-                        <a href="{{ route('dscg.index') }}" class="btn-topbar btn-outline-moderne" style="padding: 14px 24px;">
+                        <a href="{{ route('particuliers.dscg.index') }}" class="btn-topbar btn-outline-moderne" style="padding: 14px 24px;">
                             <i class="fas fa-university"></i> Formations DSCG
                         </a>
                     </div>

@@ -38,7 +38,7 @@ class RemindUncontactedLeadsCommand extends Command
                     'lead_id' => $lead->id,
                     'prenom' => $lead->prenom,
                     'telephone' => $lead->telephone,
-                    'url' => route('admin.leads.show', $lead->id),
+                    'url' => route('particuliers.admin.leads.show', $lead->id),
                 ],
             ]);
 

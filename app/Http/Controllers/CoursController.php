@@ -96,7 +96,7 @@ public function update(Request $request, $id)
         'prix' => $request->prix, // ✅ ajout prix
     ]);
 
-    return redirect()->route('cours.index')->with('success', 'Cours mis à jour avec succès.');
+    return redirect()->route('particuliers.cours.index')->with('success', 'Cours mis à jour avec succès.');
 }
 
 public function index()

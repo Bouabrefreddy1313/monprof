@@ -494,16 +494,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ url('/') }}" class="text-2xl font-bold gradient-text">
+                    <a href="{{ url('/particuliers') }}" class="text-2xl font-bold gradient-text">
                         <i class="fas fa-briefcase mr-2"></i>Mini-Métiers
                     </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="/" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Acceuil</a>
-                        <a href="/reponse" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Soutien</a>
-                        <a href="/formations" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Formation</a>
-                        <a href="/groupe" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Cours en ligne DCG & DSCG</a>
+                        <a href="/particuliers" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Acceuil</a>
+                        <a href="/particuliers/reponse" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Soutien</a>
+                        <a href="/particuliers/formations" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Formation</a>
+                        <a href="/particuliers/groupe" class="text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium transition-colors">Cours en ligne DCG & DSCG</a>
 
                     </div>
                 </div>
@@ -518,10 +518,10 @@
         <!-- Mobile menu -->
         <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="/" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Acceuil</a>
-                <a href="/reponse" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Soutien</a>
-                <a href="/formations" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Formation</a>
-                <a href="/groupe" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Cours en ligne DCG & DSCG</a>
+                <a href="/particuliers" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Acceuil</a>
+                <a href="/particuliers/reponse" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Soutien</a>
+                <a href="/particuliers/formations" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Formation</a>
+                <a href="/particuliers/groupe" class="block text-gray-700 hover:text-brand-orange px-3 py-2 rounded-md text-base font-medium">Cours en ligne DCG & DSCG</a>
 
             </div>
         </div>
@@ -1240,7 +1240,7 @@
             data.prix_formule = currentPrix;
             data.frais_reservation = '10000';
 
-            fetch('/inscription', {
+            fetch('/particuliers/inscription', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1297,7 +1297,7 @@
 
         // Function to redirect to contact page with parameters
         function redirectToContact(part, prix = null) {
-            let url = `/contact?part=${encodeURIComponent(part)}`;
+            let url = `/particuliers/contact?part=${encodeURIComponent(part)}`;
             if (prix) {
                 url += `&prix=${encodeURIComponent(prix)}`;
             }

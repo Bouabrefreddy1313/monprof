@@ -13,7 +13,7 @@ class SuperAdminAuthController extends Controller
     public function showLoginForm()
     {
         if (Auth::guard('superadmin')->check()) {
-            return redirect()->route('superadmin.dashboard');
+            return redirect()->route('particuliers.superadmin.dashboard');
         }
 
         return view('superadmin.login');
@@ -26,7 +26,7 @@ class SuperAdminAuthController extends Controller
 
         if (Auth::guard('superadmin')->attempt($credentials, $remember)) {
             $request->session()->regenerate();
-            return redirect()->intended(route('superadmin.dashboard'));
+            return redirect()->intended(route('particuliers.superadmin.dashboard'));
         }
 
         return redirect()->back()->withErrors([
@@ -59,7 +59,7 @@ class SuperAdminAuthController extends Controller
 
         Auth::guard('superadmin')->attempt($request->only('email', 'password'));
 
-        return redirect()->route('superadmin.dashboard');
+        return redirect()->route('particuliers.superadmin.dashboard');
     }
 
     public function logout(Request $request)
@@ -68,6 +68,6 @@ class SuperAdminAuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('superadmin.login.form');
+        return redirect()->route('particuliers.superadmin.login.form');
     }
 }

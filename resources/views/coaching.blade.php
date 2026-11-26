@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     <!-- Libraries Stylesheet -->
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
 </head>
@@ -74,7 +74,7 @@
             <div class="col-lg-6 image-column">
                 <div class="image-wrapper">
                     <div class="image-card">
-                        <img src="asset/img/coa.jpg" alt="Coaching scolaire" class="main-image">
+                        <img src="/asset/img/coa.jpg" alt="Coaching scolaire" class="main-image">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                    <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="" width="150px">                        </a>
+                    <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="" width="150px">                        </a>
 
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Riviera 4 Synacassi 1, Abidjan, Cote d'Ivoire</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+225 01 53 75 15 44</p>
@@ -366,7 +366,7 @@ Designed by <a class="text-white border-bottom" href="">FreeLance ADG</a></p>
 
    <script>
     function redirectToContact(part, prix = null) {
-        let url = `/contact?part=${encodeURIComponent(part)}`;
+        let url = `/particuliers/contact?part=${encodeURIComponent(part)}`;
         if (prix) {
             url += `&prix=${encodeURIComponent(prix)}`;
         }
@@ -376,21 +376,21 @@ Designed by <a class="text-white border-bottom" href="">FreeLance ADG</a></p>
  <!-- JavaScript Libraries -->
  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/form/lib/wow/wow.min.js"></script>
-    <script src="asset/form/lib/easing/easing.min.js"></script>
-    <script src="asset/form/lib/waypoints/waypoints.min.js"></script>
-    <script src="asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/asset/form/lib/wow/wow.min.js"></script>
+    <script src="/asset/form/lib/easing/easing.min.js"></script>
+    <script src="/asset/form/lib/waypoints/waypoints.min.js"></script>
+    <script src="/asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/form/lib/wow/wow.min.js"></script>
-    <script src="asset/form/lib/easing/easing.min.js"></script>
-    <script src="asset/form/lib/waypoints/waypoints.min.js"></script>
-    <script src="asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/asset/form/lib/wow/wow.min.js"></script>
+    <script src="/asset/form/lib/easing/easing.min.js"></script>
+    <script src="/asset/form/lib/waypoints/waypoints.min.js"></script>
+    <script src="/asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="asset/main.js"></script>
+    <script src="/asset/main.js"></script>
 
 
 @include('components.newsletter-popup')

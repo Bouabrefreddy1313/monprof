@@ -9,13 +9,13 @@
     <meta content="Cours de codage, robotique, programmation" name="keywords">
     <meta content="Programmation informatique pour enfants et adolescents - Animation numérique, JavaScript, Python, IA et Robotique" name="description">
 
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <style>
@@ -1573,7 +1573,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img src="asset/img/robo.jpg" alt="Champions de la Robotique">
+                    <img src="/asset/img/robo.jpg" alt="Champions de la Robotique">
                     <div class="programme-image-badge"><i class="fas fa-robot"></i> CP à CM2</div>
                 </div>
                 <div class="programme-text">
@@ -1679,7 +1679,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img loading="lazy" decoding="async" src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique">
+                    <img loading="lazy" decoding="async" src="/asset/img/orp.jpeg" alt="Champion de l'Animation Numérique">
                     <div class="programme-image-badge"><i class="fas fa-child"></i> CP à CM2</div>
                 </div>
                 <div class="programme-text">
@@ -1779,7 +1779,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img loading="lazy" decoding="async" src="asset/img/js.jpg" alt="Génies du Python">
+                    <img loading="lazy" decoding="async" src="/asset/img/js.jpg" alt="Génies du Python">
                     <div class="programme-image-badge"><i class="fab fa-python"></i> CM1 – CM2</div>
                 </div>
                 <div class="programme-text">
@@ -1879,7 +1879,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img loading="lazy" decoding="async" src="asset/img/vir.jpeg" alt="Pionniers de l'IA">
+                    <img loading="lazy" decoding="async" src="/asset/img/vir.jpeg" alt="Pionniers de l'IA">
                     <div class="programme-image-badge"><i class="fas fa-brain"></i> CM1 – CM2</div>
                 </div>
                 <div class="programme-text">
@@ -1977,7 +1977,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img loading="lazy" decoding="async" src="asset/img/js.jpeg" alt="Génies du JavaScript">
+                    <img loading="lazy" decoding="async" src="/asset/img/js.jpeg" alt="Génies du JavaScript">
                     <div class="programme-image-badge"><i class="fab fa-js"></i> CM2 avancé – Collège</div>
                 </div>
                 <div class="programme-text">
@@ -2113,7 +2113,7 @@ body {
 
             <div class="cta-buttons">
                 <a href="tel:+2250153751544" class="btn-cta-orange"><i class="fas fa-phone-alt"></i> Être rappelé gratuitement</a>
-                <a href="{{ url('/reponse') }}" class="btn-cta-outline"><i class="fas fa-search"></i> Explorer nos autres activités</a>
+                <a href="{{ url('/particuliers/reponse') }}" class="btn-cta-outline"><i class="fas fa-search"></i> Explorer nos autres activités</a>
             </div>
         </div>
     </div>
@@ -2131,7 +2131,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -2144,22 +2144,22 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 
@@ -2341,7 +2341,7 @@ function submitInscription(e) {
     data.formule = currentFormule;
     data.prix_formule = currentPrix;
     data.frais_reservation = '10000';
-    fetch('/inscription', {
+    fetch('/particuliers/inscription', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '' },
         body: JSON.stringify(data)
@@ -2374,7 +2374,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeInscriptionModal(); });
 
 function redirectToContact(part, prix = null) {
-    let url = `/contact?part=${encodeURIComponent(part)}`;
+    let url = `/particuliers/contact?part=${encodeURIComponent(part)}`;
     if (prix) {
         url += `&prix=${encodeURIComponent(prix)}`;
     }

@@ -140,7 +140,7 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.login.submit') }}" method="POST">
+        <form action="{{ route('particuliers.admin.login.submit') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="email"><i class="fas fa-envelope text-muted me-1"></i> Email</label>
@@ -165,7 +165,7 @@
         </form>
 
         <div class="link-register">
-            Pas encore de compte ? <a href="{{ route('admin.register.form') }}">S'inscrire ici</a>
+            Pas encore de compte ? <a href="{{ route('particuliers.admin.register.form') }}">S'inscrire ici</a>
         </div>
     </div>
 

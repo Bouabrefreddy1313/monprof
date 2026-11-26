@@ -585,7 +585,7 @@
                     <p><strong>Ensuite, remplissez le formulaire ci-dessous avec vos informations pour recevoir le code du bon.</strong></p>
                 </div>
 
-                <form method="POST" action="{{ route('voucher-orders.store', $voucher) }}" class="form-container" id="purchaseForm">
+                <form method="POST" action="{{ route('particuliers.voucher-orders.store', $voucher) }}" class="form-container" id="purchaseForm">
                     @csrf
 
                     <div class="form-group">

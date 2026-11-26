@@ -6,7 +6,7 @@
    
     <title>Leçons de {{ $matiere->nom }}</title>
  <!-- Favicon -->
- <link href="asset/img/favicon.png" rel="icon">
+ <link href="/asset/img/favicon.png" rel="icon">
 
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,7 +16,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
 <!-- Customized Bootstrap Stylesheet -->
 <link href="/asset/css/formationcss/cssform/style.css" rel="stylesheet">
@@ -40,31 +40,31 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav py-0">
-                        <a href="{{ url('/') }}" class="nav-item nav-link">Accueil</a>
-                        <a href="{{ url('/reponse') }}" class="nav-item nav-link">Soutien</a>
-                        <a href="{{ url('/formations') }}" class="nav-item nav-link">Formation</a>
-                        <a href="{{ url('/groupe') }}" class="nav-item nav-link">Cours en ligne DCG & DSCG</a>
+                        <a href="{{ url('/particuliers') }}" class="nav-item nav-link">Accueil</a>
+                        <a href="{{ url('/particuliers/reponse') }}" class="nav-item nav-link">Soutien</a>
+                        <a href="{{ url('/particuliers/formations') }}" class="nav-item nav-link">Formation</a>
+                        <a href="{{ url('/particuliers/groupe') }}" class="nav-item nav-link">Cours en ligne DCG & DSCG</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Extrascolaire</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#orientationModal">Orientation</a>
-                                <li><a class="dropdown-item" href="{{ url('/reussir') }}">Reussir mes oraux</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/coaching') }}">Coaching scolaire</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/musique') }}">Cours de musique et de chant</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/sportif') }}">Coaching sportif à domicile</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/particuliers/reussir') }}">Reussir mes oraux</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/particuliers/coaching') }}">Coaching scolaire</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/particuliers/musique') }}">Cours de musique et de chant</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/particuliers/sportif') }}">Coaching sportif à domicile</a></li>
                             </div>
                         </div>
                     </div>
                     @auth
                         <div class="d-flex align-items-center ms-auto">
                             <span class="me-3">{{ Auth::user()->name }}</span>
-                            <a href="{{ route('logout') }}" class="btn btn-outline-primary btn-sm py-1 px-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            <a href="{{ route('particuliers.logout') }}" class="btn btn-outline-primary btn-sm py-1 px-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a>
+                            <form id="logout-form" action="{{ route('particuliers.logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
                         </div>
                     @else
-                        <a class="btn btn-primary py-2 px-4 ms-auto d-none d-lg-block" href="{{ url('/login') }}">Connexion</a>
+                        <a class="btn btn-primary py-2 px-4 ms-auto d-none d-lg-block" href="{{ url('/particuliers/login') }}">Connexion</a>
                     @endauth
                 </div>
             </nav>
@@ -82,7 +82,7 @@
         <div class="text-center mb-5">
             <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">MATIERE</h5>
             <h1>{{ $matiere->nom }}</h1>
-            <a href="{{ route('order.matiere', $matiere->id) }}" class="btn btn-primary btn-lg mt-4">Souscrire à la matière</a>
+            <a href="{{ route('particuliers.order.matiere', $matiere->id) }}" class="btn btn-primary btn-lg mt-4">Souscrire à la matière</a>
         </div>
         <div class="row">
             @foreach ($lecons as $index => $lecon)
@@ -135,7 +135,7 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                    <img src="asset/img/logo.png" alt="" width="150px">                        </a>
+                    <img src="/asset/img/logo.png" alt="" width="150px">                        </a>
                     
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Riviera 4 Synacassi 1, Abidjan, Cote d'Ivoire</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+225 01 53 75 15 44</p>
@@ -227,11 +227,11 @@ Designed by <a class="text-white border-bottom" href="">FreeLance ADG</a></p>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="assset/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/assset/mail/jqBootstrapValidation.min.js"></script>
     <script src="/assset/mail/contact.js"></script>
 
     <!-- Template Javascript -->

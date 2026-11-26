@@ -28,7 +28,7 @@
             <td>{{ $payment->status }}</td>
             <td>{{ $payment->created_at->format('d/m/Y H:i') }}</td>
             <td>
-                <form action="{{ route('payments.destroy', $payment->id) }}" method="POST" onsubmit="return confirm('Confirmer la suppression ?')">
+                <form action="{{ route('particuliers.payments.destroy', $payment->id) }}" method="POST" onsubmit="return confirm('Confirmer la suppression ?')">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>

@@ -113,7 +113,7 @@ public function paymentNotify(Request $request)
                     if ($latest) {
                         $latest->update(['status' => 'failed']);
                     }
-                    return redirect()->route('home')->with('error', 'Paiement annulé.');
+                    return redirect()->route('particuliers.home')->with('error', 'Paiement annulé.');
                 }
 
                 // La référence reçue peut être l'id de transaction interne (date YmdHis).
@@ -144,12 +144,12 @@ public function paymentNotify(Request $request)
             } catch (Exception $e) {
                 // Gérer les erreurs (par exemple, journaliser l'erreur)
                 \Log::error('Erreur lors de la vérification du statut de paiement : ' . $e->getMessage());
-                return redirect()->route('home')->with('error', 'Erreur lors de la vérification du statut du paiement.');
+                return redirect()->route('particuliers.home')->with('error', 'Erreur lors de la vérification du statut du paiement.');
             }
         }
 
         // Rediriger l'utilisateur vers une page de confirmation ou d'erreur
-        return redirect()->route('home')->with('success', 'Merci, votre paiement a été traité.');
+        return redirect()->route('particuliers.home')->with('success', 'Merci, votre paiement a été traité.');
     }
     
   

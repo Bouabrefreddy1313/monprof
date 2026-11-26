@@ -1,7 +1,7 @@
 <div class="container">
     <h2>Modifier le cours : {{ $cours->titre }}</h2>
 
-    <form action="{{ route('cours.update', $cours->id) }}" method="POST">
+    <form action="{{ route('particuliers.cours.update', $cours->id) }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="prerequis">Prérequis</label>

@@ -19,7 +19,7 @@
                     <p class="lead">Merci, votre paiement a été traité avec succès.</p>
                 @endif
 
-                <a href="{{ route('home') }}" class="btn btn-primary mt-3">Retour à l'accueil</a>
+                <a href="{{ route('particuliers.home') }}" class="btn btn-primary mt-3">Retour à l'accueil</a>
             </div>
         </div>
     </div>

@@ -29,7 +29,7 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.register.submit') }}" method="POST">
+        <form action="{{ route('particuliers.admin.register.submit') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name">Nom :</label>
@@ -70,7 +70,7 @@
             <button type="submit" class="btn btn-primary">S'inscrire</button>
         </form>
         <div class="mt-3">
-            <a href="{{ route('admin.login.form') }}" class="btn btn-secondary">Vous avez déjà un compte ? Connectez-vous ici</a>
+            <a href="{{ route('particuliers.admin.login.form') }}" class="btn btn-secondary">Vous avez déjà un compte ? Connectez-vous ici</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

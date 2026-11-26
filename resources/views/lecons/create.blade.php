@@ -14,7 +14,7 @@
                 <h4 class="mb-0">Ajouter une Leçon</h4>
             </div>
             <div class="card-body">
-                <form action="{{ route('lecons.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('particuliers.lecons.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="titre">Titre de la Leçon:</label>

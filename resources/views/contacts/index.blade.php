@@ -938,19 +938,19 @@ body {
     <div class="filter-tabs-wrapper">
       <div class="filter-label">Filtres :</div>
       <div class="filter-tabs">
-        <a href="{{ route('voircontact.consulter', ['filter' => 'all']) }}" 
+        <a href="{{ route('particuliers.voircontact.consulter', ['filter' => 'all']) }}" 
            class="filter-tab {{ !isset($filter) || $filter === 'all' ? 'active' : '' }}">
           Tous les statuts
         </a>
-        <a href="{{ route('voircontact.consulter', ['filter' => 'en_cours']) }}" 
+        <a href="{{ route('particuliers.voircontact.consulter', ['filter' => 'en_cours']) }}" 
            class="filter-tab {{ $filter === 'en_cours' ? 'active' : '' }}">
           En cours ({{ $countEnCours }})
         </a>
-        <a href="{{ route('voircontact.consulter', ['filter' => 'vendue']) }}" 
+        <a href="{{ route('particuliers.voircontact.consulter', ['filter' => 'vendue']) }}" 
            class="filter-tab {{ $filter === 'vendue' ? 'active' : '' }}">
           Vendues ({{ $countVendues }})
         </a>
-        <a href="{{ route('voircontact.consulter', ['filter' => 'annulée']) }}" 
+        <a href="{{ route('particuliers.voircontact.consulter', ['filter' => 'annulée']) }}" 
            class="filter-tab {{ $filter === 'annulée' ? 'active' : '' }}">
           Annulées ({{ $countAnnulees }})
         </a>
@@ -1072,7 +1072,7 @@ body {
           <!-- SECTION ACTIONS -->
           <div class="actions-section">
             @if($contacts->etat !== 'vendue' && $contacts->etat !== 'annulée')
-              <form action="{{ route('vendreCommande', $contacts->id) }}" method="POST" style="display:inline;">
+              <form action="{{ route('particuliers.vendreCommande', $contacts->id) }}" method="POST" style="display:inline;">
                 @csrf
                 <button type="submit" class="action-btn btn-sell" title="Marquer comme vendu">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1082,7 +1082,7 @@ body {
                 </button>
               </form>
               
-              <form action="{{ route('annulerCommande', $contacts->id) }}" method="POST" style="display:inline;">
+              <form action="{{ route('particuliers.annulerCommande', $contacts->id) }}" method="POST" style="display:inline;">
                 @csrf
                 <button type="submit" class="action-btn btn-cancel" title="Annuler">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1098,7 +1098,7 @@ body {
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
               </svg>
             </button>
-            <form action="{{ route('contacts.destroy', $contacts->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Confirmer la suppression ?')">
+            <form action="{{ route('particuliers.contacts.destroy', $contacts->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Confirmer la suppression ?')">
               @csrf
               @method('DELETE')
               <button type="submit" class="action-btn btn-delete" title="Supprimer">
@@ -1125,7 +1125,7 @@ body {
             
             <div class="detail-box" style="grid-column: 1 / -1;">
               <h4>Ajouter un commentaire</h4>
-              <form action="{{ route('ajouterCommentaire', $contacts->id) }}" method="POST" class="comment-form-row">
+              <form action="{{ route('particuliers.ajouterCommentaire', $contacts->id) }}" method="POST" class="comment-form-row">
                 @csrf
                 <input type="text" name="commentaire" placeholder="Écrire un commentaire..." class="comment-input-row" required>
                 <button type="submit" class="btn-send-small">
@@ -1154,7 +1154,7 @@ body {
     @endforelse
   </div>
 
-  <a href="{{ url('/voircontact') }}" class="back-link">
+  <a href="{{ url('/particuliers/voircontact') }}" class="back-link">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <line x1="19" y1="12" x2="5" y2="12"></line>
       <polyline points="12 19 5 12 12 5"></polyline>

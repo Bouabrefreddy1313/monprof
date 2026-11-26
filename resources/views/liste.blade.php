@@ -127,7 +127,7 @@
 
 <h1>Liste des données</h1>
 
-<form action="{{ route('liste') }}" method="GET">
+<form action="{{ route('particuliers.liste') }}" method="GET">
     <label for="formation">Sélectionner une formation :</label>
     <select name="formation" id="formation">
         <option value="">Sélectionner une formation</option>
@@ -170,7 +170,7 @@
                         <td>{{ $cours->cible ?: '-' }}</td>
                         <td>
                             <div class="actions">
-                                <form action="{{ route('cours.destroy', $cours->id) }}" method="POST">
+                                <form action="{{ route('particuliers.cours.destroy', $cours->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-delete">Supprimer</button>
@@ -191,13 +191,13 @@
     <!-- Actions sur la formation et les sous-formations -->
     <div class="section-actions">
         <h3>Actions sur la formation</h3>
-        <form action="{{ route('formations.destroy', $selectedFormation->id) }}" method="POST">
+        <form action="{{ route('particuliers.formations.destroy', $selectedFormation->id) }}" method="POST">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn-danger">Supprimer la formation</button>
         </form>
         @foreach($selectedFormation->sousFormations as $sousFormation)
-            <form action="{{ route('sous-formations.destroy', $sousFormation->id) }}" method="POST">
+            <form action="{{ route('particuliers.sous-formations.destroy', $sousFormation->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn-warning">Supprimer Sous-formation : {{ $sousFormation->titre }}</button>
@@ -208,7 +208,7 @@
     <!-- Formulaire pour modifier la formation -->
     <div class="edit-form">
         <h3>Modifier la formation {{ $selectedFormation->titre }}</h3>
-        <form action="{{ route('formations.update', $selectedFormation->id) }}" method="POST">
+        <form action="{{ route('particuliers.formations.update', $selectedFormation->id) }}" method="POST">
             @csrf
             @method('PUT')
             <label for="titre">Titre de la formation :</label>

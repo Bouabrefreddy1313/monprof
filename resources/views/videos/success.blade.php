@@ -19,10 +19,10 @@
             <div class="check-icon"><i class="fas fa-check"></i></div>
             <h2 class="fw-bold mb-3">Paiement réussi !</h2>
             <p class="text-muted mb-4">Vous avez maintenant accès à la vidéo <strong>{{ $video->titre }}</strong></p>
-            <a href="{{ route('video.show', $video->id) }}" class="btn btn-success btn-lg w-100">
+            <a href="{{ route('particuliers.video.show', $video->id) }}" class="btn btn-success btn-lg w-100">
                 <i class="fas fa-play-circle"></i> Regarder la vidéo
             </a>
-            <a href="{{ route('video.dashboard') }}" class="btn btn-outline-primary mt-3 w-100">
+            <a href="{{ route('particuliers.video.dashboard') }}" class="btn btn-outline-primary mt-3 w-100">
                 <i class="fas fa-film"></i> Mon tableau de bord vidéos
             </a>
         </div>

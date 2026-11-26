@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="asset/css/voir.css">
+    <link rel="stylesheet" href="/asset/css/voir.css">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Liste des Paiements</title>
@@ -572,7 +572,7 @@ body {
                 </div>
                 <!-- Nouveau bloc pour actions -->
                 <div class="card-actions" style="padding: 1rem; border-top: 1px solid #e5e7eb; display: flex; justify-content: flex-end;">
-                    <form action="{{ route('payments.destroy', $payment->id) }}" method="POST" onsubmit="return confirm('Confirmer la suppression ?')">
+                    <form action="{{ route('particuliers.payments.destroy', $payment->id) }}" method="POST" onsubmit="return confirm('Confirmer la suppression ?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="action-btn delete-btn">

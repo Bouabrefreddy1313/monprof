@@ -463,7 +463,7 @@
             <p>Rejoignez la communauté Monprofchezmoi</p>
         </div>
 
-        <form method="POST" action="{{ route('register') }}" id="registerForm">
+        <form method="POST" action="{{ route('particuliers.register') }}" id="registerForm">
             @csrf
 
             <!-- Name -->
@@ -583,14 +583,14 @@
 
             <!-- Login Link -->
             <div class="login-wrap">
-                <p>Déjà un compte ? <a href="{{ route('login') }}">Se connecter</a></p>
+                <p>Déjà un compte ? <a href="{{ route('particuliers.login') }}">Se connecter</a></p>
             </div>
         </form>
     </div>
 
     <!-- Back to home -->
     <div class="back-home">
-        <a href="{{ url('/') }}">
+        <a href="{{ url('/particuliers') }}">
             <i class="fas fa-arrow-left"></i>
             Retour à l'accueil
         </a>

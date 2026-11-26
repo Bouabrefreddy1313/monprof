@@ -60,7 +60,7 @@ class PanierVideoController extends Controller
     public function remove($videoId)
     {
         $user = Auth::user();
-        if (!$user) return redirect()->route('login');
+        if (!$user) return redirect()->route('particuliers.login');
 
         PanierVideo::where('user_id', $user->id)
             ->where('video_id', $videoId)
@@ -75,7 +75,7 @@ class PanierVideoController extends Controller
     public function index()
     {
         $user = Auth::user();
-        if (!$user) return redirect()->route('login');
+        if (!$user) return redirect()->route('particuliers.login');
 
         $items = PanierVideo::where('user_id', $user->id)
             ->with('video')
@@ -92,7 +92,7 @@ class PanierVideoController extends Controller
     public function checkout(Request $request)
     {
         $user = Auth::user();
-        if (!$user) return redirect()->route('login');
+        if (!$user) return redirect()->route('particuliers.login');
 
         $items = PanierVideo::where('user_id', $user->id)->with('video')->get();
 
@@ -107,8 +107,8 @@ class PanierVideoController extends Controller
         // Créer le paiement groupé (un seul paiement pour toutes les vidéos)
         $groupTransactionId = 'PAN' . time() . $user->id;
 
-        $returnUrl = route('panier.return');
-        $errorUrl = route('panier.cancel');
+        $returnUrl = route('particuliers.panier.return');
+        $errorUrl = route('particuliers.panier.cancel');
 
         $returnUrl = $this->ensureAbsoluteUrl($returnUrl);
         $errorUrl = $this->ensureAbsoluteUrl($errorUrl);
@@ -150,7 +150,7 @@ class PanierVideoController extends Controller
         $reference = $request->get('reference') ?? session('panier_payment_reference');
 
         if (!$reference) {
-            return redirect()->route('panier.cancel');
+            return redirect()->route('particuliers.panier.cancel');
         }
 
         $checkResult = $this->geniuspay->checkPaymentStatus($reference);
@@ -212,11 +212,11 @@ class PanierVideoController extends Controller
                 session()->forget(['panier_payment_reference', 'panier_payment_video_ids']);
             }
 
-            return redirect()->route('video.dashboard')
+            return redirect()->route('particuliers.video.dashboard')
                 ->with('success', 'Achat effectué avec succès !');
         }
 
-        return redirect()->route('panier.cancel');
+        return redirect()->route('particuliers.panier.cancel');
     }
 
     /**
@@ -261,7 +261,7 @@ class PanierVideoController extends Controller
 
         session()->forget(['panier_payment_video_ids', 'panier_payment_reference']);
 
-        return redirect()->route('panier.index')
+        return redirect()->route('particuliers.panier.index')
             ->with('error', 'Paiement annulé. Réessayez.');
     }
 

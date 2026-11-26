@@ -109,33 +109,33 @@
         </div>
         <ul class="sidebar-nav">
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.dashboard') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.dashboard') }}" class="sidebar-nav-link">
                     <i class="fas fa-tachometer-alt"></i> <span>Dashboard Ventes</span>
                 </a>
             </li>
             <li class="sidebar-section-label">Module Diagnostic</li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
                     <i class="fas fa-chart-pie"></i> <span>Entonnoir & Stats</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.questions') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions') }}" class="sidebar-nav-link">
                     <i class="fas fa-question-circle"></i> <span>Questionnaire No-Code</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.courses') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.courses') }}" class="sidebar-nav-link">
                     <i class="fas fa-tags"></i> <span>Cours & Tags Matching</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.settings') }}" class="sidebar-nav-link active">
+                <a href="{{ route('particuliers.superadmin.diagnostic.settings') }}" class="sidebar-nav-link active">
                     <i class="fas fa-sliders-h"></i> <span>Configuration Module</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.leads.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.leads.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-users"></i> <span>Liste des Leads</span>
                 </a>
             </li>
@@ -159,7 +159,7 @@
         @endif
 
         <div class="card-custom">
-            <form action="{{ route('superadmin.diagnostic.settings.update') }}" method="POST">
+            <form action="{{ route('particuliers.superadmin.diagnostic.settings.update') }}" method="POST">
                 @csrf
 
                 <!-- Activation générale -->

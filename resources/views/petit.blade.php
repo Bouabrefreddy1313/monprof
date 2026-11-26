@@ -10,7 +10,7 @@
     <meta content="Les Petits Bilingues de MONPROFCHEZMOI : ateliers d'anglais immersifs et ludiques pour enfants de 4 à 16 ans, en mini-groupes de 3 à 8 enfants. Hebdomadaire, immersif ou stage de vacances à Abidjan." name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
     <!-- Libraries Stylesheet -->
 
     <!-- Bootstrap -->
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
 
     <style>
         /* ============================================
@@ -2536,7 +2536,7 @@
             </div>
 
             <div class="hero-page-image d-none d-lg-block">
-                <img src="asset/img/petitseul.jpg" alt="Les Petits Bilingues">
+                <img src="/asset/img/petitseul.jpg" alt="Les Petits Bilingues">
                 <div class="hero-badge-float"><i class="fas fa-check-circle"></i> 500+ enfants accompagnés</div>
             </div>
         </div>
@@ -2578,7 +2578,7 @@
                 <!-- Hebdomadaire G1 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/hebdopetit.jpg" alt="Atelier hebdomadaire petits" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/hebdopetit.jpg" alt="Atelier hebdomadaire petits" class="workshop-image">
                         <div class="workshop-badge">Hebdo</div>
                     </div>
                     <div class="workshop-body">
@@ -2652,7 +2652,7 @@
                 <!-- Immersif G1 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/yoga.jpg" alt="Atelier immersif" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/yoga.jpg" alt="Atelier immersif" class="workshop-image">
                         <div class="workshop-badge">Immersif</div>
                     </div>
                     <div class="workshop-body">
@@ -2726,7 +2726,7 @@
                 <!-- Stage G1 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/petitseul.jpg" alt="Stage de vacances" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/petitseul.jpg" alt="Stage de vacances" class="workshop-image">
                         <div class="workshop-badge">Stage</div>
                     </div>
                     <div class="workshop-body">
@@ -2787,7 +2787,7 @@
                 <!-- Hebdomadaire G2 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/joueseul.jpg" alt="Atelier hebdomadaire" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/joueseul.jpg" alt="Atelier hebdomadaire" class="workshop-image">
                         <div class="workshop-badge">Hebdo</div>
                     </div>
                     <div class="workshop-body">
@@ -2861,7 +2861,7 @@
                 <!-- Immersif G2 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/main.jpg" alt="Atelier immersif" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/main.jpg" alt="Atelier immersif" class="workshop-image">
                         <div class="workshop-badge">Immersif</div>
                     </div>
                     <div class="workshop-body">
@@ -2935,7 +2935,7 @@
                 <!-- Stage G2 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/activ.jpg" alt="Stage de vacances" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/activ.jpg" alt="Stage de vacances" class="workshop-image">
                         <div class="workshop-badge">Stage</div>
                     </div>
                     <div class="workshop-body">
@@ -2996,7 +2996,7 @@
                 <!-- Hebdomadaire G3 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/beber.jpeg" alt="Atelier hebdomadaire ados" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/beber.jpeg" alt="Atelier hebdomadaire ados" class="workshop-image">
                         <div class="workshop-badge">Hebdo</div>
                     </div>
                     <div class="workshop-body">
@@ -3070,7 +3070,7 @@
                 <!-- Immersif G3 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/azaz.jpeg" alt="Atelier immersif ados" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/azaz.jpeg" alt="Atelier immersif ados" class="workshop-image">
                         <div class="workshop-badge">Immersif</div>
                     </div>
                     <div class="workshop-body">
@@ -3144,7 +3144,7 @@
                 <!-- Stage G3 -->
                 <div class="workshop-card-moderne animate-scroll">
                     <div class="workshop-image-wrap">
-                        <img loading="lazy" decoding="async" src="asset/img/beber.jpeg" alt="Stage de vacances ados" class="workshop-image">
+                        <img loading="lazy" decoding="async" src="/asset/img/beber.jpeg" alt="Stage de vacances ados" class="workshop-image">
                         <div class="workshop-badge">Stage</div>
                     </div>
                     <div class="workshop-body">
@@ -3214,7 +3214,7 @@
             </div>
 
             <div class="intro-image-wrap animate-scroll">
-                <img loading="lazy" decoding="async" src="asset/img/yoga.jpg" alt="Enfants apprenant l'anglais">
+                <img loading="lazy" decoding="async" src="/asset/img/yoga.jpg" alt="Enfants apprenant l'anglais">
             </div>
         </div>
     </div>
@@ -3420,7 +3420,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -3433,22 +3433,22 @@
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 
@@ -3754,7 +3754,7 @@ function submitInscription(e) {
     }
 
     // Envoyer l'inscription en AJAX
-    fetch('/inscription', {
+    fetch('/particuliers/inscription', {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || ''
@@ -3766,7 +3766,7 @@ function submitInscription(e) {
         if (result.success && result.token) {
             const paymentForm = document.createElement('form');
             paymentForm.method = 'POST';
-            paymentForm.action = '/payment/initiate';
+            paymentForm.action = '/particuliers/payment/initiate';
 
             const csrfInput = document.createElement('input');
             csrfInput.type = 'hidden';
@@ -3838,7 +3838,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeInscriptionModal(); });
 
 function redirectToContact(part) {
-    window.location.href = `/contact?part=${part}`;
+    window.location.href = `/particuliers/contact?part=${part}`;
 }
 </script>
 

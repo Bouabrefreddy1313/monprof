@@ -273,17 +273,17 @@
         </div>
         <ul class="sidebar-nav">
             <li class="sidebar-nav-item">
-                <a href="{{ url('/') }}" class="sidebar-nav-link">
+                <a href="{{ url('/particuliers') }}" class="sidebar-nav-link">
                     <i class="fas fa-home"></i> <span>Accueil Site</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.dashboard') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.dashboard') }}" class="sidebar-nav-link">
                     <i class="fas fa-tachometer-alt"></i> <span>Dashboard Ventes</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.leads.index') }}" class="sidebar-nav-link active">
+                <a href="{{ route('particuliers.admin.leads.index') }}" class="sidebar-nav-link active">
                     <i class="fas fa-funnel-dollar"></i> <span>Diagnostics & Leads</span>
                     @if($counts['nouveau'] > 0)
                         <span class="badge-count">{{ $counts['nouveau'] }}</span>
@@ -291,12 +291,12 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.notifications.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.notifications.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-bell"></i> <span>Notifications</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ url('/voircours') }}" class="sidebar-nav-link">
+                <a href="{{ url('/particuliers/voircours') }}" class="sidebar-nav-link">
                     <i class="fas fa-book"></i> <span>Cours & Formations</span>
                 </a>
             </li>
@@ -309,10 +309,10 @@
         <div class="topbar">
             <h1><i class="fas fa-funnel-dollar text-warning"></i> Gestion des Leads & Diagnostics</h1>
             <div>
-                <a href="{{ route('admin.leads.export', request()->query()) }}" class="btn btn-outline-secondary btn-sm me-2">
+                <a href="{{ route('particuliers.admin.leads.export', request()->query()) }}" class="btn btn-outline-secondary btn-sm me-2">
                     <i class="fas fa-file-csv me-1"></i> Exporter CSV
                 </a>
-                <form action="{{ route('admin.logout') }}" method="POST" class="d-inline">
+                <form action="{{ route('particuliers.admin.logout') }}" method="POST" class="d-inline">
                     @csrf
                     <button type="submit" class="btn btn-outline-danger btn-sm">
                         <i class="fas fa-sign-out-alt"></i> Déconnexion
@@ -330,35 +330,35 @@
 
         <!-- Quick Stats -->
         <div class="stats-row">
-            <a href="{{ route('admin.leads.index') }}" class="stat-box">
+            <a href="{{ route('particuliers.admin.leads.index') }}" class="stat-box">
                 <div>
                     <div class="stat-val">{{ $counts['total'] }}</div>
                     <div class="stat-lbl">Total Leads</div>
                 </div>
                 <div class="stat-icon bg-light text-dark"><i class="fas fa-users"></i></div>
             </a>
-            <a href="{{ route('admin.leads.index', ['statut' => 'nouveau']) }}" class="stat-box nouveau">
+            <a href="{{ route('particuliers.admin.leads.index', ['statut' => 'nouveau']) }}" class="stat-box nouveau">
                 <div>
                     <div class="stat-val text-danger">{{ $counts['nouveau'] }}</div>
                     <div class="stat-lbl">Nouveaux à traiter</div>
                 </div>
                 <div class="stat-icon"><i class="fas fa-bolt"></i></div>
             </a>
-            <a href="{{ route('admin.leads.index', ['statut' => 'contacte']) }}" class="stat-box contacte">
+            <a href="{{ route('particuliers.admin.leads.index', ['statut' => 'contacte']) }}" class="stat-box contacte">
                 <div>
                     <div class="stat-val text-primary">{{ $counts['contacte'] }}</div>
                     <div class="stat-lbl">Contactés</div>
                 </div>
                 <div class="stat-icon"><i class="fas fa-phone"></i></div>
             </a>
-            <a href="{{ route('admin.leads.index', ['statut' => 'en_discussion']) }}" class="stat-box en_discussion">
+            <a href="{{ route('particuliers.admin.leads.index', ['statut' => 'en_discussion']) }}" class="stat-box en_discussion">
                 <div>
                     <div class="stat-val text-warning">{{ $counts['en_discussion'] }}</div>
                     <div class="stat-lbl">En discussion</div>
                 </div>
                 <div class="stat-icon"><i class="fas fa-comments"></i></div>
             </a>
-            <a href="{{ route('admin.leads.index', ['statut' => 'converti']) }}" class="stat-box converti">
+            <a href="{{ route('particuliers.admin.leads.index', ['statut' => 'converti']) }}" class="stat-box converti">
                 <div>
                     <div class="stat-val text-success">{{ $counts['converti'] }}</div>
                     <div class="stat-lbl">Convertis / Inscrits</div>
@@ -369,7 +369,7 @@
 
         <!-- Filters Form -->
         <div class="filter-card">
-            <form action="{{ route('admin.leads.index') }}" method="GET" class="row g-2 align-items-center">
+            <form action="{{ route('particuliers.admin.leads.index') }}" method="GET" class="row g-2 align-items-center">
                 <div class="col-md-3">
                     <input type="text" name="search" class="form-control form-control-sm" placeholder="Recherche nom, tél, email..." value="{{ request('search') }}">
                 </div>
@@ -402,7 +402,7 @@
                 </div>
                 <div class="col-md-3 d-flex gap-2">
                     <button type="submit" class="btn btn-warning btn-sm text-white fw-bold"><i class="fas fa-filter me-1"></i> Filtrer</button>
-                    <a href="{{ route('admin.leads.index') }}" class="btn btn-light btn-sm text-secondary">Réinitialiser</a>
+                    <a href="{{ route('particuliers.admin.leads.index') }}" class="btn btn-light btn-sm text-secondary">Réinitialiser</a>
                 </div>
             </form>
         </div>
@@ -500,7 +500,7 @@
                                             <a href="https://wa.me/{{ $waClean }}?text={{ $waMsg }}" target="_blank" class="btn-act-wa" title="WhatsApp">
                                                 <i class="fab fa-whatsapp"></i>
                                             </a>
-                                            <a href="{{ route('admin.leads.show', $l->id) }}" class="btn-view-dossier" title="Ouvrir le dossier">
+                                            <a href="{{ route('particuliers.admin.leads.show', $l->id) }}" class="btn-view-dossier" title="Ouvrir le dossier">
                                                 Fiche <i class="fas fa-arrow-right ms-1"></i>
                                             </a>
                                         </div>

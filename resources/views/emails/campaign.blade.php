@@ -69,7 +69,7 @@
             <p>MonProfChezMoi-ci.com</p>
             <p>Vous recevez cet email car vous êtes inscrit à notre newsletter.</p>
             <p>
-                <a href="{{ url('/unsubscribe?email=EMAIL') }}">Se désabonner</a>
+                <a href="{{ url('/particuliers/unsubscribe?email=EMAIL') }}">Se désabonner</a>
             </p>
         </div>
     </div>

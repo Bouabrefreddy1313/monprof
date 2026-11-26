@@ -8,18 +8,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-<link rel="stylesheet" href="asset/js/nav/icomoon/style.css">
+<link rel="stylesheet" href="/asset/js/nav/icomoon/style.css">
 
-<link rel="stylesheet" href="asset/js/nav/owl.carousel.min.css">
+<link rel="stylesheet" href="/asset/js/nav/owl.carousel.min.css">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="asset/js/nav/bootstrap.min.css">
+<link rel="stylesheet" href="/asset/js/nav/bootstrap.min.css">
 
     <title>Soutien scolaire - Monprofchezmoi</title>
     <!-- css file link-->
-    <link rel="stylesheet" href="asset/js/soutien/index.css">
+    <link rel="stylesheet" href="/asset/js/soutien/index.css">
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 </head>
 <body>
 @include('partials.header')
@@ -38,8 +38,8 @@
             </div>
             <div class="modal-body">
                 <div class="list-group">
-                    <a href="{{ url('/bouge') }}" class="list-group-item list-group-item-action">Bouge ta grammaire et ton orthographe</a>
-                    <a href="{{ url('/codage') }}" class="list-group-item list-group-item-action">Codage informatique pour 8-14 ans</a>
+                    <a href="{{ url('/particuliers/bouge') }}" class="list-group-item list-group-item-action">Bouge ta grammaire et ton orthographe</a>
+                    <a href="{{ url('/particuliers/codage') }}" class="list-group-item list-group-item-action">Codage informatique pour 8-14 ans</a>
                 </div>
             </div>
             <div class="modal-footer">
@@ -85,13 +85,13 @@
             <span>Nous sommes à votre écoute au 01 53 75 15 44</span>
         </div>
     </div>
-    <script src="asset/js/soutien/index.js"></script> 
-    <script src="asset/js/nav/jquery-3.3.1.min.js"></script>
-    <script src="asset/js/nav/popper.min.js"></script>
-    <script src="asset/js/nav/bootstrap.min.js"></script>
-    <script src="asset/js/nav/jquery.sticky.js"></script>
-    <script src="asset/js/nav/main.js"></script>
-    <script src="asset/js/nav/defile.js"></script>
+    <script src="/asset/js/soutien/index.js"></script> 
+    <script src="/asset/js/nav/jquery-3.3.1.min.js"></script>
+    <script src="/asset/js/nav/popper.min.js"></script>
+    <script src="/asset/js/nav/bootstrap.min.js"></script>
+    <script src="/asset/js/nav/jquery.sticky.js"></script>
+    <script src="/asset/js/nav/main.js"></script>
+    <script src="/asset/js/nav/defile.js"></script>
     @include('components.chatbot')
     @include('components.newsletter-popup')
 </body>

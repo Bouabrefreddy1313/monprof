@@ -17,7 +17,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title">{{ $matiere->nom }}</h5>
-                            <a href="{{ route('lecons.show', ['id' => $matiere->id]) }}" class="btn btn-primary">Voir les lecons</a>
+                            <a href="{{ route('particuliers.lecons.show', ['id' => $matiere->id]) }}" class="btn btn-primary">Voir les lecons</a>
                         </div>
                     </div>
                 </div>

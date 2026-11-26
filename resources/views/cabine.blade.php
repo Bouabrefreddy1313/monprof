@@ -10,7 +10,7 @@
     <meta content="Donnez le goût de la lecture à vos enfants avec notre bibliothèque de 60 livres pour les 3-15 ans." name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
     <!-- Libraries Stylesheet -->
 
     <!-- Bootstrap -->
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
-    <link href="asset/css/courscss/style.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,9 +51,9 @@
      ============================================ -->
 <div class="breadcrumb-moderne">
     <div class="container">
-        <a href="{{ url('/') }}">Accueil</a>
+        <a href="{{ url('/particuliers') }}">Accueil</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="{{ url('/cabine') }}">Extrascolaire</a>
+        <a href="{{ url('/particuliers/cabine') }}">Extrascolaire</a>
         <i class="fas fa-chevron-right"></i>
         <span class="current">Ma cabine à livres</span>
     </div>
@@ -80,7 +80,7 @@
                 <a href="#tarifs" class="btn-cta-orange" style="margin-top: 10px;"><i class="fas fa-tag"></i> Voir les formules</a>
             </div>
             <div class="intro-image-wrap animate-scroll">
-                <img src="asset/img/cabine.jpg" alt="Ma cabine à livres">
+                <img src="/asset/img/cabine.jpg" alt="Ma cabine à livres">
                 <div class="intro-image-badge">
                     <i class="fas fa-book-open"></i> 60+ livres disponibles
                 </div>
@@ -140,7 +140,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/fusa.jpg" alt="La princesse Violette">
+                        <img loading="lazy" decoding="async" src="/asset/img/fusa.jpg" alt="La princesse Violette">
                         <span class="book-card-age">Dès 3 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/mys.jpg" alt="Mystère aux Etats-Unis">
+                        <img loading="lazy" decoding="async" src="/asset/img/mys.jpg" alt="Mystère aux Etats-Unis">
                         <span class="book-card-age">3-6 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -160,7 +160,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/roi.jpg" alt="Le Roi Lion">
+                        <img loading="lazy" decoding="async" src="/asset/img/roi.jpg" alt="Le Roi Lion">
                         <span class="book-card-age">Dès 3 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -180,7 +180,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/amandine.jpeg" alt="Amandine Malabul">
+                        <img loading="lazy" decoding="async" src="/asset/img/amandine.jpeg" alt="Amandine Malabul">
                         <span class="book-card-age">6-8 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -190,7 +190,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/james.jpeg" alt="Emma James">
+                        <img loading="lazy" decoding="async" src="/asset/img/james.jpeg" alt="Emma James">
                         <span class="book-card-age">Dès 6 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -200,7 +200,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/bibliomys.jpeg" alt="Bibliomystère">
+                        <img loading="lazy" decoding="async" src="/asset/img/bibliomys.jpeg" alt="Bibliomystère">
                         <span class="book-card-age">Dès 8 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -220,7 +220,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/licorne.jpg" alt="Skandar">
+                        <img loading="lazy" decoding="async" src="/asset/img/licorne.jpg" alt="Skandar">
                         <span class="book-card-age">9-12 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -230,7 +230,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/disparu.jpeg" alt="La Joconde disparue">
+                        <img loading="lazy" decoding="async" src="/asset/img/disparu.jpeg" alt="La Joconde disparue">
                         <span class="book-card-age">Dès 9 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -240,7 +240,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/naitre.jpeg" alt="Naître fille">
+                        <img loading="lazy" decoding="async" src="/asset/img/naitre.jpeg" alt="Naître fille">
                         <span class="book-card-age">10-12 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -260,7 +260,7 @@
             <div class="book-grid">
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/guerre.jpg" alt="La Guerre des Deux Lunes">
+                        <img loading="lazy" decoding="async" src="/asset/img/guerre.jpg" alt="La Guerre des Deux Lunes">
                         <span class="book-card-age">13-14 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -270,7 +270,7 @@
                 </div>
                 <div class="book-card animate-scroll">
                     <div class="book-card-image">
-                        <img loading="lazy" decoding="async" src="asset/img/sem.jpeg" alt="Sem">
+                        <img loading="lazy" decoding="async" src="/asset/img/sem.jpeg" alt="Sem">
                         <span class="book-card-age">Dès 15 ans</span>
                     </div>
                     <div class="book-card-content">
@@ -559,7 +559,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -572,22 +572,22 @@
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 
@@ -678,7 +678,7 @@ function submitInscription(e) {
     }
 
     // Étape 1 : Créer l'inscription
-    fetch('/inscription', {
+    fetch('/particuliers/inscription', {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || ''
@@ -691,7 +691,7 @@ function submitInscription(e) {
             // Étape 2 : Redirection vers le système de paiement
             const paymentForm = document.createElement('form');
             paymentForm.method = 'POST';
-            paymentForm.action = '/payment/initiate';
+            paymentForm.action = '/particuliers/payment/initiate';
 
             const csrfInput = document.createElement('input');
             csrfInput.type = 'hidden';

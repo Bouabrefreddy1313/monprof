@@ -29,7 +29,7 @@
 
 <script>
     function initiatePayment(amount, category) {
-        fetch('/payment/initiate', {
+        fetch('/particuliers/payment/initiate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

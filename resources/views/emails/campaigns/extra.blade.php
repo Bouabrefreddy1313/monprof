@@ -48,23 +48,23 @@
                 <div class="program-card">
                     <h3>🎵 Musique et chant</h3>
                     <p>Des cours de musique et de chant pour développer la sensibilité artistique et l'expression personnelle.</p>
-                    <a href="{{ url('/musique') }}" class="program-link">Découvrir →</a>
+                    <a href="{{ url('/particuliers/musique') }}" class="program-link">Découvrir →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>💻 Codage et robotique</h3>
                     <p>Des ateliers pour initier les enfants à la programmation et à la robotique, en s'amusant.</p>
-                    <a href="{{ url('/codage') }}" class="program-link">En savoir plus →</a>
+                    <a href="{{ url('/particuliers/codage') }}" class="program-link">En savoir plus →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>🌍 Langues étrangères</h3>
                     <p>Des cours d'anglais, d'espagnol et d'autres langues pour ouvrir le monde à votre enfant.</p>
-                    <a href="{{ url('/petit') }}" class="program-link">Voir plus →</a>
+                    <a href="{{ url('/particuliers/petit') }}" class="program-link">Voir plus →</a>
                 </div>
 
                 <div class="cta-section">
-                    <a href="{{ url('/formations') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/formations') }}" class="cta-button">
                         Voir toutes nos activités →
                     </a>
                 </div>
@@ -78,9 +78,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

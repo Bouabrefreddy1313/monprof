@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Ajouter une formation</title>
-    <link rel="stylesheet" href="asset/css/vue.css">
+    <link rel="stylesheet" href="/asset/css/vue.css">
 </head>
 <body>
 @include('partials.header')
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('formations.store') }}" method="POST">
+    <form action="{{ route('particuliers.formations.store') }}" method="POST">
         @csrf
         <div>
             <label for="titre">Titre de la formation :</label>

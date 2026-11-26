@@ -280,7 +280,7 @@ class DiagnosticController extends Controller
                     'prenom' => $lead->prenom,
                     'telephone' => $lead->telephone,
                     'cours' => $lead->titre_recommandation,
-                    'url' => route('admin.leads.show', $lead->id),
+                    'url' => route('particuliers.admin.leads.show', $lead->id),
                 ],
             ]);
         } catch (\Throwable $e) {

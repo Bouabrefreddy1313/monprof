@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1207,13 +1207,13 @@
          ============================================ -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
-            <img src="asset/img/logo.png" alt="Monprofchezmoi">
+            <img src="/asset/img/logo.png" alt="Monprofchezmoi">
             <span>ADMIN</span>
         </div>
 
         <ul class="sidebar-nav">
             <li class="sidebar-nav-item">
-                <a href="{{ url('/') }}" class="sidebar-nav-link">
+                <a href="{{ url('/particuliers') }}" class="sidebar-nav-link">
                     <i class="fas fa-home"></i>
                     <span>Accueil Site</span>
                 </a>
@@ -1232,7 +1232,7 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.leads.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.leads.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-funnel-dollar"></i>
                     <span>Diagnostics & Leads</span>
                     @php $newLeadsCount = \App\Models\Lead::where('statut', 'nouveau')->count(); @endphp
@@ -1242,7 +1242,7 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.notifications.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.notifications.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-bell"></i>
                     <span>Notifications</span>
                     @php $notifCount = \App\Models\Notification::unread()->count(); @endphp
@@ -1252,25 +1252,25 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.videos.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.videos.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-video"></i>
                     <span>Vidéos DCG/DSCG</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ url('/voirsoutien') }}" class="sidebar-nav-link">
+                <a href="{{ url('/particuliers/voirsoutien') }}" class="sidebar-nav-link">
                     <i class="fas fa-users"></i>
                     <span>Soutien</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.bons.verifier') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.bons.verifier') }}" class="sidebar-nav-link">
                     <i class="fas fa-ticket-alt"></i>
                     <span>Vérifier Bon Cadeau</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ url('/voircours') }}" class="sidebar-nav-link">
+                <a href="{{ url('/particuliers/voircours') }}" class="sidebar-nav-link">
                     <i class="fas fa-eye"></i>
                     <span>Cours</span>
                 </a>
@@ -1300,14 +1300,14 @@
                 Tableau de Bord
             </h1>
             <div class="topbar-actions">
-                <a href="{{ route('admin.notifications.index') }}" class="btn-topbar btn-notif">
+                <a href="{{ route('particuliers.admin.notifications.index') }}" class="btn-topbar btn-notif">
                     <i class="fas fa-bell"></i>
                     Notifications
                     @if($notifCount > 0)
                         <span class="notif-badge">{{ $notifCount }}</span>
                     @endif
                 </a>
-                <form action="{{ route('admin.logout') }}" method="POST" class="d-inline">
+                <form action="{{ route('particuliers.admin.logout') }}" method="POST" class="d-inline">
                     @csrf
                     <button type="submit" class="btn-topbar btn-logout">
                         <i class="fas fa-sign-out-alt"></i> Déconnexion
@@ -1670,12 +1670,12 @@
             </div>
 
             <div class="actions-grid">
-                <a href="{{ route('admin.bons.verifier') }}" class="action-card orange">
+                <a href="{{ route('particuliers.admin.bons.verifier') }}" class="action-card orange">
                     <div class="action-icon"><i class="fas fa-barcode"></i></div>
                     <h5>Vérifier un Bon</h5>
                     <span class="btn-action"><i class="fas fa-search"></i> Vérifier & Lier</span>
                 </a>
-                <a href="{{ url('/bons/create') }}" class="action-card orange">
+                <a href="{{ url('/particuliers/bons/create') }}" class="action-card orange">
                     <div class="action-icon"><i class="fas fa-gift"></i></div>
                     <h5>Bons Cadeaux</h5>
                     <span class="btn-action"><i class="fas fa-plus"></i> Créer & Gérer</span>
@@ -1690,27 +1690,27 @@
                     <h5>VentePILOT</h5>
                     <span class="btn-action"><i class="fas fa-external-link-alt"></i> Accéder</span>
                 </a>
-                <a href="{{ url('/formcreate') }}" class="action-card orange">
+                <a href="{{ url('/particuliers/formcreate') }}" class="action-card orange">
                     <div class="action-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h5>Créer une Formation</h5>
                     <span class="btn-action"><i class="fas fa-plus"></i> Créer</span>
                 </a>
-                <a href="{{ url('/create') }}" class="action-card blue">
+                <a href="{{ url('/particuliers/create') }}" class="action-card blue">
                     <div class="action-icon"><i class="fas fa-book"></i></div>
                     <h5>Créer un Cours</h5>
                     <span class="btn-action"><i class="fas fa-plus"></i> Créer</span>
                 </a>
-                <a href="{{ url('/souscreate') }}" class="action-card green">
+                <a href="{{ url('/particuliers/souscreate') }}" class="action-card green">
                     <div class="action-icon"><i class="fas fa-stream"></i></div>
                     <h5>Sous-Formation</h5>
                     <span class="btn-action"><i class="fas fa-plus"></i> Créer</span>
                 </a>
-                <a href="{{ url('/matieres/create') }}" class="action-card purple">
+                <a href="{{ url('/particuliers/matieres/create') }}" class="action-card purple">
                     <div class="action-icon"><i class="fas fa-book-open"></i></div>
                     <h5>UE (DCG/DSCG)</h5>
                     <span class="btn-action"><i class="fas fa-plus"></i> Ajouter</span>
                 </a>
-                <a href="{{ url('/lecons/create') }}" class="action-card red">
+                <a href="{{ url('/particuliers/lecons/create') }}" class="action-card red">
                     <div class="action-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     <h5>Leçon (DCG/DSCG)</h5>
                     <span class="btn-action"><i class="fas fa-plus"></i> Ajouter</span>
@@ -1720,27 +1720,27 @@
                     <h5>Tableau de bord commandes</h5>
                     <span class="btn-action"><i class="fas fa-cog"></i> Gérer</span>
                 </a>
-                <a href="{{ route('admin.videos.index') }}" class="action-card yellow">
+                <a href="{{ route('particuliers.admin.videos.index') }}" class="action-card yellow">
                     <div class="action-icon"><i class="fas fa-video"></i></div>
                     <h5>Vidéos DCG/DSCG</h5>
                     <span class="btn-action"><i class="fas fa-cog"></i> Gérer</span>
                 </a>
-                <a href="{{ route('admin.notifications.index') }}" class="action-card teal">
+                <a href="{{ route('particuliers.admin.notifications.index') }}" class="action-card teal">
                     <div class="action-icon"><i class="fas fa-bell"></i></div>
                     <h5>Notifications</h5>
                     <span class="btn-action"><i class="fas fa-eye"></i> Voir</span>
                 </a>
-                <a href="{{ url('/voirsoutien') }}" class="action-card cyan">
+                <a href="{{ url('/particuliers/voirsoutien') }}" class="action-card cyan">
                     <div class="action-icon"><i class="fas fa-users"></i></div>
                     <h5>Soutien</h5>
                     <span class="btn-action"><i class="fas fa-eye"></i> Voir</span>
                 </a>
-                <a href="{{ url('/voircours') }}" class="action-card pink">
+                <a href="{{ url('/particuliers/voircours') }}" class="action-card pink">
                     <div class="action-icon"><i class="fas fa-eye"></i></div>
                     <h5>Cours</h5>
                     <span class="btn-action"><i class="fas fa-eye"></i> Voir</span>
                 </a>
-                <a href="{{ url('/choisir') }}" class="action-card cyan">
+                <a href="{{ url('/particuliers/choisir') }}" class="action-card cyan">
                     <div class="action-icon"><i class="fas fa-mouse-pointer"></i></div>
                     <h5>Choisir</h5>
                     <span class="btn-action"><i class="fas fa-external-link-alt"></i> Ouvrir</span>

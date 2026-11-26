@@ -10,10 +10,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('admin.dashboard') }}">Admin Dashboard</a>
+            <a class="navbar-brand" href="{{ route('particuliers.admin.dashboard') }}">Admin Dashboard</a>
             <div class="navbar-nav ml-auto">
-                <a href="{{ route('admin.videos.index') }}" class="btn btn-outline-light btn-sm mr-2">Retour</a>
-                <form action="{{ route('admin.logout') }}" method="POST" class="d-inline">
+                <a href="{{ route('particuliers.admin.videos.index') }}" class="btn btn-outline-light btn-sm mr-2">Retour</a>
+                <form action="{{ route('particuliers.admin.logout') }}" method="POST" class="d-inline">
                     @csrf
                     <button type="submit" class="btn btn-danger btn-sm">Déconnexion</button>
                 </form>
@@ -26,7 +26,7 @@
 
         <div class="card shadow">
             <div class="card-body">
-                <form action="{{ route('admin.videos.update', $video->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('particuliers.admin.videos.update', $video->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf @method('PUT')
 
                     <div class="row">
@@ -96,7 +96,7 @@
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-save"></i> Mettre à jour
                     </button>
-                    <a href="{{ route('admin.videos.index') }}" class="btn btn-secondary">Annuler</a>
+                    <a href="{{ route('particuliers.admin.videos.index') }}" class="btn btn-secondary">Annuler</a>
                 </form>
             </div>
         </div>

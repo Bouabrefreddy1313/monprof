@@ -48,7 +48,7 @@
             Une fois le paiement effectué, notre équipe validera votre inscription sous 24h.
         </p>
 
-        <a href="{{ url('/') }}" class="btn">Retour à l'accueil</a>
+        <a href="{{ url('/particuliers') }}" class="btn">Retour à l'accueil</a>
     </div>
 
 @include('components.newsletter-popup')

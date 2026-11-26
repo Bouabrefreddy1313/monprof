@@ -9,14 +9,14 @@
     <meta content="Méthodologie collège, autonomie scolaire, organisation travail, Côte d'Ivoire" name="keywords">
     <meta content="Accompagnement personnalisé pour développer les méthodes de travail et l'autonomie des collégiens." name="description">
 
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
-    <link href="asset/css/courscss/style.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/style.css" rel="stylesheet">
 </head>
 
 <style>
@@ -1136,9 +1136,9 @@ body {
 <!-- Breadcrumb -->
 <div class="breadcrumb-moderne">
     <div class="container">
-        <a href="{{ url('/') }}">Accueil</a>
+        <a href="{{ url('/particuliers') }}">Accueil</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="{{ url('/reponse') }}">Collège</a>
+        <a href="{{ url('/particuliers/reponse') }}">Collège</a>
         <i class="fas fa-chevron-right"></i>
         <span class="current">Méthodologie et autonomie</span>
     </div>
@@ -1549,7 +1549,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -1561,21 +1561,21 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
             <div>
@@ -1780,7 +1780,7 @@ function submitInscription(e) {
     }
 
     // Étape 1 : Créer l'inscription
-    fetch('/inscription', {
+    fetch('/particuliers/inscription', {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || ''
@@ -1793,7 +1793,7 @@ function submitInscription(e) {
             // Étape 2 : Redirection vers le système de paiement
             const paymentForm = document.createElement('form');
             paymentForm.method = 'POST';
-            paymentForm.action = '/payment/initiate';
+            paymentForm.action = '/particuliers/payment/initiate';
 
             const csrfInput = document.createElement('input');
             csrfInput.type = 'hidden';

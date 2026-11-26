@@ -10,7 +10,7 @@
                 <p>Accédez à votre espace personnel</p>
             </div>
 
-            <form method="POST" action="{{ route('login') }}" id="loginPopupForm">
+            <form method="POST" action="{{ route('particuliers.login') }}" id="loginPopupForm">
                 @csrf
 
                 <!-- Email -->
@@ -65,8 +65,8 @@
                         <label for="login_remember">Se souvenir de moi</label>
                     </div>
 
-                    @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="forgot-link">
+                    @if (Route::has('particuliers.password.request'))
+                        <a href="{{ route('particuliers.password.request') }}" class="forgot-link">
                             Mot de passe oublié ?
                         </a>
                     @endif
@@ -85,7 +85,7 @@
 
                 <!-- Register -->
                 <div class="register-wrap">
-                    <p>Pas encore de compte ? <a href="{{ route('register') }}">Créer un compte</a></p>
+                    <p>Pas encore de compte ? <a href="{{ route('particuliers.register') }}">Créer un compte</a></p>
                 </div>
             </form>
         </div>

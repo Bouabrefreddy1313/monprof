@@ -174,7 +174,7 @@
                 <div class="montant">{{ number_format($reservation->acompte, 0, '', ' ') }} FCFA</div>
             </div>
 
-            <form action="{{ route('payment.initiate') }}" method="POST">
+            <form action="{{ route('particuliers.payment.initiate') }}" method="POST">
     @csrf
     <input type="hidden" name="reservation_token" value="{{ $reservation->token }}">
     <input type="hidden" name="type" value="reservation">

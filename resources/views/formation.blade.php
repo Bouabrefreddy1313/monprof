@@ -9,7 +9,7 @@
     <meta content="Soutien Scolaire" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -53,7 +53,7 @@
     @foreach($cours as $cours)
         <div class="col-lg-4 col-md-6 mb-3"> <!-- Réduit la marge inférieure de 4 à 3 -->
             <div class="rounded overflow-hidden mb-2">
-                <a href="{{ route('cours', ['id' => $cours->id]) }}">
+                <a href="{{ route('particuliers.cours', ['id' => $cours->id]) }}">
                 </a>
                 <div class="bg-secondary p-3"> <!-- Réduit le padding intérieur de 4 à 3 -->
 
@@ -66,7 +66,7 @@
                        </div>
                         
 <!-- Titre du cours à droite -->
-<a class="h6 m-0 custom-course-title" href="{{ route('cours', ['id' => $cours->id]) }}">{{ $cours->titre }}</a>
+<a class="h6 m-0 custom-course-title" href="{{ route('particuliers.cours', ['id' => $cours->id]) }}">{{ $cours->titre }}</a>
                     </div>
 
                     <!-- Informations supplémentaires -->
@@ -83,7 +83,7 @@
                     </div>
                      <!-- Ajout du bouton en bas du cadre avec couleur orange -->
                     <div class="text-center mt-3">
-                        <a href="{{ route('cours', ['id' => $cours->id]) }}" class="btn btn-block" style="font-weight: bold; border-radius: 30px; background-color: orange; color: white;">Je m’informe gratuitement</a>
+                        <a href="{{ route('particuliers.cours', ['id' => $cours->id]) }}" class="btn btn-block" style="font-weight: bold; border-radius: 30px; background-color: orange; color: white;">Je m’informe gratuitement</a>
                     </div>
                 </div>
             </div>
@@ -108,8 +108,8 @@
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="index.html" class="navbar-brand">
-                            <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="" width="150px">                        </a>
+                        <a href="/index.html" class="navbar-brand">
+                            <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="" width="150px">                        </a>
                         <p class="mt-3 mb-4">Leader de l’accompagnement éducatif en Côte d’Ivoire, groupe  éducatif expérimenté et innovant, Monprofchezmoi est avant tout  une entreprise à taille humaine, capable de répondre au plus près  de chez vous à chacun de vos besoins.
 Depuis 2019, Monprofchezmoi accompagne près de 500 familles  chaque année. Nous avons développé une approche pédagogique  qui permet de prendre en compte les besoins individuels de nos  élèves, avec le souci permanent d’atteindre l’objectif de chacun.
 </p>
@@ -202,12 +202,12 @@ Depuis 2019, Monprofchezmoi accompagne près de 500 familles  chaque année. Nou
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
 
     <!-- Template Javascript -->
-    <script src="asset/js/formationjs/js/main.js"></script>
+    <script src="/asset/js/formationjs/js/main.js"></script>
 
 @include('components.newsletter-popup')
 @include('components.chatbot')

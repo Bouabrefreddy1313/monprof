@@ -31,7 +31,7 @@
                     <td>{{ $c->heure ?? '-' }}</td>
                     <td>{{ $c->prix !== null && $c->prix !== '' ? number_format((float)$c->prix, 0, ',', ' ') . ' XOF' : '-' }}</td>
                     <td>
-                        <a href="{{ route('cours.edit', $c->id) }}" class="btn btn-primary btn-sm">Modifier</a>
+                        <a href="{{ route('particuliers.cours.edit', $c->id) }}" class="btn btn-primary btn-sm">Modifier</a>
                     </td>
                 </tr>
             @endforeach

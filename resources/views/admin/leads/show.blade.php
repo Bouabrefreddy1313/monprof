@@ -143,7 +143,7 @@
     <!-- Breadcrumb & Top Navigation -->
     <div class="header-bar">
         <div>
-            <a href="{{ route('admin.leads.index') }}" class="text-muted text-decoration-none small fw-bold">
+            <a href="{{ route('particuliers.admin.leads.index') }}" class="text-muted text-decoration-none small fw-bold">
                 &larr; Retour à la liste des leads
             </a>
             <h1 class="h3 fw-bold mt-1 text-dark mb-0">Fiche Prospect : {{ $lead->prenom }} (#{{ $lead->id }})</h1>
@@ -260,14 +260,14 @@
                         </a>
                     @endif
                     @if($lead->coursRecommande)
-                        <a href="{{ route('cours', $lead->cours_recommande_id) }}" target="_blank" class="btn btn-outline-warning btn-sm fw-bold">
+                        <a href="{{ route('particuliers.cours', $lead->cours_recommande_id) }}" target="_blank" class="btn btn-outline-warning btn-sm fw-bold">
                             <i class="fas fa-external-link-alt me-1"></i> Ouvrir la fiche du cours sur le site
                         </a>
                     @endif
                 </div>
 
                 <!-- Modification manuelle du cours -->
-                <form action="{{ route('admin.leads.change-course', $lead->id) }}" method="POST" class="mt-3">
+                <form action="{{ route('particuliers.admin.leads.change-course', $lead->id) }}" method="POST" class="mt-3">
                     @csrf
                     <label class="form-label small fw-bold">Recommander manuellement un autre cours de la base :</label>
                     <div class="input-group">
@@ -291,7 +291,7 @@
                 <h5 class="fw-bold mb-3"><i class="fas fa-tasks text-success me-2"></i> Suivi du Dossier</h5>
 
                 <!-- Form Statut -->
-                <form action="{{ route('admin.leads.status', $lead->id) }}" method="POST" class="mb-3">
+                <form action="{{ route('particuliers.admin.leads.status', $lead->id) }}" method="POST" class="mb-3">
                     @csrf
                     <label class="form-label small fw-bold">Changer le statut :</label>
                     <div class="input-group">
@@ -307,7 +307,7 @@
                 </form>
 
                 <!-- Form Assignation -->
-                <form action="{{ route('admin.leads.assign', $lead->id) }}" method="POST">
+                <form action="{{ route('particuliers.admin.leads.assign', $lead->id) }}" method="POST">
                     @csrf
                     <label class="form-label small fw-bold">Assigner à un responsable :</label>
                     <div class="input-group">
@@ -325,7 +325,7 @@
             <!-- Ajouter une note -->
             <div class="card-custom">
                 <h5 class="fw-bold mb-3"><i class="fas fa-comment-alt text-info me-2"></i> Ajouter une Note Interne</h5>
-                <form action="{{ route('admin.leads.note', $lead->id) }}" method="POST">
+                <form action="{{ route('particuliers.admin.leads.note', $lead->id) }}" method="POST">
                     @csrf
                     <div class="mb-2">
                         <textarea name="note" class="form-control" rows="3" placeholder="Écrire une note (ex: a confirmé un RDV mercredi 15h, rappel prévu...)" required></textarea>

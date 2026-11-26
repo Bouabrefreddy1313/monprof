@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Paiement - {{ $video->titre }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <form action="{{ route('video.init_payment', $video->id) }}" method="POST">
+        <form action="{{ route('particuliers.video.init_payment', $video->id) }}" method="POST">
             @csrf
             <input type="hidden" name="user_id" value="{{ auth()->id() }}">
             <button type="submit" class="btn btn-geniuspay w-100">

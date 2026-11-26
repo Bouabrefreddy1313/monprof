@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Redirection vers le paiement...</title>
-    <meta http-equiv="refresh" content="3;url={{ route('reservation.confirmation', ['token' => $token]) }}">
+    <meta http-equiv="refresh" content="3;url={{ route('particuliers.reservation.confirmation', ['token' => $token]) }}">
 </head>
 <body style="font-family: 'Nunito', sans-serif; background: #f8f9fa; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0;">
     <div style="text-align: center; padding: 40px;">
@@ -15,7 +15,7 @@
         <h2 style="color: #0A1628; font-weight: 700; margin-bottom: 12px;">Préparation du paiement sécurisé</h2>
         <p style="color: #5F6368; font-size: 0.95rem; margin-bottom: 24px;">Vous allez être redirigé vers GeniusPay dans un instant...</p>
         <div id="error-message" style="color: #EF4444; display: none;"></div>
-        <a href="{{ route('reservation.confirmation', ['token' => $token]) }}" style="color: #FF6B35; text-decoration: none; font-weight: 600;">Cliquez ici si la redirection ne fonctionne pas</a>
+        <a href="{{ route('particuliers.reservation.confirmation', ['token' => $token]) }}" style="color: #FF6B35; text-decoration: none; font-weight: 600;">Cliquez ici si la redirection ne fonctionne pas</a>
     </div>
 
     <script>
@@ -23,7 +23,7 @@
             const token = '{{ $token }}';
 
             // Appeler l'API pour initier le paiement
-            fetch('{{ route("payment.initiate") }}', {
+            fetch('{{ route("particuliers.payment.initiate") }}', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

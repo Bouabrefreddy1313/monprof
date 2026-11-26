@@ -60,19 +60,19 @@
                                 @endif
                             </div>
                             <p>{{ Str::limit($course->description ?? $course->objectif ?? 'Formation complète avec un formateur expert.', 150) }}</p>
-                            <a href="{{ url('/cours/' . $course->id) }}" class="course-link">Voir le cours →</a>
+                            <a href="{{ url('/particuliers/cours/' . $course->id) }}" class="course-link">Voir le cours →</a>
                         </div>
                     @endforeach
                 @else
                     <div class="course-card">
                         <h3>🎓 Toutes nos formations</h3>
                         <p>Découvrez notre catalogue complet de formations : primaire, collège, lycée, supérieur, sport et activités extrascolaires.</p>
-                        <a href="{{ url('/formations') }}" class="course-link">Voir toutes les formations →</a>
+                        <a href="{{ url('/particuliers/formations') }}" class="course-link">Voir toutes les formations →</a>
                     </div>
                 @endif
 
                 <div class="cta-section">
-                    <a href="{{ url('/formations') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/formations') }}" class="cta-button">
                         Voir toutes nos formations →
                     </a>
                 </div>
@@ -86,9 +86,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

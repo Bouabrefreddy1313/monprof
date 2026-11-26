@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Admin Dashboard</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -842,13 +842,13 @@
          ============================================ -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
-            <img src="asset/img/logo.png" alt="Monprofchezmoi">
+            <img src="/asset/img/logo.png" alt="Monprofchezmoi">
             <span></span>
         </div>
 
         <ul class="sidebar-nav">
             <li class="sidebar-nav-item">
-                <a href="{{ url('/') }}" class="sidebar-nav-link">
+                <a href="{{ url('/particuliers') }}" class="sidebar-nav-link">
                     <i class="fas fa-home"></i>
                     <span>Accueil Site</span>
                 </a>
@@ -860,7 +860,7 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.notifications.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.notifications.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-bell"></i>
                     <span>Notifications</span>
                     @php $notifCount = \App\Models\Notification::unread()->count(); @endphp
@@ -870,7 +870,7 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.bons.verifier') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.bons.verifier') }}" class="sidebar-nav-link">
                     <i class="fas fa-ticket-alt"></i>
                     <span>Gérer les Bons</span>
                 </a>
@@ -880,31 +880,31 @@
                 <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4); font-weight: 800;">Module Diagnostic</span>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
                     <i class="fas fa-chart-pie"></i>
                     <span>Entonnoir & Stats</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.questions') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions') }}" class="sidebar-nav-link">
                     <i class="fas fa-question-circle"></i>
                     <span>Questionnaire No-Code</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.courses') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.courses') }}" class="sidebar-nav-link">
                     <i class="fas fa-tags"></i>
                     <span>Cours & Tags Matching</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.settings') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.settings') }}" class="sidebar-nav-link">
                     <i class="fas fa-sliders-h"></i>
                     <span>Configuration Module</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('admin.leads.index') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.admin.leads.index') }}" class="sidebar-nav-link">
                     <i class="fas fa-users"></i>
                     <span>Liste des Leads</span>
                 </a>
@@ -934,10 +934,10 @@
                 Suivi des commandes
             </h1>
             <div class="topbar-actions">
-                <a href="{{ route('admin.bons.verifier') }}" class="btn-topbar" style="background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: white; border: none; font-weight: 700;">
+                <a href="{{ route('particuliers.admin.bons.verifier') }}" class="btn-topbar" style="background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: white; border: none; font-weight: 700;">
                     <i class="fas fa-ticket-alt"></i> Gérer les Bons
                 </a>
-                <a href="{{ route('superadmin.notifications.index') }}" class="btn-topbar btn-notif">
+                <a href="{{ route('particuliers.superadmin.notifications.index') }}" class="btn-topbar btn-notif">
                     <i class="fas fa-bell"></i>
                     Notifications
                     @if($notifCount > 0)
@@ -945,7 +945,7 @@
                     @endif
                 </a>
                 @if(Auth::guard('superadmin')->check())
-                <form action="{{ route('superadmin.logout') }}" method="POST" class="d-inline">
+                <form action="{{ route('particuliers.superadmin.logout') }}" method="POST" class="d-inline">
                     @csrf
                     <button type="submit" class="btn-topbar btn-logout">
                         <i class="fas fa-sign-out-alt"></i> Déconnexion
@@ -982,7 +982,7 @@
                         <small style="color: var(--gray-500); font-weight: 600;">Vérifier le statut d'un bon, lier un bon à une formation et suivre les attributions</small>
                     </div>
                 </div>
-                <a href="{{ route('admin.bons.verifier') }}" style="background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: white; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: var(--shadow-orange); text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                <a href="{{ route('particuliers.admin.bons.verifier') }}" style="background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: white; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: var(--shadow-orange); text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
                     <i class="fas fa-ticket-alt"></i> Gérer & Vérifier les Bons
                 </a>
             </div>

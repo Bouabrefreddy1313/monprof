@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Mon Panier - Formations Vidéo</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -765,7 +765,7 @@
                             <div class="cart-price">
                                 {{ number_format($item->video->prix) }} FCFA
                             </div>
-                            <a href="{{ route('panier.remove', $item->video_id) }}"
+                            <a href="{{ route('particuliers.panier.remove', $item->video_id) }}"
                                class="btn-remove"
                                onclick="return confirm('Retirer cette vidéo du panier ?')"
                                title="Retirer du panier">
@@ -782,10 +782,10 @@
                     <h3>Votre panier est vide</h3>
                     <p>Ajoutez des vidéos depuis nos formations DCG ou DSCG pour commencer</p>
                     <div class="empty-actions">
-                        <a href="{{ route('dcg.index') }}" class="btn-empty-primary">
+                        <a href="{{ route('particuliers.dcg.index') }}" class="btn-empty-primary">
                             <i class="fas fa-graduation-cap"></i> Formations DCG
                         </a>
-                        <a href="{{ route('dscg.index') }}" class="btn-empty-outline">
+                        <a href="{{ route('particuliers.dscg.index') }}" class="btn-empty-outline">
                             <i class="fas fa-university"></i> Formations DSCG
                         </a>
                     </div>
@@ -813,7 +813,7 @@
                         <span class="summary-total-value">{{ number_format($total) }} FCFA</span>
                     </div>
 
-                    <form action="{{ route('panier.checkout') }}" method="POST">
+                    <form action="{{ route('particuliers.panier.checkout') }}" method="POST">
                         @csrf
                         <button type="submit" class="btn-checkout">
                             <i class="fas fa-credit-card"></i> Paiement groupé GeniusPay

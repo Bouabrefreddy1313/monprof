@@ -26,7 +26,7 @@
                 </p>
                 @if($lead->coursRecommande)
                 <div style="margin-top: 15px;">
-                    <a href="{{ route('cours', $lead->cours_recommande_id) }}" style="display: inline-block; color: #FF6B35; font-weight: bold; font-size: 13px; text-decoration: none;">
+                    <a href="{{ route('particuliers.cours', $lead->cours_recommande_id) }}" style="display: inline-block; color: #FF6B35; font-weight: bold; font-size: 13px; text-decoration: none;">
                         Découvrir le programme complet du cours &rarr;
                     </a>
                 </div>

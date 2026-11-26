@@ -1739,9 +1739,9 @@ textarea.form-control-moderne {
      ============================================ -->
 <div class="breadcrumb-moderne">
     <div class="container">
-        <a href="{{ url('/') }}">Accueil</a>
+        <a href="{{ url('/particuliers') }}">Accueil</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="{{ url('/formations') }}">Formations</a>
+        <a href="{{ url('/particuliers/formations') }}">Formations</a>
         <i class="fas fa-chevron-right"></i>
         <span class="current">{{ $cours->titre }}</span>
     </div>
@@ -1951,7 +1951,7 @@ function parseContentToModules($text) {
                         </div>
                         <div class="sidebar-card-body">
                             <div class="qr-code-wrapper">
-                                <img loading="lazy" decoding="async" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data={{ urlencode(config('app.url') . route('cours', $cours->id, false)) }}" alt="QR Code {{ $cours->titre }}">
+                                <img loading="lazy" decoding="async" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data={{ urlencode(config('app.url') . route('particuliers.cours', $cours->id, false)) }}" alt="QR Code {{ $cours->titre }}">
                             </div>
                             <p class="qr-card-text">
                                 <strong>{{ $cours->titre }}</strong>
@@ -2034,7 +2034,7 @@ function parseContentToModules($text) {
         </div>
 
         {{-- FORMULAIRE --}}
-        <form class="reservation-form" action="{{ route('reservation.store') }}" method="POST">
+        <form class="reservation-form" action="{{ route('particuliers.reservation.store') }}" method="POST">
             @csrf
             <input type="hidden" name="cours_id" value="{{ $cours->id }}">
             <input type="hidden" name="formule" id="formuleInput" value="individuel">
@@ -2220,22 +2220,22 @@ function parseContentToModules($text) {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 

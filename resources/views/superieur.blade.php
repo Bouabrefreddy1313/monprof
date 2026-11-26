@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +23,10 @@
     <!-- Libraries Stylesheet -->
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="asset/style.css" rel="stylesheet">
+    <link href="/asset/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,8 +42,8 @@
                 </div>
                 <div class="modal-body">
                 <div class="list-group">
-                        <a href="{{ url('/terminale')  }}" class="list-group-item list-group-item-action">Vous êtes lycéen : 2nd , 1ère, Terminale</a>
-                        <a href="{{url('/superieur') }}" class="list-group-item list-group-item-action">Vous avez entamé des études supérieures</a>
+                        <a href="{{ url('/particuliers/terminale')  }}" class="list-group-item list-group-item-action">Vous êtes lycéen : 2nd , 1ère, Terminale</a>
+                        <a href="{{url('/particuliers/superieur') }}" class="list-group-item list-group-item-action">Vous avez entamé des études supérieures</a>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -64,8 +64,8 @@
             </div>
             <div class="modal-body">
                 <div class="list-group">
-                    <a href="{{ url('/bouge') }}" class="list-group-item list-group-item-action">Bouge ta grammaire et ton orthographe</a>
-                    <a href="{{ url('/codage') }}" class="list-group-item list-group-item-action">Codage informatique pour 8-14 ans</a>
+                    <a href="{{ url('/particuliers/bouge') }}" class="list-group-item list-group-item-action">Bouge ta grammaire et ton orthographe</a>
+                    <a href="{{ url('/particuliers/codage') }}" class="list-group-item list-group-item-action">Codage informatique pour 8-14 ans</a>
                 </div>
             </div>
             <div class="modal-footer">
@@ -87,7 +87,7 @@
                 <div class="col-md-6 animated fadeIn">
                     <div class="owl-carousel header-carousel">
                         <div class="owl-carousel-item">
-                            <img class="img-fluid" src="asset/img/tl.jpg" alt="">
+                            <img class="img-fluid" src="/asset/img/tl.jpg" alt="">
                         </div>
                         
                     </div>
@@ -101,7 +101,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                    <img loading="lazy" decoding="async" class="img-fluid w-100" src="asset/img/SUP.jpg" alt="Image">
+                    <img loading="lazy" decoding="async" class="img-fluid w-100" src="/asset/img/SUP.jpg" alt="Image">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn text-content" data-wow-delay="0.5s">
@@ -147,7 +147,7 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                    <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="" width="150px">                        </a>
+                    <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="" width="150px">                        </a>
                     
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Riviera 4 Synacassi 1, Abidjan, Cote d'Ivoire</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+225 01 53 75 15 44</p>
@@ -220,27 +220,27 @@ Designed by <a class="text-white border-bottom" href="">FreeLance ADG</a></p>
     <script>
 function redirectToContact(part) {
     // Redirige vers la page de contact avec le paramètre 'part'
-    window.location.href = '/contact?part=' + encodeURIComponent(part);
+    window.location.href = '/particuliers/contact?part=' + encodeURIComponent(part);
 }
 </script>
  <!-- JavaScript Libraries -->
  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/form/lib/wow/wow.min.js"></script>
-    <script src="asset/form/lib/easing/easing.min.js"></script>
-    <script src="asset/form/lib/waypoints/waypoints.min.js"></script>
-    <script src="asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/asset/form/lib/wow/wow.min.js"></script>
+    <script src="/asset/form/lib/easing/easing.min.js"></script>
+    <script src="/asset/form/lib/waypoints/waypoints.min.js"></script>
+    <script src="/asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/form/lib/wow/wow.min.js"></script>
-    <script src="asset/form/lib/easing/easing.min.js"></script>
-    <script src="asset/form/lib/waypoints/waypoints.min.js"></script>
-    <script src="asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/asset/form/lib/wow/wow.min.js"></script>
+    <script src="/asset/form/lib/easing/easing.min.js"></script>
+    <script src="/asset/form/lib/waypoints/waypoints.min.js"></script>
+    <script src="/asset/form/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="asset/main.js"></script>
+    <script src="/asset/main.js"></script>
 
 @include('components.newsletter-popup')
 @include('components.chatbot')

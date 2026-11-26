@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{{ ucfirst($type) }} - Formations Vidéo</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -562,12 +562,12 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-moderne">
     <div class="container">
-        <a href="{{ url('/') }}" class="navbar-brand-moderne">
-            <img src="asset/img/logo.png" alt="Monprofchezmoi" height="45">
+        <a href="{{ url('/particuliers') }}" class="navbar-brand-moderne">
+            <img src="/asset/img/logo.png" alt="Monprofchezmoi" height="45">
         </a>
         <div style="display: flex; align-items: center; gap: 10px;">
             @auth
-                <a href="{{ route('panier.index') }}" class="btn-cart-moderne" style="position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 10px; font-weight: 600; font-size: 0.9rem; color: #FF6B35; border: 1.5px solid #FF6B35; text-decoration: none; transition: all 0.3s ease;">
+                <a href="{{ route('particuliers.panier.index') }}" class="btn-cart-moderne" style="position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 10px; font-weight: 600; font-size: 0.9rem; color: #FF6B35; border: 1.5px solid #FF6B35; text-decoration: none; transition: all 0.3s ease;">
                     <i class="fas fa-shopping-cart"></i> Panier
                     @php
                         $cartCount = \App\Models\PanierVideo::where('user_id', Auth::id())->count();
@@ -577,7 +577,7 @@
                     @endif
                 </a>
             @endauth
-            <a href="{{ url('/groupe') }}" class="btn-back-moderne">
+            <a href="{{ url('/particuliers/groupe') }}" class="btn-back-moderne">
                 <i class="fas fa-arrow-left"></i> Retour
             </a>
         </div>
@@ -633,7 +633,7 @@
                                 </span>
                             </div>
                             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <a href="{{ route('video.show', $video->id) }}" class="btn-video-moderne" style="flex: 1;">
+                                <a href="{{ route('particuliers.video.show', $video->id) }}" class="btn-video-moderne" style="flex: 1;">
                                     <i class="fas fa-play-circle"></i> Voir
                                 </a>
                                 @auth
@@ -672,7 +672,7 @@ function ajouterPanier(videoId, btn) {
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
 
-    fetch('/panier/ajouter/' + videoId, {
+    fetch('/particuliers/panier/ajouter/' + videoId, {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': token,
@@ -706,7 +706,7 @@ function ajouterPanier(videoId, btn) {
     })
     .catch(err => {
         if (err.status === 401) {
-            window.location.href = '/login';
+            window.location.href = '/particuliers/login';
         }
         btn.innerHTML = '<i class="fas fa-cart-plus"></i> Panier';
         btn.disabled = false;

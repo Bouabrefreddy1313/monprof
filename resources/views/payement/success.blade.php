@@ -246,7 +246,7 @@
                         <p class="session-sub">
                             Cette formation est disponible en session de 3h. Choisissez le jour auquel vous souhaitez participer.
                         </p>
-                        <form action="{{ route('reservation.session', ['token' => $reservation->token]) }}" method="POST">
+                        <form action="{{ route('particuliers.reservation.session', ['token' => $reservation->token]) }}" method="POST">
                             @csrf
                             <div class="session-options">
                                 <label class="session-option">
@@ -299,7 +299,7 @@
                 <i class="fas fa-envelope"></i> Un email de confirmation vous a été envoyé.
             </div>
 
-            <a href="{{ url('/') }}" class="btn-home" style="margin-top: 24px;">
+            <a href="{{ url('/particuliers') }}" class="btn-home" style="margin-top: 24px;">
                 <i class="fas fa-home"></i> Retour à l'accueil
             </a>
         </div>

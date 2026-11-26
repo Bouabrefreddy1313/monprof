@@ -9,13 +9,13 @@
     <meta content="Orientation Seconde, Parcours scolaire, Lycée, Abidjan, Côte d'Ivoire" name="keywords">
     <meta content="Accompagnement personnalisé pour les élèves de Seconde : bilan de profil, découverte des métiers et préparation des choix d'orientation à Abidjan." name="description">
 
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <style>
@@ -1606,8 +1606,8 @@ body {
 <!-- ============================================
      NAVBAR
      ============================================ -->
-        <a href="{{ url('/') }}" class="navbar-brand">
-            <img src="asset/img/logo.png" alt="Monprofchezmoi" height="45">
+        <a href="{{ url('/particuliers') }}" class="navbar-brand">
+            <img src="/asset/img/logo.png" alt="Monprofchezmoi" height="45">
         </a>
 
         <button class="navbar-toggler navbar-toggler-premium" type="button" data-bs-toggle="collapse" data-bs-target="#navbarModerne">
@@ -1618,7 +1618,7 @@ body {
 
         <div class="collapse navbar-collapse" id="navbarModerne">
             <ul class="nav-menu-moderne ms-auto">
-                <li class="nav-item-moderne"><a href="{{ url('/') }}" class="nav-link-moderne active">Accueil</a></li>
+                <li class="nav-item-moderne"><a href="{{ url('/particuliers') }}" class="nav-link-moderne active">Accueil</a></li>
 
                 <li class="nav-item-moderne">
                     <a href="#" class="nav-link-moderne">Primaire <i class="fas fa-chevron-down chevron"></i></a>
@@ -1630,19 +1630,19 @@ body {
                         <div class="mega-body-moderne">
                             <div>
                                 <div class="mega-col-title">Nos cours</div>
-                                <a href="{{ url('/primaire') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book"></i></div><span>Soutien scolaire toutes matières</span></a>
-                                <a href="{{ url('/accompagnement') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-puzzle-piece"></i></div><span>Accompagnement DYS</span></a>
-                                <a href="{{ url('/methode') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-tasks"></i></div><span>Méthodologie et organisation</span></a>
+                                <a href="{{ url('/particuliers/primaire') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book"></i></div><span>Soutien scolaire toutes matières</span></a>
+                                <a href="{{ url('/particuliers/accompagnement') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-puzzle-piece"></i></div><span>Accompagnement DYS</span></a>
+                                <a href="{{ url('/particuliers/methode') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-tasks"></i></div><span>Méthodologie et organisation</span></a>
                             </div>
                             <div>
                                 <div class="mega-col-title">Nos activités</div>
-                                <a href="{{ url('/minimetier') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-briefcase"></i></div><span>Mini métiers</span></a>
-                                <a href="{{ url('/codage') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-robot"></i></div><span>Robotique et ateliers créatifs</span></a>
-                                <a href="{{ url('/petit') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-language"></i></div><span>Les petits bilingues</span></a>
-                                <a href="{{ url('/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
-                                <a href="{{ url('/bouge') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-spell-check"></i></div><span>Bouge ta grammaire</span></a>
-                                <a href="{{ url('/cabine') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book-reader"></i></div><span>Ma cabine à livres</span></a>
-                                <a href="{{ url('/sportenf') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-running"></i></div><span>Sport enfant</span></a>
+                                <a href="{{ url('/particuliers/minimetier') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-briefcase"></i></div><span>Mini métiers</span></a>
+                                <a href="{{ url('/particuliers/codage') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-robot"></i></div><span>Robotique et ateliers créatifs</span></a>
+                                <a href="{{ url('/particuliers/petit') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-language"></i></div><span>Les petits bilingues</span></a>
+                                <a href="{{ url('/particuliers/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
+                                <a href="{{ url('/particuliers/bouge') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-spell-check"></i></div><span>Bouge ta grammaire</span></a>
+                                <a href="{{ url('/particuliers/cabine') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book-reader"></i></div><span>Ma cabine à livres</span></a>
+                                <a href="{{ url('/particuliers/sportenf') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-running"></i></div><span>Sport enfant</span></a>
                             </div>
                         </div>
                     </div>
@@ -1658,19 +1658,19 @@ body {
                         <div class="mega-body-moderne">
                             <div>
                                 <div class="mega-col-title">Nos cours</div>
-                                <a href="{{ url('/soutien-collège') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book"></i></div><span>Soutien scolaire toutes matières</span></a>
-                                <a href="{{ url('/coaching') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-graduation-cap"></i></div><span>Coaching scolaire</span></a>
-                                <a href="{{ url('/college-methode') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-user-graduate"></i></div><span>Méthodologie et autonomie</span></a>
+                                <a href="{{ url('/particuliers/soutien-collège') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book"></i></div><span>Soutien scolaire toutes matières</span></a>
+                                <a href="{{ url('/particuliers/coaching') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-graduation-cap"></i></div><span>Coaching scolaire</span></a>
+                                <a href="{{ url('/particuliers/college-methode') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-user-graduate"></i></div><span>Méthodologie et autonomie</span></a>
                             </div>
                             <div>
                                 <div class="mega-col-title">Nos activités</div>
                                 
-                                <a href="{{ url('/minimetier') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-briefcase"></i></div><span>Mini métiers</span></a>
-                                <a href="{{ url('/college-competence') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-robot"></i></div><span>Robotique et ateliers créatifs</span></a>
-                                <a href="{{ url('/petit') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-language"></i></div><span>Les petits bilingues</span></a>
-                                <a href="{{ url('/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
-                                <a href="{{ url('/bouge') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-spell-check"></i></div><span>Bouge ta grammaire</span></a>
-                                <a href="{{ url('/cabine') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book-reader"></i></div><span>Ma cabine à livres</span></a>
+                                <a href="{{ url('/particuliers/minimetier') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-briefcase"></i></div><span>Mini métiers</span></a>
+                                <a href="{{ url('/particuliers/college-competence') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-robot"></i></div><span>Robotique et ateliers créatifs</span></a>
+                                <a href="{{ url('/particuliers/petit') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-language"></i></div><span>Les petits bilingues</span></a>
+                                <a href="{{ url('/particuliers/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
+                                <a href="{{ url('/particuliers/bouge') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-spell-check"></i></div><span>Bouge ta grammaire</span></a>
+                                <a href="{{ url('/particuliers/cabine') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book-reader"></i></div><span>Ma cabine à livres</span></a>
                             </div>
                         </div>
                     </div>
@@ -1686,15 +1686,15 @@ body {
                         <div class="mega-body-moderne">
                             <div>
                                 <div class="mega-col-title">Nos cours</div>
-                                <a href="{{ url('/lycee-sous') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book"></i></div><span>Soutien scolaire toutes matières</span></a>
-                                <a href="{{ url('/lycee-preparation') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-award"></i></div><span>Préparation Bac</span></a>
-                                <a href="{{ url('/lycee-coaching') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-star"></i></div><span>Coaching méthodologique</span></a>
+                                <a href="{{ url('/particuliers/lycee-sous') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-book"></i></div><span>Soutien scolaire toutes matières</span></a>
+                                <a href="{{ url('/particuliers/lycee-preparation') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-award"></i></div><span>Préparation Bac</span></a>
+                                <a href="{{ url('/particuliers/lycee-coaching') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-star"></i></div><span>Coaching méthodologique</span></a>
                             </div>
                             <div>
                                 <div class="mega-col-title">Nos activités</div>
-                                <a href="{{ url('/terminale') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation</span></a>
-                                <a href="{{ url('/coaching') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-graduation-cap"></i></div><span>Coaching scolaire</span></a>
-                                <a href="{{ url('/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
+                                <a href="{{ url('/particuliers/terminale') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation</span></a>
+                                <a href="{{ url('/particuliers/coaching') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-graduation-cap"></i></div><span>Coaching scolaire</span></a>
+                                <a href="{{ url('/particuliers/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
                             </div>
                         </div>
                     </div>
@@ -1710,17 +1710,17 @@ body {
                         <div class="mega-body-moderne">
                             <div>
                                 <div class="mega-col-title">Nos cours</div>
-<a href="{{ url('/seconde') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en seconde</span></a>
-                                <a href="{{ url('/premiere') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en premiere</span></a>
-                                <a href="{{ url('/groupe') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-calculator"></i></div><span>Préparation DCG / DSCG</span></a>
+<a href="{{ url('/particuliers/seconde') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en seconde</span></a>
+                                <a href="{{ url('/particuliers/premiere') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en premiere</span></a>
+                                <a href="{{ url('/particuliers/groupe') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-calculator"></i></div><span>Préparation DCG / DSCG</span></a>
 
                             </div>
                             <div>
                                 <div class="mega-col-title">Nos activités</div>
-                                <a href="{{ url('/reussir') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-microphone"></i></div><span>Réussir ses oraux</span></a>
-                                <a href="{{ url('/terminale') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en terminal</span></a>
+                                <a href="{{ url('/particuliers/reussir') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-microphone"></i></div><span>Réussir ses oraux</span></a>
+                                <a href="{{ url('/particuliers/terminale') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en terminal</span></a>
 
-                                <a href="{{ url('/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
+                                <a href="{{ url('/particuliers/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
                             </div>
                         </div>
                     </div>
@@ -1736,44 +1736,44 @@ body {
                         <div class="mega-body-moderne">
                             <div>
                                 <div class="mega-col-title">Nos cours</div>
-<a href="{{ url('/seconde') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en seconde</span></a>
-                                <a href="{{ url('/premiere') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en premiere</span></a>
-                                <a href="{{ url('/groupe') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-calculator"></i></div><span>Préparation DCG / DSCG</span></a>
-                                <a href="{{ url('/formations') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-chalkboard-teacher"></i></div><span>Toutes les formations professionnelles</span></a>
+<a href="{{ url('/particuliers/seconde') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en seconde</span></a>
+                                <a href="{{ url('/particuliers/premiere') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en premiere</span></a>
+                                <a href="{{ url('/particuliers/groupe') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-calculator"></i></div><span>Préparation DCG / DSCG</span></a>
+                                <a href="{{ url('/particuliers/formations') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-chalkboard-teacher"></i></div><span>Toutes les formations professionnelles</span></a>
 
                             </div>
                             <div>
                                 <div class="mega-col-title">Nos activités</div>
-                                <a href="{{ url('/reussir') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-microphone"></i></div><span>Réussir ses oraux</span></a>
-                                <a href="{{ url('/terminale') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en terminal</span></a>
+                                <a href="{{ url('/particuliers/reussir') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-microphone"></i></div><span>Réussir ses oraux</span></a>
+                                <a href="{{ url('/particuliers/terminale') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-compass"></i></div><span>Orientation en terminal</span></a>
 
-                                <a href="{{ url('/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
+                                <a href="{{ url('/particuliers/musique') }}" class="mega-link-moderne"><div class="mega-link-icon"><i class="fas fa-music"></i></div><span>Musique et chant</span></a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item-moderne"><a href="https://mpcmformation-ci.com/" target="_blank" class="nav-link-moderne">Entreprise</a></li>
+                <li class="nav-item-moderne"><a href="{{ route('profil.choisir', ['profil' => 'entreprise']) }}" class="nav-link-moderne" title="Changer d'espace"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Espace entreprises</a></li>
 
 
                 
-                <li class="nav-item-moderne"><a href="/contact" class="nav-link-moderne">Contact</a></li>
+                <li class="nav-item-moderne"><a href="/particuliers/contact" class="nav-link-moderne">Contact</a></li>
             </ul>
 
             <div class="ms-lg-3 mt-3 mt-lg-0">
                 @auth
                     <div class="user-connected">
-                        <a href="{{ route('video.dashboard') }}" class="d-flex align-items-center text-decoration-none">
+                        <a href="{{ route('particuliers.video.dashboard') }}" class="d-flex align-items-center text-decoration-none">
                             <div class="user-avatar">{{ substr(Auth::user()->name, 0, 1) }}</div>
                             <span class="user-name d-none d-lg-block">{{ Auth::user()->name }}</span>
                         </a>
-                        <a href="{{ route('logout') }}" class="btn-connect-outline btn-sm"
+                        <a href="{{ route('particuliers.logout') }}" class="btn-connect-outline btn-sm"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i>
                         </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
+                        <form id="logout-form" action="{{ route('particuliers.logout') }}" method="POST" style="display: none;">@csrf</form>
                     </div>
                 @else
-                    <a href="{{ url('/login') }}" class="btn-nav-cta"><i class="fas fa-user"></i> Connexion</a>
+                    <a href="{{ url('/particuliers/login') }}" class="btn-nav-cta"><i class="fas fa-user"></i> Connexion</a>
                 @endauth
             </div>
         </div>
@@ -1838,9 +1838,9 @@ body {
      ============================================ -->
 <div class="breadcrumb-moderne">
     <div class="container">
-        <a href="{{ url('/') }}">Accueil</a>
+        <a href="{{ url('/particuliers') }}">Accueil</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="{{ url('/terminale') }}">Lycée</a>
+        <a href="{{ url('/particuliers/terminale') }}">Lycée</a>
         <i class="fas fa-chevron-right"></i>
         <span class="current">Orientation Seconde</span>
     </div>
@@ -2411,7 +2411,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -2424,22 +2424,22 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 
@@ -2554,7 +2554,7 @@ function submitInscription(e) {
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement en cours...';
     }
 
-    fetch('/inscription', {
+    fetch('/particuliers/inscription', {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': csrfToken,
@@ -2617,7 +2617,7 @@ function submitInscription(e) {
             // Redirection vers le paiement
             const paymentForm = document.createElement('form');
             paymentForm.method = 'POST';
-            paymentForm.action = '/payment/initiate';
+            paymentForm.action = '/particuliers/payment/initiate';
 
             const csrfInput = document.createElement('input');
             csrfInput.type = 'hidden';

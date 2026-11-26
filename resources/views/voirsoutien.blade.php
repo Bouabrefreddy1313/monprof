@@ -688,20 +688,20 @@
                         <i data-lucide="message-square"></i>
                     </button>
                     @if($reponse->statut == 0)
-                        <form method="POST" action="{{ route('reponse.vendu', $reponse->id) }}" style="display:inline;">
+                        <form method="POST" action="{{ route('particuliers.reponse.vendu', $reponse->id) }}" style="display:inline;">
                             @csrf @method('PUT')
                             <button type="submit" class="action-btn btn-sell" title="Marquer comme vendu">
                                 <i data-lucide="check-circle-2"></i>
                             </button>
                         </form>
-                        <form method="POST" action="{{ route('reponse.annuler', $reponse->id) }}" style="display:inline;">
+                        <form method="POST" action="{{ route('particuliers.reponse.annuler', $reponse->id) }}" style="display:inline;">
                             @csrf @method('PUT')
                             <button type="submit" class="action-btn btn-cancel" title="Annuler">
                                 <i data-lucide="x"></i>
                             </button>
                         </form>
                        
-                        <form method="POST" action="{{ route('reponse.supprimer', $reponse->id) }}"
+                        <form method="POST" action="{{ route('particuliers.reponse.supprimer', $reponse->id) }}"
                               onsubmit="return confirm('Supprimer ?');" style="display:inline;">
                             @csrf @method('DELETE')
                             <button type="submit" class="action-btn btn-delete" title="Supprimer">
@@ -730,7 +730,7 @@
                     @endif
                     <div class="detail-box" style="grid-column: 1 / -1;">
                         <h4>Ajouter un commentaire</h4>
-                        <form action="{{ route('ajouterCommentaire', $reponse->id) }}" method="POST">
+                        <form action="{{ route('particuliers.ajouterCommentaire', $reponse->id) }}" method="POST">
                             @csrf
                             <div class="comment-form-row">
                                 <input type="text" name="commentaire" placeholder="Écrire un commentaire..." class="comment-input-row" required>
@@ -754,7 +754,7 @@
         </div>
     @endif
 
-    <a href="{{ url('/voirsoutien') }}" class="btn-back"><i data-lucide="arrow-left"></i> Retour</a>
+    <a href="{{ url('/particuliers/voirsoutien') }}" class="btn-back"><i data-lucide="arrow-left"></i> Retour</a>
 </div>
 
 <!-- ---------- SCRIPTS ---------- -->

@@ -59,19 +59,19 @@
                                 @endif
                             </div>
                             <p>{{ Str::limit($course->description ?? $course->objectif ?? 'Cours particuliers et accompagnement scolaire avec un professeur dédié.', 150) }}</p>
-                            <a href="{{ url('/cours/' . $course->id) }}" class="course-link">Voir la formation →</a>
+                            <a href="{{ url('/particuliers/cours/' . $course->id) }}" class="course-link">Voir la formation →</a>
                         </div>
                     @endforeach
                 @else
                     <div class="course-card">
                         <h3>🎓 Soutien scolaire primaire, collège & lycée</h3>
                         <p>Cours particuliers, stages de révision, méthodologie et préparation au Brevet et au Bac. Un professeur dédié pour accompagner votre enfant tout au long de l'année.</p>
-                        <a href="{{ url('/formations') }}" class="course-link">Voir toutes les formations →</a>
+                        <a href="{{ url('/particuliers/formations') }}" class="course-link">Voir toutes les formations →</a>
                     </div>
                 @endif
 
                 <div class="cta-section">
-                    <a href="{{ url('/formations') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/formations') }}" class="cta-button">
                         Découvrir les programmes de soutien →
                     </a>
                 </div>
@@ -85,9 +85,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

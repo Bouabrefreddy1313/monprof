@@ -43,8 +43,8 @@ class userPayementController extends Controller
 
         // URLs de retour (contiennent l'id de transaction interne, pas la référence
         // GeniusPay qui n'est connue qu'après la création du paiement).
-        $successUrl = $this->ensureAbsoluteUrl(route('matiere.payment.return', ['transaction_id' => $id_transaction]));
-        $errorUrl   = $this->ensureAbsoluteUrl(route('matiere.payment.return', ['transaction_id' => $id_transaction, 'status' => 'cancel']));
+        $successUrl = $this->ensureAbsoluteUrl(route('particuliers.matiere.payment.return', ['transaction_id' => $id_transaction]));
+        $errorUrl   = $this->ensureAbsoluteUrl(route('particuliers.matiere.payment.return', ['transaction_id' => $id_transaction, 'status' => 'cancel']));
 
         // Données du paiement GeniusPay
         $result = $geniuspay->initPayment([

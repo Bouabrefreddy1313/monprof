@@ -36,7 +36,7 @@
         <div class="icon">😢</div>
         <h1>Vous êtes désabonné</h1>
         <p>Vous ne recevrez plus nos emails. Si vous changez d'avis, vous pouvez vous réinscrire à tout moment.</p>
-        <p><a href="{{ url('/') }}">Retour à l'accueil</a></p>
+        <p><a href="{{ url('/particuliers') }}">Retour à l'accueil</a></p>
     </div>
 
 @include('components.newsletter-popup')

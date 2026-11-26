@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h3">📧 Abonnés Newsletter</h1>
-        <a href="{{ route('admin.subscribers.campaign') }}" class="btn btn-warning">
+        <a href="{{ route('particuliers.admin.subscribers.campaign') }}" class="btn btn-warning">
             📨 Envoyer une campagne
         </a>
     </div>
@@ -71,7 +71,7 @@
                             </td>
                             <td>{{ $sub->subscribed_at ? $sub->subscribed_at->format('d/m/Y H:i') : '-' }}</td>
                             <td>
-                                <form action="{{ route('admin.subscribers.destroy', $sub->id) }}" method="POST"
+                                <form action="{{ route('particuliers.admin.subscribers.destroy', $sub->id) }}" method="POST"
                                       onsubmit="return confirm('Supprimer cet abonné ?')" style="display:inline">
                                     @csrf @method('DELETE')
                                     <button class="btn btn-sm btn-danger">Supprimer</button>

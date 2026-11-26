@@ -346,7 +346,7 @@
         </div>
         <div>
             @php
-                $dashboardUrl = Auth::guard('superadmin')->check() ? route('superadmin.dashboard') : route('admin.dashboard');
+                $dashboardUrl = Auth::guard('superadmin')->check() ? route('particuliers.superadmin.dashboard') : route('particuliers.admin.dashboard');
             @endphp
             <a href="{{ $dashboardUrl }}" class="btn-back">
                 <i class="fas fa-arrow-left"></i> Retour au Tableau de Bord
@@ -381,7 +381,7 @@
                 Tapez le code unique communiqué par la cliente pour contrôler s'il a déjà été utilisé ou s'il est disponible.
             </p>
 
-            <form action="{{ route('admin.bons.rechercher') }}" method="POST">
+            <form action="{{ route('particuliers.admin.bons.rechercher') }}" method="POST">
                 @csrf
                 <div class="search-input-group">
                     <div class="search-input-wrap">
@@ -506,7 +506,7 @@
                 Renseignez le code du bon et sélectionnez la formation dans la liste, puis cliquez sur le bouton vert pour valider.
             </p>
 
-            <form action="{{ route('admin.bons.lier_direct') }}" method="POST">
+            <form action="{{ route('particuliers.admin.bons.lier_direct') }}" method="POST">
                 @csrf
 
                 <div class="row g-3 mb-3">

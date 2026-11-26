@@ -63,7 +63,7 @@ class VideoController extends Controller
             ->count() === 0;
 
         if (!$isFirstVideo && !$hasAccess) {
-            return redirect()->route('video.payer', $video->id);
+            return redirect()->route('particuliers.video.payer', $video->id);
         }
 
         return view('videos.show', compact('video', 'hasAccess'));
@@ -78,7 +78,7 @@ class VideoController extends Controller
         $user = Auth::user();
 
         if (!$user) {
-            return redirect()->route('login');
+            return redirect()->route('particuliers.login');
         }
 
         return view('videos.payment', compact('video'));
@@ -107,8 +107,8 @@ class VideoController extends Controller
 
         $transactionId = 'VID' . time() . $paiement->id;
 
-        $returnUrl = route('video.return', ['video_id' => $video->id, 'token' => $paiement->id]);
-        $errorUrl = route('video.cancel', ['video_id' => $video->id, 'token' => $paiement->id]);
+        $returnUrl = route('particuliers.video.return', ['video_id' => $video->id, 'token' => $paiement->id]);
+        $errorUrl = route('particuliers.video.cancel', ['video_id' => $video->id, 'token' => $paiement->id]);
 
         // S'assurer que les URLs sont absolues
         $returnUrl = $this->ensureAbsoluteUrl($returnUrl);
@@ -158,7 +158,7 @@ class VideoController extends Controller
         $reference = $request->get('reference') ?? $request->get('transaction_id');
 
         if (!$token && !$reference) {
-            return redirect()->route('video.cancel');
+            return redirect()->route('particuliers.video.cancel');
         }
 
         // Retrouver le paiement par token (id du paiement) ou par référence
@@ -167,7 +167,7 @@ class VideoController extends Controller
             : PaiementVideo::where('transaction_id', $reference)->first();
 
         if (!$paiement) {
-            return redirect()->route('video.cancel');
+            return redirect()->route('particuliers.video.cancel');
         }
 
         $reference = $reference ?? $paiement->transaction_id;
@@ -180,10 +180,10 @@ class VideoController extends Controller
                 $this->grantVideoAccess($paiement);
             }
 
-            return redirect()->route('video.success', ['video_id' => $videoId]);
+            return redirect()->route('particuliers.video.success', ['video_id' => $videoId]);
         }
 
-        return redirect()->route('video.cancel', ['video_id' => $videoId]);
+        return redirect()->route('particuliers.video.cancel', ['video_id' => $videoId]);
     }
 
     /**

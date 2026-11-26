@@ -8,7 +8,7 @@
     <meta content="Contactez l'equipe de MonProfChezMoi pour toute question, inscription ou formation." name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
 
     <style>
     :root {
@@ -721,7 +721,7 @@
                 @endif
 
                 <div class="contact-form-wrap">
-                    <form action="{{ route('contact.store') }}" method="POST">
+                    <form action="{{ route('particuliers.contact.store') }}" method="POST">
                         @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -865,14 +865,14 @@
     <div class="container-contact">
         <div class="row g-5">
             <div class="col-lg-4">
-                <a href="{{ route('home') }}" class="footer-brand">MonProfChezMoi</a>
+                <a href="{{ route('particuliers.home') }}" class="footer-brand">MonProfChezMoi</a>
                 <p class="mt-3">Leader de l'accompagnement éducatif en Côte d'Ivoire. Un groupe éducatif expérimenté et innovant au service de la réussite de chaque élève depuis 2019.</p>
             </div>
             <div class="col-lg-4">
                 <h4 class="footer-col-title">Navigation</h4>
-                <a href="{{ route('home') }}" class="nav-link-footer">Accueil</a>
-                <a href="{{ route('formations') }}" class="nav-link-footer">Formations</a>
-                <a href="{{ route('contact.form') }}" class="nav-link-footer">Contact</a>
+                <a href="{{ route('particuliers.home') }}" class="nav-link-footer">Accueil</a>
+                <a href="{{ route('particuliers.formations') }}" class="nav-link-footer">Formations</a>
+                <a href="{{ route('particuliers.contact.form') }}" class="nav-link-footer">Contact</a>
             </div>
             <div class="col-lg-4">
                 <h4 class="footer-col-title">Contact</h4>

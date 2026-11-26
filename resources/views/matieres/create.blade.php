@@ -10,7 +10,7 @@
 <body>
     <div class="container mt-5">
         <h1 class="mb-4">Ajouter une Matière</h1>
-        <form action="{{ route('matieres.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('particuliers.matieres.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="nom">Nom:</label>

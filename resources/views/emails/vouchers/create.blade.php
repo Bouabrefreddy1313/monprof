@@ -3,7 +3,7 @@
     <h1>Offrez une formation !</h1>
     <p>Choisissez le montant et renseignez le bénéficiaire.</p>
 
-    <form action="{{ route('vouchers.store') }}" method="POST">
+    <form action="{{ route('particuliers.vouchers.store') }}" method="POST">
         @csrf
         <div class="form-group">
             <label>Montant</label>

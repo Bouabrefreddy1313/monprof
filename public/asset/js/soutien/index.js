@@ -2390,7 +2390,7 @@ function showForm(url) {
 
     // Création du formulaire
     const form = document.createElement("form");
-    form.setAttribute("action", "/reponse");
+    form.setAttribute("action", "/particuliers/reponse");
     form.setAttribute("method", "POST");
     
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
@@ -2521,7 +2521,7 @@ function handleSubmitForm() {
     });
 
     // Envoi des données à la route Laravel
-    fetch('/reponse', {
+    fetch('/particuliers/reponse', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

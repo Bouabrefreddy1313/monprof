@@ -60,7 +60,7 @@ class GiftVoucherController extends Controller
 
         $voucher->update($request->only('title', 'amount', 'description'));
 
-        return redirect()->route('admin.vouchers.index')->with('success', 'Bon modifié !');
+        return redirect()->route('particuliers.admin.vouchers.index')->with('success', 'Bon modifié !');
     }
 
    public function destroy($id)

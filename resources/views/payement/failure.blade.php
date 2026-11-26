@@ -149,10 +149,10 @@
             </div>
 
             <div>
-                <a href="{{ url('/') }}" class="btn-retry">
+                <a href="{{ url('/particuliers') }}" class="btn-retry">
                     <i class="fas fa-redo"></i> Réessayer le paiement
                 </a>
-                <a href="{{ url('/') }}" class="btn-home">
+                <a href="{{ url('/particuliers') }}" class="btn-home">
                     <i class="fas fa-home"></i> Retour à l'accueil
                 </a>
             </div>

@@ -63,8 +63,8 @@ class PaymentController extends Controller
 
         $transactionId = 'TXN' . time();
 
-        $successUrl = $this->ensureAbsoluteUrl(route('payment.return', ['type' => $type, 'token' => $item->token]));
-        $errorUrl   = $this->ensureAbsoluteUrl(route('payment.cancel', ['type' => $type, 'token' => $item->token]));
+        $successUrl = $this->ensureAbsoluteUrl(route('particuliers.payment.return', ['type' => $type, 'token' => $item->token]));
+        $errorUrl   = $this->ensureAbsoluteUrl(route('particuliers.payment.cancel', ['type' => $type, 'token' => $item->token]));
 
         Log::info('Payment Initiate', [
             'type'           => $type,
@@ -175,20 +175,20 @@ class PaymentController extends Controller
         }
 
         if (!$reference) {
-            return redirect()->route('payment.cancel')->with('error', 'Transaction invalide');
+            return redirect()->route('particuliers.payment.cancel')->with('error', 'Transaction invalide');
         }
 
         $checkResult = $this->geniuspay->checkPaymentStatus($reference);
 
         if ($checkResult['success'] && $checkResult['status'] === 'completed') {
-            return redirect()->route('payment.success', [
+            return redirect()->route('particuliers.payment.success', [
                 'type'      => $type,
                 'token'     => $token,
                 'reference' => $reference,
             ]);
         }
 
-        return redirect()->route('payment.cancel', ['type' => $type, 'token' => $token])
+        return redirect()->route('particuliers.payment.cancel', ['type' => $type, 'token' => $token])
             ->with('error', 'Le paiement a échoué ou a été annulé.');
     }
 

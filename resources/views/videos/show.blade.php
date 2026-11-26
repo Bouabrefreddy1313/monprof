@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{{ $video->titre }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -68,7 +68,7 @@
 </head>
 <body>
     <div class="container py-5">
-        <a href="{{ url('/groupe') }}" class="btn btn-outline-light mb-4">
+        <a href="{{ url('/particuliers/groupe') }}" class="btn btn-outline-light mb-4">
             <i class="fas fa-arrow-left"></i> Retour aux formations
         </a>
 
@@ -76,7 +76,7 @@
             <div class="video-wrapper">
                 @if($hasAccess)
                     <video controls autoplay>
-                        <source src="{{ route('video.stream', $video->id) }}" type="video/mp4">
+                        <source src="{{ route('particuliers.video.stream', $video->id) }}" type="video/mp4">
                         Votre navigateur ne supporte pas la lecture vidéo.
                     </video>
                 @else
@@ -115,7 +115,7 @@
                 </div>
 
                 @if(!$hasAccess)
-                    <form action="{{ route('video.init_payment', $video->id) }}" method="POST">
+                    <form action="{{ route('particuliers.video.init_payment', $video->id) }}" method="POST">
                         @csrf
                         <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                         <button type="submit" class="btn btn-acheter w-100">

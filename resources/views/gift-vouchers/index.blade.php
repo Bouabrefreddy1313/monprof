@@ -897,7 +897,7 @@ body {
                     <a href="#vouchers-section" class="btn-hero-nouveau btn-orange">
                         <i class="fas fa-shopping-cart"></i> Voir les bons disponibles
                     </a>
-                    <a href="/formations" class="btn-hero-nouveau btn-outline">
+                    <a href="/particuliers/formations" class="btn-hero-nouveau btn-outline">
                         <i class="fas fa-graduation-cap"></i> Découvrir les formations
                     </a>
                 </div>
@@ -1019,7 +1019,7 @@ body {
                     </div>
 
                     <div class="voucher-card-footer">
-                        <a href="{{ route('voucher-orders.create', $voucher->id) }}" class="btn-voucher-moderne">
+                        <a href="{{ route('particuliers.voucher-orders.create', $voucher->id) }}" class="btn-voucher-moderne">
                             <i class="fas fa-shopping-cart"></i> Acheter maintenant
                         </a>
                     </div>
@@ -1084,10 +1084,10 @@ body {
                 <a href="tel:+2250153751544" class="btn-cta-final btn-orange">
                     <i class="fas fa-phone-alt"></i> Nous appeler
                 </a>
-                <a href="/contact" class="btn-cta-final btn-outline">
+                <a href="/particuliers/contact" class="btn-cta-final btn-outline">
                     <i class="fas fa-envelope"></i> Nous contacter
                 </a>
-                <a href="/formations" class="btn-cta-final btn-outline">
+                <a href="/particuliers/formations" class="btn-cta-final btn-outline">
                     <i class="fas fa-graduation-cap"></i> Voir les formations
                 </a>
             </div>

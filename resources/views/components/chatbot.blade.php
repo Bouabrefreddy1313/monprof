@@ -265,7 +265,7 @@
         showTyping();
 
         try {
-            const response = await fetch('/api/chatbot/ask', {
+            const response = await fetch('/particuliers/api/chatbot/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

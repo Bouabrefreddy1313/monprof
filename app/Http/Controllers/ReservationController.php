@@ -154,8 +154,8 @@ class ReservationController extends Controller
             'currency' => 'XOF',
             'transaction_id' => 'RES_' . $reservation->id . '_' . time(),
             'description' => 'Acompte formation ' . $reservation->cours->titre,
-            'return_url' => route('reservation.success', ['token' => $token]),
-            'notify_url' => route('reservation.webhook'),
+            'return_url' => route('particuliers.reservation.success', ['token' => $token]),
+            'notify_url' => route('particuliers.reservation.webhook'),
             'customer_name' => $reservation->nom,
             'customer_email' => $reservation->email,
             'customer_phone_number' => $reservation->telephone,
@@ -176,7 +176,7 @@ class ReservationController extends Controller
             \Log::error('Erreur envoi email paiement: ' . $e->getMessage());
         }
 
-        return redirect()->route('reservation.success', ['token' => $token]);
+        return redirect()->route('particuliers.reservation.success', ['token' => $token]);
     }
 
     /**
@@ -213,7 +213,7 @@ class ReservationController extends Controller
             \Log::error('Erreur envoi email session choisie: ' . $e->getMessage());
         }
 
-        return redirect()->route('payment.success', [
+        return redirect()->route('particuliers.payment.success', [
             'type' => 'reservation',
             'token' => $token,
             'reference' => $reservation->transaction_id,

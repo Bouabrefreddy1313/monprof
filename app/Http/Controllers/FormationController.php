@@ -48,7 +48,7 @@ class FormationController extends Controller
         $query = $request->input('query');
 
         if (empty($query)) {
-            return redirect()->route('formations');
+            return redirect()->route('particuliers.formations');
         }
 
         // Recherche dans les COURS (sous-formations) - simplifiée

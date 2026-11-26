@@ -44,7 +44,7 @@ class ShowDataController extends Controller
     // Ajoutez d'autres champs à mettre à jour de la même manière
     $formation->save();
 
-    return redirect()->route('liste')->with('success', 'Formation mise à jour avec succès.');
+    return redirect()->route('particuliers.liste')->with('success', 'Formation mise à jour avec succès.');
 }
 
 public function terminerContact($id)
@@ -79,7 +79,7 @@ public function deleteFormation(Request $request, $id)
     $formation = Formation::findOrFail($id);
     $formation->delete();
 
-    return redirect()->route('liste')->with('success', 'Formation supprimée avec succès.');
+    return redirect()->route('particuliers.liste')->with('success', 'Formation supprimée avec succès.');
 }
 
 public function ajouterCommentaireOrder(Request $request, $id)
@@ -93,7 +93,7 @@ public function ajouterCommentaireOrder(Request $request, $id)
 
     // Retourne à la page des commandes avec un message de succès
     // Rediriger vers la liste des commandes (index)
-  return redirect()->route('orders.sho', $order->id)
+  return redirect()->route('particuliers.orders.sho', $order->id)
                  ->with('success', 'Commentaire ajouté avec succès!');
 
 }
@@ -113,7 +113,7 @@ public function ajouterCommentaire(Request $request, $id)
     $contact->save();
 
     // Rediriger vers la page des demandes avec un message de succès
-    return redirect()->route('voircontact.consulter')->with('success', 'Commentaire ajouté avec succès.');
+    return redirect()->route('particuliers.voircontact.consulter')->with('success', 'Commentaire ajouté avec succès.');
 }
 public function editSousFormation(Request $request, $id)
 {
@@ -122,7 +122,7 @@ public function editSousFormation(Request $request, $id)
     // Ajoutez d'autres champs à mettre à jour de la même manière
     $sousFormation->save();
 
-    return redirect()->route('liste')->with('success', 'Sous-formation mise à jour avec succès.');
+    return redirect()->route('particuliers.liste')->with('success', 'Sous-formation mise à jour avec succès.');
 }
 
   public function commenter(Request $request, $id)
@@ -133,14 +133,14 @@ public function editSousFormation(Request $request, $id)
     $reponse->commentaire = $request->commentaire;
     $reponse->save();
 
-    return redirect()->route('voirsoutien')->with('success', 'Commentaire ajouté avec succès.');
+    return redirect()->route('particuliers.voirsoutien')->with('success', 'Commentaire ajouté avec succès.');
 }
 public function deleteSousFormation(Request $request, $id)
 {
     $sousFormation = SousFormation::findOrFail($id);
     $sousFormation->delete();
 
-    return redirect()->route('liste')->with('success', 'Sous-formation supprimée avec succès.');
+    return redirect()->route('particuliers.liste')->with('success', 'Sous-formation supprimée avec succès.');
 }
 
 
@@ -151,7 +151,7 @@ public function editCours(Request $request, $id)
     // Ajoutez d'autres champs à mettre à jour de la même manière
     $cours->save();
 
-    return redirect()->route('liste')->with('success', 'Cours mis à jour avec succès.');
+    return redirect()->route('particuliers.liste')->with('success', 'Cours mis à jour avec succès.');
 }
 
 
@@ -160,7 +160,7 @@ public function deleteCours(Request $request, $id)
     $cours = Cours::findOrFail($id);
     $cours->delete();
 
-    return redirect()->route('liste')->with('success', 'Cours supprimé avec succès.');
+    return redirect()->route('particuliers.liste')->with('success', 'Cours supprimé avec succès.');
 }
 
 
@@ -539,14 +539,14 @@ public function updateFormation(Request $request, $id)
         : ($formation->categorie ?: 'transversale');
 
     $formation->save();
-    return redirect()->route('liste')->with('success', 'Formation mise à jour avec succès.');
+    return redirect()->route('particuliers.liste')->with('success', 'Formation mise à jour avec succès.');
 }
 
  public function update(Request $request, $id)
     {
         $sousFormation = SousFormation::findOrFail($id);
         $sousFormation->update($request->all());
-        return redirect()->route('liste')->with('success', 'Sous-formation mise à jour avec succès.');
+        return redirect()->route('particuliers.liste')->with('success', 'Sous-formation mise à jour avec succès.');
     }
 
     public function store(Request $request)
@@ -1044,7 +1044,7 @@ public function storeContact(Request $request)
     }
 
     // Redirection vers la page de confirmation
-    return redirect()->route('contact.confirmation');
+    return redirect()->route('particuliers.contact.confirmation');
 }
 
 public function filterCourses($formationId, Request $request)
@@ -1117,7 +1117,7 @@ public function register(Request $request)
 
     session(['comm_id' => $comm->id]);
 
-    return redirect('/dashboardadmin');
+    return redirect('/particuliers/dashboardadmin');
 }
 public function login(Request $request)
 {
@@ -1133,7 +1133,7 @@ public function login(Request $request)
     // Auth avec Remember Me
     if (Auth::attempt($credentials, $remember)) {
         $request->session()->regenerate(); // protège contre le session fixation
-        return redirect()->intended('/dashboardadmin');
+        return redirect()->intended('/particuliers/dashboardadmin');
     }
 
     // Si Auth échoue, vérifie manuellement dans Comm (si tu utilises un modèle custom)
@@ -1141,7 +1141,7 @@ public function login(Request $request)
 
     if ($comm && Hash::check($request->password, $comm->password)) {
     session(['comm_id' => $comm->id]); // stocke l’ID en session
-    return redirect('/dashboardadmin');
+    return redirect('/particuliers/dashboardadmin');
 }
 
 
@@ -1153,7 +1153,7 @@ public function login(Request $request)
 public function logout()
 {
     session()->forget('comm_id');
-    return redirect('/comm/login');
+    return redirect('/particuliers/comm/login');
 }
 
 

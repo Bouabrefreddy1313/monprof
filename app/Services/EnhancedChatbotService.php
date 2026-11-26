@@ -77,7 +77,7 @@ class EnhancedChatbotService
                 'categorie' => 'Extrascolaire',
                 'titre' => 'Musique et chant',
                 'slug' => 'musique',
-                'url' => url('/musique'),
+                'url' => url('/particuliers/musique'),
                 'public' => 'Enfants et adultes',
                 'description' => 'Cours de musique : piano, guitare, chant, solfège. Éveil musical pour enfants.',
                 'mots_cles' => ['musique', 'chant', 'piano', 'guitare', 'solfège', 'éveil musical', 'instrument', 'chanteur']
@@ -86,7 +86,7 @@ class EnhancedChatbotService
                 'categorie' => 'Extrascolaire',
                 'titre' => 'Coaching sportif à domicile',
                 'slug' => 'sportif',
-                'url' => url('/sportif'),
+                'url' => url('/particuliers/sportif'),
                 'public' => 'Adultes et enfants',
                 'description' => 'Coaching sportif personnalisé à domicile : fitness, musculation, remise en forme.',
                 'mots_cles' => ['sport', 'coaching sportif', 'fitness', 'musculation', 'remise en forme', 'perte poids', 'entraînement']
@@ -95,7 +95,7 @@ class EnhancedChatbotService
                 'categorie' => 'Extrascolaire',
                 'titre' => 'Sports pour enfants',
                 'slug' => 'sport-enfant',
-                'url' => url('/sportenf'),
+                'url' => url('/particuliers/sportenf'),
                 'public' => 'Enfants',
                 'description' => 'Activités sportives pour enfants : découverte, éveil sportif, coordination.',
                 'mots_cles' => ['sport enfant', 'enfant sport', 'éveil sportif', 'activité sportive enfant']
@@ -104,7 +104,7 @@ class EnhancedChatbotService
                 'categorie' => 'Extrascolaire',
                 'titre' => 'Les petits bilingues',
                 'slug' => 'petit',
-                'url' => url('/petit'),
+                'url' => url('/particuliers/petit'),
                 'public' => 'Enfants',
                 'description' => 'Cours de langues étrangères pour enfants : anglais, initiation linguistique.',
                 'mots_cles' => ['bilingue', 'langue enfant', 'anglais enfant', 'petit bilingue', 'langue étrangère enfant']
@@ -113,7 +113,7 @@ class EnhancedChatbotService
                 'categorie' => 'Extrascolaire',
                 'titre' => 'Bouge ta grammaire',
                 'slug' => 'bouge',
-                'url' => url('/bouge'),
+                'url' => url('/particuliers/bouge'),
                 'public' => 'Enfants',
                 'description' => 'Français ludique : apprendre la grammaire en s\'amusant, ateliers interactifs.',
                 'mots_cles' => ['grammaire', 'français ludique', 'orthographe', 'jeu éducatif', 'atelier français']
@@ -123,7 +123,7 @@ class EnhancedChatbotService
                 'categorie' => 'Soutien scolaire',
                 'titre' => 'Soutien scolaire Primaire',
                 'slug' => 'primaire',
-                'url' => url('/primaire'),
+                'url' => url('/particuliers/primaire'),
                 'public' => 'CP, CE1, CE2, CM1, CM2',
                 'description' => 'Soutien scolaire toutes matières pour le primaire. Accompagnement personnalisé.',
                 'mots_cles' => ['primaire', 'cp', 'ce1', 'ce2', 'cm1', 'cm2', 'soutien primaire', 'école primaire']
@@ -132,7 +132,7 @@ class EnhancedChatbotService
                 'categorie' => 'Soutien scolaire',
                 'titre' => 'Soutien scolaire Collège',
                 'slug' => 'soutien-college',
-                'url' => url('/soutien-collège'),
+                'url' => url('/particuliers/soutien-collège'),
                 'public' => '6ème à 3ème',
                 'description' => 'Soutien scolaire par matière pour le collège. Préparation aux examens.',
                 'mots_cles' => ['collège', 'college', '6eme', '5eme', '4eme', '3eme', 'soutien collège']
@@ -141,7 +141,7 @@ class EnhancedChatbotService
                 'categorie' => 'Soutien scolaire',
                 'titre' => 'Préparation au Brevet',
                 'slug' => 'soutien-brevet',
-                'url' => url('/soutien-brevet'),
+                'url' => url('/particuliers/soutien-brevet'),
                 'public' => '3ème',
                 'description' => 'Préparation structurée pour réussir le Brevet des collèges.',
                 'mots_cles' => ['brevet', 'dnb', 'examen', 'préparation brevet', '3eme']
@@ -150,7 +150,7 @@ class EnhancedChatbotService
                 'categorie' => 'Soutien scolaire',
                 'titre' => 'Soutien aux études supérieures',
                 'slug' => 'soutien-superieur',
-                'url' => url('/soutien-superieur'),
+                'url' => url('/particuliers/soutien-superieur'),
                 'public' => 'Étudiants',
                 'description' => 'Accompagnement pour les études supérieures : remise à niveau, préparation examens, mémoire.',
                 'mots_cles' => ['supérieur', 'superieur', 'université', 'fac', 'étude supérieure', 'licence', 'master', 'mémoire']
@@ -160,7 +160,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Orientation en Seconde',
                 'slug' => 'seconde',
-                'url' => url('/seconde'),
+                'url' => url('/particuliers/seconde'),
                 'public' => 'Seconde',
                 'description' => 'Accompagnement à l\'orientation pour les élèves de Seconde. Choix des spécialités.',
                 'mots_cles' => ['seconde', 'orientation seconde', 'spécialité', 'choix orientation']
@@ -169,7 +169,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Orientation en Première',
                 'slug' => 'premiere',
-                'url' => url('/premiere'),
+                'url' => url('/particuliers/premiere'),
                 'public' => 'Première',
                 'description' => 'Accompagnement à l\'orientation pour les élèves de Première. Projet post-Bac.',
                 'mots_cles' => ['première', 'premiere', 'orientation première', 'post-bac', 'parcoursup']
@@ -178,7 +178,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Orientation en Terminale',
                 'slug' => 'terminale',
-                'url' => url('/terminale'),
+                'url' => url('/particuliers/terminale'),
                 'public' => 'Terminale',
                 'description' => 'Accompagnement à l\'orientation pour les élèves de Terminale. Projet d\'études supérieures.',
                 'mots_cles' => ['terminale', 'terminal', 'orientation terminale', 'post bac', 'parcoursup', 'bac']
@@ -187,7 +187,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Préparation aux oraux et entretiens',
                 'slug' => 'reussir',
-                'url' => url('/reussir'),
+                'url' => url('/particuliers/reussir'),
                 'public' => 'Tous niveaux',
                 'description' => 'Préparation aux oraux d\'admission, entretiens de stage, concours.',
                 'mots_cles' => ['oral', 'entretien', 'admission', 'stage', 'concours', 'expression orale', 'confiance']
@@ -196,7 +196,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Coaching scolaire',
                 'slug' => 'coaching',
-                'url' => url('/coaching'),
+                'url' => url('/particuliers/coaching'),
                 'public' => 'Tous niveaux',
                 'description' => 'Coaching scolaire personnalisé : motivation, organisation, méthodes de travail.',
                 'mots_cles' => ['coaching scolaire', 'motivation', 'organisation', 'méthode travail', 'accompagnement scolaire']
@@ -205,7 +205,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Accompagnement DYS',
                 'slug' => 'accompagnement',
-                'url' => url('/accompagnement'),
+                'url' => url('/particuliers/accompagnement'),
                 'public' => 'Élèves DYS',
                 'description' => 'Méthodes adaptées pour les élèves avec troubles DYS (dyslexie, dyspraxie, etc.).',
                 'mots_cles' => ['dys', 'dyslexie', 'dyspraxie', 'trouble apprentissage', 'accompagnement dys']
@@ -214,7 +214,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Méthodologie et organisation',
                 'slug' => 'methode',
-                'url' => url('/methode'),
+                'url' => url('/particuliers/methode'),
                 'public' => 'Tous niveaux',
                 'description' => 'Méthodologie pour mieux apprendre, s\'organiser et gagner en autonomie.',
                 'mots_cles' => ['méthodologie', 'méthode', 'organisation', 'autonomie', 'apprendre', 'révision']
@@ -223,7 +223,7 @@ class EnhancedChatbotService
                 'categorie' => 'Accompagnement',
                 'titre' => 'Orientation aux études supérieures',
                 'slug' => 'orientation-superieur',
-                'url' => url('/orientation-superieur'),
+                'url' => url('/particuliers/orientation-superieur'),
                 'public' => 'Étudiants',
                 'description' => 'Accompagnement à l\'orientation dans les études supérieures : choix de filière, projet professionnel.',
                 'mots_cles' => ['orientation supérieur', 'filière', 'choix étude', 'projet professionnel']
@@ -432,9 +432,9 @@ class EnhancedChatbotService
                 }
             }
             $msg .= "\nContactez-nous pour les facilités de paiement !";
-            return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.95, 'source' => 'formations', 'url' => url('/formations')];
+            return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.95, 'source' => 'formations', 'url' => url('/particuliers/formations')];
         } catch (\Exception $e) {
-            return ['type' => 'answer', 'message' => "Les tarifs varient selon la formation. Contactez-nous pour un devis personnalisé.", 'confidence' => 0.85, 'source' => 'general', 'url' => url('/contact')];
+            return ['type' => 'answer', 'message' => "Les tarifs varient selon la formation. Contactez-nous pour un devis personnalisé.", 'confidence' => 0.85, 'source' => 'general', 'url' => url('/particuliers/contact')];
         }
     }
 
@@ -450,9 +450,9 @@ class EnhancedChatbotService
                 if ($c->adresse) $msg .= "  - À notre adresse : $c->adresse\n";
             }
             $msg .= "\nHoraires : lundi-vendredi 08h-18h, samedi 09h-13h.";
-            return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.9, 'source' => 'contact', 'url' => url('/contact')];
+            return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.9, 'source' => 'contact', 'url' => url('/particuliers/contact')];
         } catch (\Exception $e) {
-            return ['type' => 'answer', 'message' => "Contactez-nous via notre page de contact du lundi au samedi.", 'confidence' => 0.85, 'source' => 'general', 'url' => url('/contact')];
+            return ['type' => 'answer', 'message' => "Contactez-nous via notre page de contact du lundi au samedi.", 'confidence' => 0.85, 'source' => 'general', 'url' => url('/particuliers/contact')];
         }
     }
 
@@ -468,7 +468,7 @@ class EnhancedChatbotService
             $count = \App\Models\Inscription::count();
             if ($count > 0) $msg .= "\nDéjà $count personnes inscrites !";
         } catch (\Exception $e) {}
-        return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.9, 'source' => 'inscription', 'url' => url('/contact')];
+        return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.9, 'source' => 'inscription', 'url' => url('/particuliers/contact')];
     }
 
     private function getHoraires(): array
@@ -481,7 +481,7 @@ class EnhancedChatbotService
                 foreach ($cours as $c) $msg .= "  - $c->titre : $c->heure\n";
             }
         } catch (\Exception $e) {}
-        return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.85, 'source' => 'horaire', 'url' => url('/contact')];
+        return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.85, 'source' => 'horaire', 'url' => url('/particuliers/contact')];
     }
 
     private function getDuree(): array
@@ -648,7 +648,7 @@ class EnhancedChatbotService
                     }
                 }
                 $msg .= "\nDites-moi laquelle vous intéresse pour plus de détails !";
-                return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.9, 'source' => 'formations', 'url' => url('/formations')];
+                return ['type' => 'answer', 'message' => $msg, 'confidence' => 0.9, 'source' => 'formations', 'url' => url('/particuliers/formations')];
             }
         } catch (\Exception $e) {
             \Illuminate\Support\Facades\Log::error('Chatbot searchFormations error: ' . $e->getMessage());

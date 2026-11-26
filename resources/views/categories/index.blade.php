@@ -7,7 +7,7 @@
             <h1>Catégories de Vidéos</h1>
             <div class="list-group">
                 @foreach ($categories as $category)
-                    <a href="{{ route('videos.category', $category->id) }}" class="list-group-item list-group-item-action">
+                    <a href="{{ route('particuliers.videos.category', $category->id) }}" class="list-group-item list-group-item-action">
                         {{ $category->name }}
                     </a>
                 @endforeach

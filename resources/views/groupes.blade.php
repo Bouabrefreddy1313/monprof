@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -978,10 +978,10 @@ body {
             </div>
             <div class="modal-body" style="padding: 24px 28px;">
                 <div class="list-group" style="border-radius: 16px; overflow: hidden;">
-                    <a href="{{ url('/terminale') }}" class="list-group-item list-group-item-action" style="padding: 16px 20px; border: none; border-bottom: 1px solid var(--gray-100); transition: all 0.2s;">
+                    <a href="{{ url('/particuliers/terminale') }}" class="list-group-item list-group-item-action" style="padding: 16px 20px; border: none; border-bottom: 1px solid var(--gray-100); transition: all 0.2s;">
                         <i class="fas fa-school me-2" style="color: var(--orange);"></i> Vous êtes lycéen : 2nd, 1ère, Terminale
                     </a>
-                    <a href="{{ url('/superieur') }}" class="list-group-item list-group-item-action" style="padding: 16px 20px; border: none; transition: all 0.2s;">
+                    <a href="{{ url('/particuliers/superieur') }}" class="list-group-item list-group-item-action" style="padding: 16px 20px; border: none; transition: all 0.2s;">
                         <i class="fas fa-university me-2" style="color: var(--orange);"></i> Vous avez entamé des études supérieures
                     </a>
                 </div>
@@ -1006,41 +1006,41 @@ body {
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="asset/img/SUP.jpg" alt="DCG DSCG">
+                <img src="/asset/img/SUP.jpg" alt="DCG DSCG">
                 <div class="carousel-overlay"></div>
                 <div class="carousel-caption-moderne">
                     <div class="carousel-label"><i class="fas fa-star"></i> Meilleurs cours en ligne</div>
                     <h1 class="carousel-title">Validez votre <span class="highlight">DCG</span> ou votre <span class="highlight">DSCG</span> en le préparant à distance</h1>
                     <p class="carousel-subtitle">Des cours en ligne complets, des fiches de révision et des examens blancs corrigés pour réussir haut la main.</p>
                     <div class="carousel-buttons">
-                        <a href="{{ url('/dcg') }}" class="btn-carousel btn-orange"><i class="fas fa-book"></i> Je suis en DCG</a>
-                        <a href="{{ url('/dscg') }}" class="btn-carousel btn-outline"><i class="fas fa-graduation-cap"></i> Je suis en DSCG</a>
+                        <a href="{{ url('/particuliers/dcg') }}" class="btn-carousel btn-orange"><i class="fas fa-book"></i> Je suis en DCG</a>
+                        <a href="{{ url('/particuliers/dscg') }}" class="btn-carousel btn-outline"><i class="fas fa-graduation-cap"></i> Je suis en DSCG</a>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img loading="lazy" decoding="async" src="asset/img/don2.jpeg" alt="DCG DSCG">
+                <img loading="lazy" decoding="async" src="/asset/img/don2.jpeg" alt="DCG DSCG">
                 <div class="carousel-overlay"></div>
                 <div class="carousel-caption-moderne">
                     <div class="carousel-label"><i class="fas fa-trophy"></i> Taux de réussite élevé</div>
                     <h1 class="carousel-title">Validez votre DCG ou votre DSCG <span class="highlight">dès la prochaine session</span></h1>
                     <p class="carousel-subtitle">Une méthode éprouvée, des professeurs experts et un suivi personnalisé pour garantir votre réussite.</p>
                     <div class="carousel-buttons">
-                        <a href="{{ url('/matieres') }}" class="btn-carousel btn-orange"><i class="fas fa-book"></i> Je suis en DCG</a>
-                        <a href="{{ url('/dscg') }}" class="btn-carousel btn-outline"><i class="fas fa-graduation-cap"></i> Je suis en DSCG</a>
+                        <a href="{{ url('/particuliers/matieres') }}" class="btn-carousel btn-orange"><i class="fas fa-book"></i> Je suis en DCG</a>
+                        <a href="{{ url('/particuliers/dscg') }}" class="btn-carousel btn-outline"><i class="fas fa-graduation-cap"></i> Je suis en DSCG</a>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img loading="lazy" decoding="async" src="asset/img/don3.jpeg" alt="DCG DSCG">
+                <img loading="lazy" decoding="async" src="/asset/img/don3.jpeg" alt="DCG DSCG">
                 <div class="carousel-overlay"></div>
                 <div class="carousel-caption-moderne">
                     <div class="carousel-label"><i class="fas fa-rocket"></i> Formation accélérée</div>
                     <h1 class="carousel-title">Préparez-vous à distance avec nos <span class="highlight">cours en ligne</span></h1>
                     <p class="carousel-subtitle">Accédez à vos cours partout, à tout moment. Une flexibilité totale pour concilier travail et études.</p>
                     <div class="carousel-buttons">
-                        <a href="{{ url('/matieres') }}" class="btn-carousel btn-orange"><i class="fas fa-book"></i> Je suis en DCG</a>
-                        <a href="{{ url('/dscg') }}" class="btn-carousel btn-outline"><i class="fas fa-graduation-cap"></i> Je suis en DSCG</a>
+                        <a href="{{ url('/particuliers/matieres') }}" class="btn-carousel btn-orange"><i class="fas fa-book"></i> Je suis en DCG</a>
+                        <a href="{{ url('/particuliers/dscg') }}" class="btn-carousel btn-outline"><i class="fas fa-graduation-cap"></i> Je suis en DSCG</a>
                     </div>
                 </div>
             </div>
@@ -1100,7 +1100,7 @@ body {
         <div class="services-grid">
             <div class="service-card-moderne animate-scroll">
                 <div class="service-icon-moderne">
-                    <img loading="lazy" decoding="async" src="asset/img/intello.png" alt="Structure">
+                    <img loading="lazy" decoding="async" src="/asset/img/intello.png" alt="Structure">
                 </div>
                 <h4>On vous structure 🤓</h4>
                 <p>Dès votre inscription, vous apprendrez à aborder chaque matière du diplôme de manière efficace et méthodique grâce à des cours spécifiques : Mental, Concentration, Organisation, Mémorisation, Attentes du Jury... Dès le premier jour, vous aurez un plan clair et une grande confiance en vous.</p>
@@ -1108,7 +1108,7 @@ body {
             </div>
             <div class="service-card-moderne animate-scroll">
                 <div class="service-icon-moderne">
-                    <img loading="lazy" decoding="async" src="asset/img/fort.png" alt="Formation">
+                    <img loading="lazy" decoding="async" src="/asset/img/fort.png" alt="Formation">
                 </div>
                 <h4>Nous vous formons pour devenir des champions, tout simplement. 🙌</h4>
                 <p>Vous bénéficiez de cours en vidéo efficaces et faciles à comprendre, couvrant chaque aspect des programmes, avec des points essentiels à retenir, des cas pratiques corrigés disponibles en vidéo et en PDF téléchargeables, pour renforcer vos connaissances.</p>
@@ -1116,7 +1116,7 @@ body {
             </div>
             <div class="service-card-moderne animate-scroll">
                 <div class="service-icon-moderne">
-                    <img loading="lazy" decoding="async" src="asset/img/fete.png" alt="Diplômé">
+                    <img loading="lazy" decoding="async" src="/asset/img/fete.png" alt="Diplômé">
                 </div>
                 <h4>Vous êtes heureux diplômés 🥳</h4>
                 <p>En suivant nos cours à la lettre, vous serez parfaitement préparé pour réussir vos examens avec brio et vous présenter le jour J avec assurance et détermination. Une fois votre diplôme en main, vous deviendrez l'un des candidats les plus recherchés par les recruteurs dans le domaine de l'expertise comptable.</p>
@@ -1165,8 +1165,8 @@ body {
                 </div>
 
                 <div class="registration-buttons">
-                    <a href="{{ url('/matieres') }}" class="btn-reg btn-orange"><i class="fas fa-book"></i> DCG</a>
-                    <a href="{{ url('/dscg') }}" class="btn-reg btn-outline"><i class="fas fa-graduation-cap"></i> DSCG</a>
+                    <a href="{{ url('/particuliers/matieres') }}" class="btn-reg btn-orange"><i class="fas fa-book"></i> DCG</a>
+                    <a href="{{ url('/particuliers/dscg') }}" class="btn-reg btn-outline"><i class="fas fa-graduation-cap"></i> DSCG</a>
                 </div>
             </div>
 
@@ -1220,7 +1220,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Chez MONPROFCHEZMOI CI, nous croyons que chaque personne possède un potentiel unique. Notre mission est de révéler ce potentiel grâce à un accompagnement personnalisé.</p>
                 <div class="footer-social-moderne">
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1233,9 +1233,9 @@ body {
             <div>
                 <h4 class="footer-col-title">Quick Links</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien</a>
-                    <a href="{{ url('/formations') }}">Formation</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation</a>
                     <a href="#">DCG & DSCG</a>
                     <a href="#">Extrascolaire</a>
                 </div>

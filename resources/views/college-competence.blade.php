@@ -9,14 +9,14 @@
     <meta content="Codage, Robotique, Python, IA, Collège, Abidjan, Côte d'Ivoire" name="keywords">
     <meta content="Activités numériques pour collégiens : robotique, programmation Python, IA, animation numérique et JavaScript à Abidjan." name="description">
 
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
-    <link href="asset/css/courscss/style.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/style.css" rel="stylesheet">
 </head>
 
 <style>
@@ -1738,9 +1738,9 @@ body {
      ============================================ -->
 <div class="breadcrumb-moderne">
     <div class="container">
-        <a href="{{ url('/') }}">Accueil</a>
+        <a href="{{ url('/particuliers') }}">Accueil</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="{{ url('/codage') }}">Collège</a>
+        <a href="{{ url('/particuliers/codage') }}">Collège</a>
         <i class="fas fa-chevron-right"></i>
         <span class="current">Codage & Robotique</span>
     </div>
@@ -1850,7 +1850,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img loading="lazy" decoding="async" src="asset/img/robo.jpg" alt="Champions de la Robotique Collège">
+                    <img loading="lazy" decoding="async" src="/asset/img/robo.jpg" alt="Champions de la Robotique Collège">
                     <div class="programme-image-badge"><i class="fas fa-robot"></i> 6e à 3e</div>
                 </div>
                 <div class="programme-text">
@@ -1954,7 +1954,7 @@ body {
 
             <div class="programme-hero animate-scroll">
                 <div class="programme-image-wrap">
-                    <img loading="lazy" decoding="async" src="asset/img/orp.jpeg" alt="Champion de l'Animation Numérique Collège">
+                    <img loading="lazy" decoding="async" src="/asset/img/orp.jpeg" alt="Champion de l'Animation Numérique Collège">
                     <div class="programme-image-badge"><i class="fas fa-palette"></i> 6e à 3e</div>
                 </div>
                 <div class="programme-text">
@@ -2580,7 +2580,7 @@ body {
             <h2 class="section-title-big">Donnez à votre enfant les <span style="color: var(--orange);">clés du numérique</span> dès aujourd'hui</h2>
             <p class="section-subtitle">Faites confiance à MONPROFCHEZMOI pour accompagner le développement technologique et créatif de votre enfant.</p>
             <div class="cta-buttons">
-                <a href="{{ url('/reponse') }}" class="btn-cta-orange"><i class="fas fa-search"></i> Réserver une séance</a>
+                <a href="{{ url('/particuliers/reponse') }}" class="btn-cta-orange"><i class="fas fa-search"></i> Réserver une séance</a>
                 <a href="tel:+2250153751544" class="btn-cta-outline"><i class="fas fa-phone-alt"></i> Être rappelé gratuitement</a>
             </div>
         </div>
@@ -2594,7 +2594,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -2607,22 +2607,22 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 
@@ -2738,7 +2738,7 @@ function submitInscription(e) {
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement en cours...';
     }
 
-    fetch('/inscription', {
+    fetch('/particuliers/inscription', {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': csrfToken,
@@ -2801,7 +2801,7 @@ function submitInscription(e) {
             // Redirection vers le paiement
             const paymentForm = document.createElement('form');
             paymentForm.method = 'POST';
-            paymentForm.action = '/payment/initiate';
+            paymentForm.action = '/particuliers/payment/initiate';
 
             const csrfInput = document.createElement('input');
             csrfInput.type = 'hidden';

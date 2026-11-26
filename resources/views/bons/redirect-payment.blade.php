@@ -14,10 +14,10 @@
         <h2 style="color: #2c3e50; font-weight: 700; margin-bottom: 12px;">Préparation du paiement sécurisé</h2>
         <p style="color: #5F6368; font-size: 0.95rem; margin-bottom: 24px;">Vous allez être redirigé vers GeniusPay pour acheter votre bon...</p>
         <div id="error-message" style="color: #EF4444; display: none;"></div>
-        <a href="{{ route('bons.show', $voucher) }}" style="color: #667eea; text-decoration: none; font-weight: 600;">Cliquez ici si la redirection ne fonctionne pas</a>
+        <a href="{{ route('particuliers.bons.show', $voucher) }}" style="color: #667eea; text-decoration: none; font-weight: 600;">Cliquez ici si la redirection ne fonctionne pas</a>
     </div>
 
-    <form id="payment-form" action="{{ route('payment.initiate') }}" method="POST">
+    <form id="payment-form" action="{{ route('particuliers.payment.initiate') }}" method="POST">
         @csrf
         <input type="hidden" name="reservation_token" value="{{ $token }}">
         <input type="hidden" name="type" value="voucher">

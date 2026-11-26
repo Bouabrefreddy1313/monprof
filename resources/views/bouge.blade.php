@@ -10,7 +10,7 @@
     <meta content="Apprenez le français autrement avec des jeux et activités interactives pour enfants et collégiens." name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
     <!-- Libraries Stylesheet -->
 
     <!-- Bootstrap -->
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
-    <link href="asset/css/courscss/style.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/style.css" rel="stylesheet">
 </head>
 
 <style>
@@ -1703,9 +1703,9 @@ body {
      ============================================ -->
 <div class="breadcrumb-moderne">
     <div class="container">
-        <a href="{{ url('/') }}">Accueil</a>
+        <a href="{{ url('/particuliers') }}">Accueil</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="{{ url('/bouge') }}">Extrascolaire</a>
+        <a href="{{ url('/particuliers/bouge') }}">Extrascolaire</a>
         <i class="fas fa-chevron-right"></i>
         <span class="current">Bouge ta grammaire</span>
     </div>
@@ -1718,7 +1718,7 @@ body {
     <div class="container">
         <div class="presentation-layout">
             <div class="presentation-image-wrap animate-scroll">
-                <img src="asset/img/bouge.jpg" alt="Bouge ta grammaire et ton orthographe">
+                <img src="/asset/img/bouge.jpg" alt="Bouge ta grammaire et ton orthographe">
                 <div class="presentation-image-badge">
                     <i class="fas fa-spell-check"></i> Apprendre en s'amusant
                 </div>
@@ -1922,7 +1922,7 @@ body {
             <p class="section-subtitle">Inscrivez-vous dès maintenant et donnez à votre enfant les clés pour maîtriser la langue française avec plaisir.</p>
             <div class="cta-buttons">
                 <a href="tel:+2250153751544" class="btn-cta-orange"><i class="fas fa-phone-alt"></i> Être rappelé gratuitement</a>
-                <a href="{{ url('/reponse') }}" class="btn-cta-outline"><i class="fas fa-search"></i> Découvrir nos autres activités</a>
+                <a href="{{ url('/particuliers/reponse') }}" class="btn-cta-outline"><i class="fas fa-search"></i> Découvrir nos autres activités</a>
             </div>
         </div>
     </div>
@@ -2105,7 +2105,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Leader de l'accompagnement éducatif en Côte d'Ivoire. Depuis 2019, nous accompagnons près de 500 familles chaque année avec une approche pédagogique personnalisée et innovante.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -2118,22 +2118,22 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                                        <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                                        <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 
@@ -2314,7 +2314,7 @@ function submitInscription(e) {
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement...';
     }
 
-    fetch('/inscription', {
+    fetch('/particuliers/inscription', {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || ''
@@ -2326,7 +2326,7 @@ function submitInscription(e) {
         if (result.success && result.token) {
             const paymentForm = document.createElement('form');
             paymentForm.method = 'POST';
-            paymentForm.action = '/payment/initiate';
+            paymentForm.action = '/particuliers/payment/initiate';
 
             const csrfInput = document.createElement('input');
             csrfInput.type = 'hidden';

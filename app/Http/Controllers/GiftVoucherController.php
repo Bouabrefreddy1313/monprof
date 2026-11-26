@@ -63,7 +63,7 @@ class GiftVoucherController extends Controller
         // Ici on lance la session de paiement (exemple Stripe Checkout)
         // Tu peux remplacer par ton intégration CinetPay / PayPal
         // Exemple : redirect vers page paiement avec $voucher->id pour callback
-        return redirect()->route('bons.show', $voucher)->with('success', 'Bon créé avec succès. Cliquez sur "Acheter" pour payer.');
+        return redirect()->route('particuliers.bons.show', $voucher)->with('success', 'Bon créé avec succès. Cliquez sur "Acheter" pour payer.');
     }
 
     // Méthode appelée par ton webhook de paiement -> marquer comme active et envoyer le mail

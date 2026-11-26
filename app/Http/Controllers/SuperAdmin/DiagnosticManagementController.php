@@ -343,6 +343,6 @@ class DiagnosticManagementController extends Controller
             DiagnosticSession::where('id', $sessionId)->delete();
         }
 
-        return redirect()->route('admin.leads.index')->with('success', 'Données du prospect supprimées définitivement (RGPD).');
+        return redirect()->route('particuliers.admin.leads.index')->with('success', 'Données du prospect supprimées définitivement (RGPD).');
     }
 }

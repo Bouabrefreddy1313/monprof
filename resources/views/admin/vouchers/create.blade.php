@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un bon cadeau</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <style>
 body {
@@ -93,7 +93,7 @@ h1 {
             </div>
         @endif
 
-        <form action="{{ route('vouchers.store') }}" method="POST">
+        <form action="{{ route('particuliers.vouchers.store') }}" method="POST">
             @csrf
 
             <div class="mb-3">

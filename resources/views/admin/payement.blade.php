@@ -12,7 +12,7 @@
         @if (Session::get('seccess'))
         <div class="alert alert -seuccess">{{Session::get(error)}}</div>
         @endif
-        <form action="{{ route('payements.updateconfiguration')}}" method="POST">
+        <form action="{{ route('particuliers.payements.updateconfiguration')}}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name">API KEY :</label>

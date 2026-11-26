@@ -691,7 +691,7 @@ body {
 
             @if($voucher->status === 'active')
                 <div class="purchase-section-moderne">
-                    <form action="{{ route('bons.purchase', $voucher) }}" method="POST" style="display: inline;">
+                    <form action="{{ route('particuliers.bons.purchase', $voucher) }}" method="POST" style="display: inline;">
                         @csrf
                         <button type="submit" class="purchase-btn-moderne">
                             <i class="fas fa-shopping-cart"></i>

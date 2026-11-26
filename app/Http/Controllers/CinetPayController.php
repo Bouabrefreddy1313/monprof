@@ -41,9 +41,9 @@ class CinetPayController extends Controller
             $customerPhone = $reservation->telephone;
             $transactionId = 'RES_' . $reservation->id . '_' . time();
 
-            $returnUrl = route('cinetpay.return', ['type' => 'reservation', 'token' => $reservation->token]);
-            $cancelUrl = route('cinetpay.cancel', ['transaction_id' => $transactionId]);
-            $notifyUrl = route('cinetpay.notify');
+            $returnUrl = route('particuliers.cinetpay.return', ['type' => 'reservation', 'token' => $reservation->token]);
+            $cancelUrl = route('particuliers.cinetpay.cancel', ['transaction_id' => $transactionId]);
+            $notifyUrl = route('particuliers.cinetpay.notify');
 
         } else {
             $inscription = Inscription::where('token', $request->reservation_token)->firstOrFail();
@@ -56,9 +56,9 @@ class CinetPayController extends Controller
             $customerPhone = $inscription->telephone;
             $transactionId = 'INS_' . $inscription->id . '_' . time();
 
-            $returnUrl = route('cinetpay.return', ['type' => 'inscription', 'token' => $inscription->token]);
-            $cancelUrl = route('cinetpay.cancel', ['transaction_id' => $transactionId]);
-            $notifyUrl = route('cinetpay.notify');
+            $returnUrl = route('particuliers.cinetpay.return', ['type' => 'inscription', 'token' => $inscription->token]);
+            $cancelUrl = route('particuliers.cinetpay.cancel', ['transaction_id' => $transactionId]);
+            $notifyUrl = route('particuliers.cinetpay.notify');
         }
 
         // S'assurer que les URLs sont absolues
@@ -100,7 +100,7 @@ class CinetPayController extends Controller
         if (!empty($result['manual_fallback'])) {
             $this->saveTransactionId($type, $reservation ?? null, $inscription ?? null, $transactionId);
 
-            return redirect()->route('cinetpay.manual', [
+            return redirect()->route('particuliers.cinetpay.manual', [
                 'transaction_id' => $transactionId,
                 'type' => $type,
                 'token' => $request->reservation_token,
@@ -196,7 +196,7 @@ class CinetPayController extends Controller
             $checkResult = $this->cinetpay->checkPaymentStatus($transactionId);
 
             if ($checkResult['success'] && $checkResult['status'] === 'ACCEPTED') {
-                return redirect()->route('cinetpay.success', [
+                return redirect()->route('particuliers.cinetpay.success', [
                     'transaction_id' => $transactionId,
                     'type' => $request->get('type', 'unknown'),
                     'token' => $request->get('token'),
@@ -204,7 +204,7 @@ class CinetPayController extends Controller
             }
         }
 
-        return redirect()->route('cinetpay.cancel', ['transaction_id' => $transactionId]);
+        return redirect()->route('particuliers.cinetpay.cancel', ['transaction_id' => $transactionId]);
     }
 
     /**

@@ -36,7 +36,7 @@ class LeconsController extends Controller
             'video_url' => $videoPath,
         ]);
     
-        return redirect()->route('lecons.create')->with('success', 'Leçon ajoutée avec succès.');
+        return redirect()->route('particuliers.lecons.create')->with('success', 'Leçon ajoutée avec succès.');
     }
 
     public function index($id)

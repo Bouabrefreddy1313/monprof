@@ -241,7 +241,7 @@
         <div class="table-header">
             <h2><i class="fas fa-list"></i> Liste des inscriptions</h2>
             <div>
-                <a href="{{ route('admin.inscriptions.index') }}" class="filter-btn {{ !request('statut') ? 'active' : '' }}">Tous</a>
+                <a href="{{ route('particuliers.admin.inscriptions.index') }}" class="filter-btn {{ !request('statut') ? 'active' : '' }}">Tous</a>
                 <a href="?statut=en_attente" class="filter-btn {{ request('statut') == 'en_attente' ? 'active' : '' }}">En attente</a>
                 <a href="?statut=contacte" class="filter-btn {{ request('statut') == 'contacte' ? 'active' : '' }}">Contactés</a>
             </div>
@@ -292,10 +292,10 @@
                     </td>
                     <td>
                         <div class="actions">
-                            <a href="{{ route('admin.inscriptions.show', $inscription) }}" class="btn-action btn-view" title="Voir détails"><i class="fas fa-eye"></i></a>
+                            <a href="{{ route('particuliers.admin.inscriptions.show', $inscription) }}" class="btn-action btn-view" title="Voir détails"><i class="fas fa-eye"></i></a>
 
                             @if($inscription->statut == 'en_attente')
-                                <form action="{{ route('admin.inscriptions.contacte', $inscription) }}" method="POST" style="display:inline;">
+                                <form action="{{ route('particuliers.admin.inscriptions.contacte', $inscription) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn-action btn-contact" title="Marquer comme contacté"><i class="fas fa-phone"></i></button>
@@ -303,7 +303,7 @@
                             @endif
 
                             @if($inscription->statut == 'contacte')
-                                <form action="{{ route('admin.inscriptions.confirme', $inscription) }}" method="POST" style="display:inline;">
+                                <form action="{{ route('particuliers.admin.inscriptions.confirme', $inscription) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn-action btn-confirm" title="Confirmer"><i class="fas fa-check"></i></button>
@@ -311,7 +311,7 @@
                             @endif
 
                             @if(!in_array($inscription->statut, ['annule']))
-                                <form action="{{ route('admin.inscriptions.annuler', $inscription) }}" method="POST" style="display:inline;" onsubmit="return confirm('Annuler cette inscription ?')">
+                                <form action="{{ route('particuliers.admin.inscriptions.annuler', $inscription) }}" method="POST" style="display:inline;" onsubmit="return confirm('Annuler cette inscription ?')">
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn-action btn-cancel" title="Annuler"><i class="fas fa-times"></i></button>

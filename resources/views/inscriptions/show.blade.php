@@ -180,7 +180,7 @@
 
 <div class="admin-header">
     <div class="container" style="padding: 0 30px;">
-        <a href="{{ route('admin.inscriptions.index') }}" class="back-link"><i class="fas fa-arrow-left"></i> Retour à la liste</a>
+        <a href="{{ route('particuliers.admin.inscriptions.index') }}" class="back-link"><i class="fas fa-arrow-left"></i> Retour à la liste</a>
         <h1><i class="fas fa-clipboard-check"></i> Inscription #{{ $inscription->id }}</h1>
     </div>
 </div>
@@ -284,7 +284,7 @@
                 </span>
 
                 @if($inscription->statut == 'en_attente')
-                    <form action="{{ route('admin.inscriptions.contacte', $inscription) }}" method="POST">
+                    <form action="{{ route('particuliers.admin.inscriptions.contacte', $inscription) }}" method="POST">
                         @csrf
                         @method('PATCH')
                         <button type="submit" class="btn btn-blue"><i class="fas fa-phone"></i> Marquer comme contacté</button>
@@ -292,7 +292,7 @@
                 @endif
 
                 @if($inscription->statut == 'contacte')
-                    <form action="{{ route('admin.inscriptions.confirme', $inscription) }}" method="POST">
+                    <form action="{{ route('particuliers.admin.inscriptions.confirme', $inscription) }}" method="POST">
                         @csrf
                         @method('PATCH')
                         <button type="submit" class="btn btn-green"><i class="fas fa-check"></i> Confirmer l'inscription</button>
@@ -300,7 +300,7 @@
                 @endif
 
                 @if(!in_array($inscription->statut, ['annule']))
-                    <form action="{{ route('admin.inscriptions.annuler', $inscription) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir annuler cette inscription ?')">
+                    <form action="{{ route('particuliers.admin.inscriptions.annuler', $inscription) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir annuler cette inscription ?')">
                         @csrf
                         @method('PATCH')
                         <button type="submit" class="btn btn-red"><i class="fas fa-times"></i> Annuler l'inscription</button>
@@ -318,7 +318,7 @@
                         {{ $inscription->notes_admin }}
                     </div>
                 @endif
-                <form action="{{ route('admin.inscriptions.notes', $inscription) }}" method="POST">
+                <form action="{{ route('particuliers.admin.inscriptions.notes', $inscription) }}" method="POST">
                     @csrf
                     @method('PATCH')
                     <div class="notes-area">

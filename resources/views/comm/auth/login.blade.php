@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <style>
 * {
@@ -147,7 +147,7 @@ input:focus {
         <div class="form-card">
             <h2>Login</h2>
             
-            <form action="{{ route('comm.login') }}" method="POST">
+            <form action="{{ route('particuliers.comm.login') }}" method="POST">
             @csrf   
                 
 
@@ -165,7 +165,7 @@ input:focus {
 
             <div class="login-link">
                 <p>Vous N'avez pas un compte?</p>
-                <a href="/comm/register" class="login-btn">register here</a>
+                <a href="/particuliers/comm/register" class="login-btn">register here</a>
             </div>
             <div class="form-check">
     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>

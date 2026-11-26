@@ -579,14 +579,14 @@
                             <i data-lucide="message-square"></i>
                         </button>
                         @if($o->etat !== 'vendue' && $o->etat !== 'annulee')
-                            <form action="{{ route('terminerOrder',$o->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('particuliers.terminerOrder',$o->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 <button type="submit" class="action-btn btn-sell" title="Marquer comme vendu">
                                     <i data-lucide="check-circle-2"></i>
                                 </button>
                             </form>
                             
-                            <form action="{{ route('annulerTerminerOrder',$o->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('particuliers.annulerTerminerOrder',$o->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 <button type="submit" class="action-btn btn-cancel" title="Annuler">
                                     <i data-lucide="x-circle"></i>
@@ -594,7 +594,7 @@
                             </form>
                         @endif
                          
-                        <form action="{{ route('orders.destroy',$o->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette commande ?')">
+                        <form action="{{ route('particuliers.orders.destroy',$o->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette commande ?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="action-btn btn-delete" title="Supprimer">
@@ -621,7 +621,7 @@
                         
                         <div class="detail-box" style="grid-column: 1 / -1;">
                             <h4>Ajouter un commentaire</h4>
-                            <form action="{{ route('ajouterCommentaireOrder', $o->id) }}" method="POST">
+                            <form action="{{ route('particuliers.ajouterCommentaireOrder', $o->id) }}" method="POST">
                                 @csrf
                                 <div class="comment-form-row">
                                     <input type="text" name="commentaire" placeholder="Écrire un commentaire..." class="comment-input-row" required>

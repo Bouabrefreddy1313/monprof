@@ -48,23 +48,23 @@
                 <div class="program-card">
                     <h3>📊 Préparation DCG/DSCG</h3>
                     <p>Un accompagnement complet pour réussir vos diplômes comptables avec des experts et des méthodes éprouvées.</p>
-                    <a href="{{ url('/groupe') }}" class="program-link">Découvrir →</a>
+                    <a href="{{ url('/particuliers/groupe') }}" class="program-link">Découvrir →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>🧭 Orientation post-bac</h3>
                     <p>Un coaching personnalisé pour vous aider à choisir la bonne filière et maximiser vos chances d'admission.</p>
-                    <a href="{{ url('/orientation-superieur') }}" class="program-link">En savoir plus →</a>
+                    <a href="{{ url('/particuliers/orientation-superieur') }}" class="program-link">En savoir plus →</a>
                 </div>
 
                 <div class="program-card">
                     <h3>💼 Coaching professionnel</h3>
                     <p>Des formations pratiques pour développer vos compétences professionnelles et réussir votre insertion dans le monde du travail.</p>
-                    <a href="{{ url('/reussir') }}" class="program-link">Voir plus →</a>
+                    <a href="{{ url('/particuliers/reussir') }}" class="program-link">Voir plus →</a>
                 </div>
 
                 <div class="cta-section">
-                    <a href="{{ url('/groupe') }}" class="cta-button">
+                    <a href="{{ url('/particuliers/groupe') }}" class="cta-button">
                         Voir nos formations supérieures →
                     </a>
                 </div>
@@ -78,9 +78,9 @@
                     <strong>Email :</strong> info@monprofchezmoi-ci.com
                 </p>
                 <div class="footer-links">
-                    <a href="{{ url('/') }}">Accueil</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
                     <span style="color: #E8EAED;">|</span>
-                    <a href="{{ url('/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
+                    <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($subscriber->email ?? '')) }}">Se désabonner</a>
                 </div>
                 <p class="footer-copyright">
                     © {{ date('Y') }} MonProfChezMoi-ci.com. Tous droits réservés.

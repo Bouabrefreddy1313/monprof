@@ -130,28 +130,28 @@
         </div>
         <ul class="sidebar-nav">
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.dashboard') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.dashboard') }}" class="sidebar-nav-link">
                     <i class="fas fa-tachometer-alt"></i> <span>Dashboard Ventes</span>
                 </a>
             </li>
             <li class="sidebar-section-label">Module Diagnostic</li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.analytics') }}" class="sidebar-nav-link">
                     <i class="fas fa-chart-pie"></i> <span>Entonnoir & Stats</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.questions') }}" class="sidebar-nav-link active">
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions') }}" class="sidebar-nav-link active">
                     <i class="fas fa-question-circle"></i> <span>Questionnaire No-Code</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.courses') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.courses') }}" class="sidebar-nav-link">
                     <i class="fas fa-tags"></i> <span>Cours & Tags Matching</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="{{ route('superadmin.diagnostic.settings') }}" class="sidebar-nav-link">
+                <a href="{{ route('particuliers.superadmin.diagnostic.settings') }}" class="sidebar-nav-link">
                     <i class="fas fa-sliders-h"></i> <span>Configuration Module</span>
                 </a>
             </li>
@@ -185,13 +185,13 @@
         <div class="card-custom py-3">
             <div class="d-flex align-items-center gap-2 flex-wrap">
                 <span class="small fw-bold text-muted me-2">Filtrer par parcours :</span>
-                <a href="{{ route('superadmin.diagnostic.questions', ['parcours' => 'all']) }}" class="btn btn-sm {{ $parcoursFilter === 'all' ? 'btn-dark' : 'btn-outline-secondary' }}">Tous</a>
-                <a href="{{ route('superadmin.diagnostic.questions', ['parcours' => 'commun']) }}" class="btn btn-sm {{ $parcoursFilter === 'commun' ? 'btn-dark' : 'btn-outline-secondary' }}">Commun</a>
-                <a href="{{ route('superadmin.diagnostic.questions', ['parcours' => 'scolaire']) }}" class="btn btn-sm {{ $parcoursFilter === 'scolaire' ? 'btn-dark' : 'btn-outline-secondary' }}">Scolaire</a>
-                <a href="{{ route('superadmin.diagnostic.questions', ['parcours' => 'formation']) }}" class="btn btn-sm {{ $parcoursFilter === 'formation' ? 'btn-dark' : 'btn-outline-secondary' }}">Formation</a>
-                <a href="{{ route('superadmin.diagnostic.questions', ['parcours' => 'activite_enfant']) }}" class="btn btn-sm {{ $parcoursFilter === 'activite_enfant' ? 'btn-dark' : 'btn-outline-secondary' }}">Activité Enfant</a>
-                <a href="{{ route('superadmin.diagnostic.questions', ['parcours' => 'activite_adulte']) }}" class="btn btn-sm {{ $parcoursFilter === 'activite_adulte' ? 'btn-dark' : 'btn-outline-secondary' }}">Activité Adulte</a>
-                <a href="{{ route('superadmin.diagnostic.questions', ['parcours' => 'indecis']) }}" class="btn btn-sm {{ $parcoursFilter === 'indecis' ? 'btn-dark' : 'btn-outline-secondary' }}">Indécis</a>
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions', ['parcours' => 'all']) }}" class="btn btn-sm {{ $parcoursFilter === 'all' ? 'btn-dark' : 'btn-outline-secondary' }}">Tous</a>
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions', ['parcours' => 'commun']) }}" class="btn btn-sm {{ $parcoursFilter === 'commun' ? 'btn-dark' : 'btn-outline-secondary' }}">Commun</a>
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions', ['parcours' => 'scolaire']) }}" class="btn btn-sm {{ $parcoursFilter === 'scolaire' ? 'btn-dark' : 'btn-outline-secondary' }}">Scolaire</a>
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions', ['parcours' => 'formation']) }}" class="btn btn-sm {{ $parcoursFilter === 'formation' ? 'btn-dark' : 'btn-outline-secondary' }}">Formation</a>
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions', ['parcours' => 'activite_enfant']) }}" class="btn btn-sm {{ $parcoursFilter === 'activite_enfant' ? 'btn-dark' : 'btn-outline-secondary' }}">Activité Enfant</a>
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions', ['parcours' => 'activite_adulte']) }}" class="btn btn-sm {{ $parcoursFilter === 'activite_adulte' ? 'btn-dark' : 'btn-outline-secondary' }}">Activité Adulte</a>
+                <a href="{{ route('particuliers.superadmin.diagnostic.questions', ['parcours' => 'indecis']) }}" class="btn btn-sm {{ $parcoursFilter === 'indecis' ? 'btn-dark' : 'btn-outline-secondary' }}">Indécis</a>
             </div>
         </div>
 
@@ -235,7 +235,7 @@
                                 @if($opt->icone)<i class="{{ $opt->icone }} text-warning"></i>@endif
                                 <strong>{{ $opt->label }}</strong>
                                 <small class="text-muted">({{ $opt->valeur }})</small>
-                                <form action="{{ route('superadmin.diagnostic.options.destroy', $opt->id) }}" method="POST" class="d-inline ms-1" onsubmit="return confirm('Supprimer cette option ?');">
+                                <form action="{{ route('particuliers.superadmin.diagnostic.options.destroy', $opt->id) }}" method="POST" class="d-inline ms-1" onsubmit="return confirm('Supprimer cette option ?');">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-delete-opt" title="Supprimer">&times;</button>
@@ -252,7 +252,7 @@
             <div class="modal fade" id="editQuestionModal{{ $q->id }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="{{ route('superadmin.diagnostic.questions.update', $q->id) }}" method="POST">
+                        <form action="{{ route('particuliers.superadmin.diagnostic.questions.update', $q->id) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="modal-header">
@@ -294,7 +294,7 @@
             <div class="modal fade" id="addOptionModal{{ $q->id }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="{{ route('superadmin.diagnostic.options.store', $q->id) }}" method="POST">
+                        <form action="{{ route('particuliers.superadmin.diagnostic.options.store', $q->id) }}" method="POST">
                             @csrf
                             <div class="modal-header">
                                 <h5 class="modal-title fw-bold">Ajouter une option à la question</h5>
@@ -344,7 +344,7 @@
 <div class="modal fade" id="newQuestionModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="{{ route('superadmin.diagnostic.questions.store') }}" method="POST">
+            <form action="{{ route('particuliers.superadmin.diagnostic.questions.store') }}" method="POST">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title fw-bold">Nouvelle Question</h5>

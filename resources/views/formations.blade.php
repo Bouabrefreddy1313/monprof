@@ -9,7 +9,7 @@
     <meta content="Formations professionnelles et certifiantes pour adultes" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.png" rel="icon">
+    <link href="/asset/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link href="asset/css/courscss/bootstrap.min.css" rel="stylesheet">
+    <link href="/asset/css/courscss/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <style>
@@ -1710,14 +1710,14 @@ body {
                 <h1 class="hero-title-nouveau">Trouvez votre formation et <span class="highlight-orange">enrichissez vos compétences</span></h1>
                 <p class="hero-subtitle-nouveau">Des formations pratiques et certifiantes pour booster votre carrière, évoluer professionnellement et répondre aux exigences du marché.</p>
 
-                <form action="{{ route('search.formations') }}" method="GET" class="hero-search-bar">
+                <form action="{{ route('particuliers.search.formations') }}" method="GET" class="hero-search-bar">
                     <input type="text" name="query" placeholder="Recherchez par mot-clé (ex: Comptabilité, Marketing...)" required>
                     <button type="submit"><i class="fas fa-search"></i> Rechercher</button>
                 </form>
 
                 <!-- Bouton Bons de Formation -->
                 <div class="hero-bonus-cta">
-                    <a href="{{ route('gift-vouchers.index') }}" class="btn-bon-cadeau">
+                    <a href="{{ route('particuliers.gift-vouchers.index') }}" class="btn-bon-cadeau">
                         <span class="bon-icon"><i class="fas fa-gift"></i></span>
                         <span class="bon-text">
                             <span class="bon-label">🎁 Offrir une formation</span>
@@ -1729,7 +1729,7 @@ body {
             </div>
 
             <div class="hero-formations-image d-none d-lg-block">
-                <img src="asset/img/idee.jpeg" alt="Formations professionnelles">
+                <img src="/asset/img/idee.jpeg" alt="Formations professionnelles">
                 <div class="hero-badge-float"><i class="fas fa-check-circle"></i> 500+ formateurs experts</div>
             </div>
         </div>
@@ -1752,7 +1752,7 @@ body {
         </div>
 
         <div class="groupes-grid">
-            <a href="{{ route('formations', ['groupe' => 'transversale']) }}" class="groupe-card {{ $groupe === 'transversale' ? 'active' : '' }} animate-scroll">
+            <a href="{{ route('particuliers.formations', ['groupe' => 'transversale']) }}" class="groupe-card {{ $groupe === 'transversale' ? 'active' : '' }} animate-scroll">
                 @if($groupe === 'transversale')
                     <span class="groupe-badge-selected">Sélectionné</span>
                 @endif
@@ -1770,7 +1770,7 @@ body {
                 <span class="groupe-card-cta"><i class="fas fa-arrow-right"></i> Voir les thématiques</span>
             </a>
 
-            <a href="{{ route('formations', ['groupe' => 'metier']) }}" class="groupe-card {{ $groupe === 'metier' ? 'active' : '' }} animate-scroll">
+            <a href="{{ route('particuliers.formations', ['groupe' => 'metier']) }}" class="groupe-card {{ $groupe === 'metier' ? 'active' : '' }} animate-scroll">
                 @if($groupe === 'metier')
                     <span class="groupe-badge-selected">Sélectionné</span>
                 @endif
@@ -1813,12 +1813,12 @@ body {
                         Des compétences techniques pour exercer votre métier avec expertise.
                     @endif
                 </p>
-                <a href="{{ route('formations') }}" class="btn-link-reset"><i class="fas fa-arrow-left"></i> Choisir un autre groupe</a>
+                <a href="{{ route('particuliers.formations') }}" class="btn-link-reset"><i class="fas fa-arrow-left"></i> Choisir un autre groupe</a>
             </div>
 
             <div class="formations-grid">
                 @forelse($formations as $formation)
-                    <a href="{{ route('sous_formations', ['id' => $formation->id]) }}" class="formation-card-moderne animate-scroll" style="transition-delay: {{ $loop->index * 50 }}ms">
+                    <a href="{{ route('particuliers.sous_formations', ['id' => $formation->id]) }}" class="formation-card-moderne animate-scroll" style="transition-delay: {{ $loop->index * 50 }}ms">
                         <div class="formation-icon-wrap">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -1929,7 +1929,7 @@ body {
             </div>
 
             <div class="avantages-image-wrap animate-scroll">
-                <img loading="lazy" decoding="async" src="asset/img/formata.jpeg" alt="Formations pratiques">
+                <img loading="lazy" decoding="async" src="/asset/img/formata.jpeg" alt="Formations pratiques">
                 <div class="avantages-badge"><i class="fas fa-star"></i> 100% personnalisé</div>
             </div>
         </div>
@@ -2041,7 +2041,7 @@ body {
             <p class="section-subtitle">Recherchez votre formation idéale et commencez votre parcours vers la réussite professionnelle dès aujourd'hui.</p>
 
             <div class="cta-buttons-final">
-                <a href="{{ url('/reponse') }}" class="btn-cta-final btn-orange"><i class="fas fa-search"></i> Faire une demande</a>
+                <a href="{{ url('/particuliers/reponse') }}" class="btn-cta-final btn-orange"><i class="fas fa-search"></i> Faire une demande</a>
                 <a href="tel:+2250153751544" class="btn-cta-final btn-outline-light"><i class="fas fa-phone-alt"></i> Nous contacter</a>
             </div>
         </div>
@@ -2055,7 +2055,7 @@ body {
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand-moderne">
-                <img loading="lazy" decoding="async" src="asset/img/logo.png" alt="Monprofchezmoi">
+                <img loading="lazy" decoding="async" src="/asset/img/logo.png" alt="Monprofchezmoi">
                 <p>Chez MONPROFCHEZMOI CI, nous croyons que chaque personne possède un potentiel unique. Notre mission est de révéler ce potentiel grâce à un accompagnement personnalisé, des enseignants qualifiés et des solutions adaptées à chaque étape de la vie.</p>
                 <div class="footer-social-moderne">
                     <a href="https://lc.cx/bI7TWa" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -2068,22 +2068,22 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 

@@ -102,7 +102,7 @@
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td align="center" style="background-color:#F7931E; border-radius:8px;">
-                                        <a href="{{ url('/') }}" target="_blank" style="display:inline-block; padding:16px 36px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:bold; color:#FFFFFF; text-decoration:none; border-radius:8px;">
+                                        <a href="{{ url('/particuliers') }}" target="_blank" style="display:inline-block; padding:16px 36px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:bold; color:#FFFFFF; text-decoration:none; border-radius:8px;">
                                             Découvrir nos formations&nbsp;&rarr;
                                         </a>
                                     </td>
@@ -151,7 +151,7 @@
                             </p>
                             <p style="margin:0; font-size:13px; line-height:20px; color:#C5D4E3;">
                                 Vous recevez cet email car <strong style="color:#FFFFFF;">{{ $email }}</strong> s'est inscrit sur notre site.<br>
-                                <a href="{{ url('/unsubscribe?email=' . urlencode($email)) }}" style="color:#F7931E; text-decoration:underline;">Se désabonner</a>
+                                <a href="{{ url('/particuliers/unsubscribe?email=' . urlencode($email)) }}" style="color:#F7931E; text-decoration:underline;">Se désabonner</a>
                                 &nbsp;&middot;&nbsp; © {{ date('Y') }} MonProfChezMoi-ci.com
                             </p>
                         </td>

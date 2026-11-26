@@ -971,7 +971,7 @@ body {
             <!-- Colonne Filtre -->
             <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
                 <div class="filter-section animate-scroll">
-                    <form method="GET" action="{{ route('filtrer_sous_formation', ['formationId' => $formation->id]) }}" id="filterForm">
+                    <form method="GET" action="{{ route('particuliers.filtrer_sous_formation', ['formationId' => $formation->id]) }}" id="filterForm">
                         <div class="filter-title">
                             <i class="fas fa-filter"></i> Filtrer par thématique
                         </div>
@@ -1050,7 +1050,7 @@ body {
                                             {{ \Illuminate\Support\Str::limit($coursItem->description, 150) }}
                                         </p>
 
-                                        <a href="{{ route('cours', ['id' => $coursItem->id]) }}" class="cours-btn">
+                                        <a href="{{ route('particuliers.cours', ['id' => $coursItem->id]) }}" class="cours-btn">
                                             <i class="fas fa-info-circle me-2"></i>Je m'informe gratuitement
                                         </a>
                                     </div>
@@ -1109,22 +1109,22 @@ body {
             <div>
                 <h4 class="footer-col-title">Nos Liens</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/') }}">Accueil</a>
-                    <a href="{{ url('/reponse') }}">Soutien scolaire</a>
-                    <a href="{{ url('/formations') }}">Formations</a>
-                    <a href="{{ url('/groupe') }}">DCG & DSCG</a>
-                    <a href="{{ url('/coaching') }}">Extrascolaire</a>
+                    <a href="{{ url('/particuliers') }}">Accueil</a>
+                    <a href="{{ url('/particuliers/reponse') }}">Soutien scolaire</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formations</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG & DSCG</a>
+                    <a href="{{ url('/particuliers/coaching') }}">Extrascolaire</a>
                 </div>
             </div>
 
             <div>
                 <h4 class="footer-col-title">Populaires</h4>
                 <div class="footer-links-moderne">
-                    <a href="{{ url('/formations') }}">Formation Anglais</a>
-                    <a href="{{ url('/musique') }}">Musique</a>
-                    <a href="{{ url('/groupe') }}">DCG</a>
-                    <a href="{{ url('/sportif') }}">Sport</a>
-                    <a href="{{ url('/codage') }}">Codage</a>
+                    <a href="{{ url('/particuliers/formations') }}">Formation Anglais</a>
+                    <a href="{{ url('/particuliers/musique') }}">Musique</a>
+                    <a href="{{ url('/particuliers/groupe') }}">DCG</a>
+                    <a href="{{ url('/particuliers/sportif') }}">Sport</a>
+                    <a href="{{ url('/particuliers/codage') }}">Codage</a>
                 </div>
             </div>
 

@@ -12,7 +12,7 @@ class AdminAuthController extends Controller
     public function showLoginForm()
     {
         if (Auth::guard('admin')->check()) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('particuliers.admin.dashboard');
         }
 
         return view('admin.login');
@@ -27,7 +27,7 @@ class AdminAuthController extends Controller
         if (Auth::guard('admin')->attempt($credentials, $remember)) {
             $request->session()->regenerate();
             // Connexion réussie, redirection vers le tableau de bord
-            return redirect()->intended(route('admin.dashboard'));
+            return redirect()->intended(route('particuliers.admin.dashboard'));
         }
 
         // Connexion échouée, retour au formulaire avec un message d'erreur
@@ -61,7 +61,7 @@ class AdminAuthController extends Controller
 
         Auth::guard('admin')->attempt($request->only('email', 'password'));
 
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('particuliers.admin.dashboard');
     }
     // Logout
     public function logout(Request $request)
@@ -72,6 +72,6 @@ class AdminAuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('admin.login.form');
+        return redirect()->route('particuliers.admin.login.form');
     }
 }
